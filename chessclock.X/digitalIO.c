@@ -7,8 +7,6 @@
  * @brief PIN activation and configuration
  */
 
-
-
 // Check for Project Settings
 #ifndef __dsPIC33EP512MU810__
     #error "Wrong Controller"
@@ -19,10 +17,9 @@
  * ***********************
  */
 
-#include "myxc.h"
 #include <stdint.h>     //Standard typedefs
 #include <stdbool.h>
-
+#include "digitalIO.h"
 
 /* ***********************
  * Defines
@@ -35,6 +32,11 @@
 
 /* Hardware  */
 #define _LED200 LATBbits.LATB8
+#define _LED201 LATBbits.LATB9
+#define _LED202 LATBbits.LATB10
+#define _LED203 LATBbits.LATB11
+
+#define _SW201 LATBbits.RG13
 
 /* ***********************
  * Prototypes
@@ -49,24 +51,20 @@ void delay_ms(uint16_t u16milliseconds);
  */
 int main() {
 
-    /* Port Configurations */
-    // DS70616G-page 209
-    // ODCB (open drain config) unimplemented (DS70616G, Table 4-56)
-    ANSELBbits.ANSB8=0;     //Digital I/O
-    CNENBbits.CNIEB8=0;     //Disable change notification interrupt
-    CNPUBbits.CNPUB8=0;     //Disable weak pullup
-    CNPDBbits.CNPDB8=0;     //Disable weak pulldown
-    TRISBbits.TRISB8=0;     //Pin B8: Digital Output
-    LATBbits.LATB8=0;       //Pin B8: Low
-
     /* Endless Loop */
     while(1){
         /* LATBbits.LATB8 = !(LATBbits.LATB8); //Toggle Pin B8 */
-        _LED200=!_LED200; //Toggle LED
+        ledActivationAndConfiguration(_LED200,1);
+        ledActivationAndConfiguration(_LED201,1);
+        ledActivationAndConfiguration(_LED202,1);
+        ledActivationAndConfiguration(_LED203,1);
+        delay_ms(500);
+        ledActivationAndConfiguration(_LED200,0);
+        ledActivationAndConfiguration(_LED201,0);
+        ledActivationAndConfiguration(_LED202,0);
+        ledActivationAndConfiguration(_LED203,0);
         delay_ms(500);
     }//while
     
     return (EXIT_SUCCESS);  //never reached
-} //main()
-
-
+}
