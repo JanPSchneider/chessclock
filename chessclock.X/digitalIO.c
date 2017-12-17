@@ -31,10 +31,6 @@
 #define	EXIT_FAILURE	1
 
 /* Hardware  */
-#define _LED200 LATBbits.LATB8
-#define _LED201 LATBbits.LATB9
-#define _LED202 LATBbits.LATB10
-#define _LED203 LATBbits.LATB11
 
 #define _SW201 LATBbits.RG13
 

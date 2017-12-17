@@ -7,16 +7,23 @@
 
 #ifndef DIGITALIO_H
 #define	DIGITALIO_H
+#define _LED200 LATBbits.LATB8
+#define _LED201 LATBbits.LATB9
+#define _LED202 LATBbits.LATB10
+#define _LED203 LATBbits-LATB11
 
-#ifdef	__cplusplus
-extern "C" {
+
+#ifndef __dsPIC33EP512MU810__
+    #error "Wrong Controller"
 #endif
     
 int pin;
 int status;
 
-void ledActivationAndConfiguration(pin, status){ 
 
+
+void ledActivationAndConfiguration(pin, status){ 
+   
     if(status<=1 && status >=0){
         
         /* Port Configuration LED 200 */
@@ -59,6 +66,7 @@ void ledActivationAndConfiguration(pin, status){
         LATBbits.LATB11=status;       //Pin B8: Low
         }
     }
+   
 }    
 #ifdef	__cplusplus
 }
