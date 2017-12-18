@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=digitalIO.c ../../ce413_timer1_rtc/firmware/src/delay.s ../../ce413_timer1_rtc/firmware/src/en_sec_osc.s ../../ce413_timer1_rtc/firmware/src/hexdec.c ../../ce413_timer1_rtc/firmware/src/init_timer1.c ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/isr_timer1.c ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/main_rtc.c ../../ce413_timer1_rtc/firmware/src/traps.c
+SOURCEFILES_QUOTED_IF_SPACED=digitalIO.c ../../ce413_timer1_rtc/firmware/src/delay.s ../../ce413_timer1_rtc/firmware/src/en_sec_osc.s main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/digitalIO.o ${OBJECTDIR}/_ext/403601498/delay.o ${OBJECTDIR}/_ext/403601498/en_sec_osc.o ${OBJECTDIR}/_ext/403601498/hexdec.o ${OBJECTDIR}/_ext/403601498/init_timer1.o ${OBJECTDIR}/_ext/21930316/isr_timer1.o ${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o ${OBJECTDIR}/_ext/21930316/main_rtc.o ${OBJECTDIR}/_ext/403601498/traps.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/digitalIO.o.d ${OBJECTDIR}/_ext/403601498/delay.o.d ${OBJECTDIR}/_ext/403601498/en_sec_osc.o.d ${OBJECTDIR}/_ext/403601498/hexdec.o.d ${OBJECTDIR}/_ext/403601498/init_timer1.o.d ${OBJECTDIR}/_ext/21930316/isr_timer1.o.d ${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o.d ${OBJECTDIR}/_ext/21930316/main_rtc.o.d ${OBJECTDIR}/_ext/403601498/traps.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/digitalIO.o ${OBJECTDIR}/_ext/403601498/delay.o ${OBJECTDIR}/_ext/403601498/en_sec_osc.o ${OBJECTDIR}/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/digitalIO.o.d ${OBJECTDIR}/_ext/403601498/delay.o.d ${OBJECTDIR}/_ext/403601498/en_sec_osc.o.d ${OBJECTDIR}/main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/digitalIO.o ${OBJECTDIR}/_ext/403601498/delay.o ${OBJECTDIR}/_ext/403601498/en_sec_osc.o ${OBJECTDIR}/_ext/403601498/hexdec.o ${OBJECTDIR}/_ext/403601498/init_timer1.o ${OBJECTDIR}/_ext/21930316/isr_timer1.o ${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o ${OBJECTDIR}/_ext/21930316/main_rtc.o ${OBJECTDIR}/_ext/403601498/traps.o
+OBJECTFILES=${OBJECTDIR}/digitalIO.o ${OBJECTDIR}/_ext/403601498/delay.o ${OBJECTDIR}/_ext/403601498/en_sec_osc.o ${OBJECTDIR}/main.o
 
 # Source Files
-SOURCEFILES=digitalIO.c ../../ce413_timer1_rtc/firmware/src/delay.s ../../ce413_timer1_rtc/firmware/src/en_sec_osc.s ../../ce413_timer1_rtc/firmware/src/hexdec.c ../../ce413_timer1_rtc/firmware/src/init_timer1.c ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/isr_timer1.c ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/main_rtc.c ../../ce413_timer1_rtc/firmware/src/traps.c
+SOURCEFILES=digitalIO.c ../../ce413_timer1_rtc/firmware/src/delay.s ../../ce413_timer1_rtc/firmware/src/en_sec_osc.s main.c
 
 
 CFLAGS=
@@ -101,47 +101,12 @@ ${OBJECTDIR}/digitalIO.o: digitalIO.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  digitalIO.c  -o ${OBJECTDIR}/digitalIO.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/digitalIO.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/digitalIO.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/403601498/hexdec.o: ../../ce413_timer1_rtc/firmware/src/hexdec.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/403601498" 
-	@${RM} ${OBJECTDIR}/_ext/403601498/hexdec.o.d 
-	@${RM} ${OBJECTDIR}/_ext/403601498/hexdec.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/hexdec.c  -o ${OBJECTDIR}/_ext/403601498/hexdec.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/403601498/hexdec.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/403601498/hexdec.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/403601498/init_timer1.o: ../../ce413_timer1_rtc/firmware/src/init_timer1.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/403601498" 
-	@${RM} ${OBJECTDIR}/_ext/403601498/init_timer1.o.d 
-	@${RM} ${OBJECTDIR}/_ext/403601498/init_timer1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/init_timer1.c  -o ${OBJECTDIR}/_ext/403601498/init_timer1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/403601498/init_timer1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/403601498/init_timer1.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/21930316/isr_timer1.o: ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/isr_timer1.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/21930316" 
-	@${RM} ${OBJECTDIR}/_ext/21930316/isr_timer1.o.d 
-	@${RM} ${OBJECTDIR}/_ext/21930316/isr_timer1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/isr_timer1.c  -o ${OBJECTDIR}/_ext/21930316/isr_timer1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/21930316/isr_timer1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/21930316/isr_timer1.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o: ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/21930316" 
-	@${RM} ${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c  -o ${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/21930316/main_rtc.o: ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/main_rtc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/21930316" 
-	@${RM} ${OBJECTDIR}/_ext/21930316/main_rtc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/21930316/main_rtc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/main_rtc.c  -o ${OBJECTDIR}/_ext/21930316/main_rtc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/21930316/main_rtc.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/21930316/main_rtc.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/403601498/traps.o: ../../ce413_timer1_rtc/firmware/src/traps.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/403601498" 
-	@${RM} ${OBJECTDIR}/_ext/403601498/traps.o.d 
-	@${RM} ${OBJECTDIR}/_ext/403601498/traps.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/traps.c  -o ${OBJECTDIR}/_ext/403601498/traps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/403601498/traps.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/403601498/traps.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
 ${OBJECTDIR}/digitalIO.o: digitalIO.c  nbproject/Makefile-${CND_CONF}.mk
@@ -151,47 +116,12 @@ ${OBJECTDIR}/digitalIO.o: digitalIO.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  digitalIO.c  -o ${OBJECTDIR}/digitalIO.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/digitalIO.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/digitalIO.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/403601498/hexdec.o: ../../ce413_timer1_rtc/firmware/src/hexdec.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/403601498" 
-	@${RM} ${OBJECTDIR}/_ext/403601498/hexdec.o.d 
-	@${RM} ${OBJECTDIR}/_ext/403601498/hexdec.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/hexdec.c  -o ${OBJECTDIR}/_ext/403601498/hexdec.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/403601498/hexdec.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/403601498/hexdec.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/403601498/init_timer1.o: ../../ce413_timer1_rtc/firmware/src/init_timer1.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/403601498" 
-	@${RM} ${OBJECTDIR}/_ext/403601498/init_timer1.o.d 
-	@${RM} ${OBJECTDIR}/_ext/403601498/init_timer1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/init_timer1.c  -o ${OBJECTDIR}/_ext/403601498/init_timer1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/403601498/init_timer1.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/403601498/init_timer1.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/21930316/isr_timer1.o: ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/isr_timer1.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/21930316" 
-	@${RM} ${OBJECTDIR}/_ext/21930316/isr_timer1.o.d 
-	@${RM} ${OBJECTDIR}/_ext/21930316/isr_timer1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/isr_timer1.c  -o ${OBJECTDIR}/_ext/21930316/isr_timer1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/21930316/isr_timer1.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/21930316/isr_timer1.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o: ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/21930316" 
-	@${RM} ${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c  -o ${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/21930316/lcd_exp16brd.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/21930316/main_rtc.o: ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/main_rtc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/21930316" 
-	@${RM} ${OBJECTDIR}/_ext/21930316/main_rtc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/21930316/main_rtc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/main_rtc.c  -o ${OBJECTDIR}/_ext/21930316/main_rtc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/21930316/main_rtc.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/21930316/main_rtc.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/403601498/traps.o: ../../ce413_timer1_rtc/firmware/src/traps.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/403601498" 
-	@${RM} ${OBJECTDIR}/_ext/403601498/traps.o.d 
-	@${RM} ${OBJECTDIR}/_ext/403601498/traps.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../ce413_timer1_rtc/firmware/src/traps.c  -o ${OBJECTDIR}/_ext/403601498/traps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/403601498/traps.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/403601498/traps.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

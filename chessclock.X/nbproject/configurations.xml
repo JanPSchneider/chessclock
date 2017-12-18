@@ -6,9 +6,6 @@
                    projectFiles="true">
       <itemPath>digitalIO.h</itemPath>
       <itemPath>../../HelloWorld4.X/myxc.h</itemPath>
-      <itemPath>../../ce413_timer1_rtc/firmware/src/common_rtc.h</itemPath>
-      <itemPath>../../ce413_timer1_rtc/firmware/src/delay.h</itemPath>
-      <itemPath>../../ce413_timer1_rtc/firmware/src/lcd_exp16brd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,12 +17,7 @@
       <itemPath>digitalIO.c</itemPath>
       <itemPath>../../ce413_timer1_rtc/firmware/src/delay.s</itemPath>
       <itemPath>../../ce413_timer1_rtc/firmware/src/en_sec_osc.s</itemPath>
-      <itemPath>../../ce413_timer1_rtc/firmware/src/hexdec.c</itemPath>
-      <itemPath>../../ce413_timer1_rtc/firmware/src/init_timer1.c</itemPath>
-      <itemPath>../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/isr_timer1.c</itemPath>
-      <itemPath>../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c</itemPath>
-      <itemPath>../../ce413_timer1_rtc/firmware/src/system_config/exp16/dspic33ep512mu810/main_rtc.c</itemPath>
-      <itemPath>../../ce413_timer1_rtc/firmware/src/traps.c</itemPath>
+      <itemPath>main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
