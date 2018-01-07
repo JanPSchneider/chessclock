@@ -4,10 +4,10 @@
 # NOCDDL
 #
 CND_BASEDIR=`pwd`
-# default configuration
-CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=chessclock.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/chessclock.X.production.hex
-CND_PACKAGE_DIR_default=${CND_DISTDIR}/default/package
-CND_PACKAGE_NAME_default=chessclock.x.tar
-CND_PACKAGE_PATH_default=${CND_DISTDIR}/default/package/chessclock.x.tar
+# dspic33ep512mu810 configuration
+CND_ARTIFACT_DIR_dspic33ep512mu810=dist/dspic33ep512mu810/production
+CND_ARTIFACT_NAME_dspic33ep512mu810=chessclock.X.production.hex
+CND_ARTIFACT_PATH_dspic33ep512mu810=dist/dspic33ep512mu810/production/chessclock.X.production.hex
+CND_PACKAGE_DIR_dspic33ep512mu810=${CND_DISTDIR}/dspic33ep512mu810/package
+CND_PACKAGE_NAME_dspic33ep512mu810=chessclock.x.tar
+CND_PACKAGE_PATH_dspic33ep512mu810=${CND_DISTDIR}/dspic33ep512mu810/package/chessclock.x.tar

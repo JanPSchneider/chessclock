@@ -1,9 +1,11 @@
 #include <xc.h>
+#include "lcd_exp16brd.h"
 #include <stdint.h>
-#include "digitalIO.h"
+#include "common_rtc.h"
+#include "delay.h"
 
 #if __XC16_VERSION < 1011
-#warning "Hello  Prof. Schüle, please upgrade to XC16 v1.11 or newer."
+#warning "Please upgrade to XC16 v1.11 or newer."
 #endif
 
 // Select the Board
@@ -133,7 +135,7 @@ int main( void )
     Init_LCD();
     home_clr();
 
-    Puts_LCD( ( uint8_t * ) "Real Time Clock", 15 );
+    Puts_LCD( ( uint8_t * ) "CHESSCLOCK", 15 );
     line_2();
     Puts_LCD( ( uint8_t * ) "00 : 00 : 00 ", 12 );
 
@@ -193,8 +195,3 @@ void Update_LCD( void )
     LCD_Data( tens + 0x30 );
     LCD_Data( ones + 0x30 );
 }
-
-/*******************************************************************************
- End of File
-*/
-
