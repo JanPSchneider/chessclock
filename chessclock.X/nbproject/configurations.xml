@@ -7,6 +7,7 @@
       <itemPath>../src/delay.h</itemPath>
       <itemPath>../src/lcd_exp16brd.h</itemPath>
       <itemPath>../src/common_rtc.h</itemPath>
+      <itemPath>../src/buttons.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -23,6 +24,7 @@
       <itemPath>../src/system_config/exp16/dspic33ep512mu810/main_rtc.c</itemPath>
       <itemPath>../src/system_config/exp16/dspic33ep512mu810/isr_timer1.c</itemPath>
       <itemPath>../src/init_timer1.c</itemPath>
+      <itemPath>../src/buttons.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -32,6 +34,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../src</Elem>
+    <Elem>../../explorer16_demo/dspic33ep512mu810_pim.x/bsp</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

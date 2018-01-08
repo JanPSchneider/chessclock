@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include "common_rtc.h"
 #include "delay.h"
+#include "buttons.h"
+#include "buttons.c"
 
 #if __XC16_VERSION < 1011
 #warning "Please upgrade to XC16 v1.11 or newer."
@@ -59,6 +61,8 @@
 #pragma config AWRP = OFF           // Auxiliary Segment Write-protect bit (Auxiliary program memory is not write-protected)
 #pragma config APL = OFF            // Auxiliary Segment Code-protect bit (Aux Flash Code protect is disabled)
 #pragma config APLK = OFF           // Auxiliary Segment Key bits (Aux Flash Write Protection and Code Protection is Disabled)
+
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -134,8 +138,18 @@ int main( void )
     /* Initialize LCD */
     Init_LCD();
     home_clr();
-
-    Puts_LCD( ( uint8_t * ) "CHESSCLOCK", 15 );
+    BUTTON_Enable(BUTTON_S9);
+    
+    if(BUTTON_IsPressed(BUTTON_S9) == false)
+    {
+    Puts_LCD( ( uint8_t * ) "CHESSCLOCK", 10 );
+    line_2();
+    Puts_LCD( ( uint8_t * ) "START GAME?  ", 12 );    
+    }
+    
+    if(BUTTON_IsPressed(BUTTON_S9) == true)
+    {
+    Puts_LCD( ( uint8_t * ) "CHESSCLOCK", 10 );
     line_2();
     Puts_LCD( ( uint8_t * ) "00 : 00 : 00 ", 12 );
 
@@ -162,7 +176,10 @@ int main( void )
             rtc_Lcd_Update = 0;
         }
     };
+    }
     return ( 0 );
+      
+    
 }
 
 /******************************************************************************

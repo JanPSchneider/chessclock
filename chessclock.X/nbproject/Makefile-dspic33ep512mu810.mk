@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../src/delay.s ../src/en_sec_osc.s ../src/hexdec.c ../src/traps.c ../src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c ../src/system_config/exp16/dspic33ep512mu810/main_rtc.c ../src/system_config/exp16/dspic33ep512mu810/isr_timer1.c ../src/init_timer1.c
+SOURCEFILES_QUOTED_IF_SPACED=../src/delay.s ../src/en_sec_osc.s ../src/hexdec.c ../src/traps.c ../src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c ../src/system_config/exp16/dspic33ep512mu810/main_rtc.c ../src/system_config/exp16/dspic33ep512mu810/isr_timer1.c ../src/init_timer1.c ../src/buttons.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1360937237/delay.o ${OBJECTDIR}/_ext/1360937237/en_sec_osc.o ${OBJECTDIR}/_ext/1360937237/hexdec.o ${OBJECTDIR}/_ext/1360937237/traps.o ${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o ${OBJECTDIR}/_ext/60018555/main_rtc.o ${OBJECTDIR}/_ext/60018555/isr_timer1.o ${OBJECTDIR}/_ext/1360937237/init_timer1.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1360937237/delay.o.d ${OBJECTDIR}/_ext/1360937237/en_sec_osc.o.d ${OBJECTDIR}/_ext/1360937237/hexdec.o.d ${OBJECTDIR}/_ext/1360937237/traps.o.d ${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o.d ${OBJECTDIR}/_ext/60018555/main_rtc.o.d ${OBJECTDIR}/_ext/60018555/isr_timer1.o.d ${OBJECTDIR}/_ext/1360937237/init_timer1.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1360937237/delay.o ${OBJECTDIR}/_ext/1360937237/en_sec_osc.o ${OBJECTDIR}/_ext/1360937237/hexdec.o ${OBJECTDIR}/_ext/1360937237/traps.o ${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o ${OBJECTDIR}/_ext/60018555/main_rtc.o ${OBJECTDIR}/_ext/60018555/isr_timer1.o ${OBJECTDIR}/_ext/1360937237/init_timer1.o ${OBJECTDIR}/_ext/1360937237/buttons.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1360937237/delay.o.d ${OBJECTDIR}/_ext/1360937237/en_sec_osc.o.d ${OBJECTDIR}/_ext/1360937237/hexdec.o.d ${OBJECTDIR}/_ext/1360937237/traps.o.d ${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o.d ${OBJECTDIR}/_ext/60018555/main_rtc.o.d ${OBJECTDIR}/_ext/60018555/isr_timer1.o.d ${OBJECTDIR}/_ext/1360937237/init_timer1.o.d ${OBJECTDIR}/_ext/1360937237/buttons.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1360937237/delay.o ${OBJECTDIR}/_ext/1360937237/en_sec_osc.o ${OBJECTDIR}/_ext/1360937237/hexdec.o ${OBJECTDIR}/_ext/1360937237/traps.o ${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o ${OBJECTDIR}/_ext/60018555/main_rtc.o ${OBJECTDIR}/_ext/60018555/isr_timer1.o ${OBJECTDIR}/_ext/1360937237/init_timer1.o
+OBJECTFILES=${OBJECTDIR}/_ext/1360937237/delay.o ${OBJECTDIR}/_ext/1360937237/en_sec_osc.o ${OBJECTDIR}/_ext/1360937237/hexdec.o ${OBJECTDIR}/_ext/1360937237/traps.o ${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o ${OBJECTDIR}/_ext/60018555/main_rtc.o ${OBJECTDIR}/_ext/60018555/isr_timer1.o ${OBJECTDIR}/_ext/1360937237/init_timer1.o ${OBJECTDIR}/_ext/1360937237/buttons.o
 
 # Source Files
-SOURCEFILES=../src/delay.s ../src/en_sec_osc.s ../src/hexdec.c ../src/traps.c ../src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c ../src/system_config/exp16/dspic33ep512mu810/main_rtc.c ../src/system_config/exp16/dspic33ep512mu810/isr_timer1.c ../src/init_timer1.c
+SOURCEFILES=../src/delay.s ../src/en_sec_osc.s ../src/hexdec.c ../src/traps.c ../src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c ../src/system_config/exp16/dspic33ep512mu810/main_rtc.c ../src/system_config/exp16/dspic33ep512mu810/isr_timer1.c ../src/init_timer1.c ../src/buttons.c
 
 
 CFLAGS=
@@ -136,6 +136,13 @@ ${OBJECTDIR}/_ext/1360937237/init_timer1.o: ../src/init_timer1.c  nbproject/Make
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/init_timer1.c  -o ${OBJECTDIR}/_ext/1360937237/init_timer1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/init_timer1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/init_timer1.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/_ext/1360937237/buttons.o: ../src/buttons.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/buttons.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/buttons.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/buttons.c  -o ${OBJECTDIR}/_ext/1360937237/buttons.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/buttons.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/buttons.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/_ext/1360937237/hexdec.o: ../src/hexdec.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
@@ -178,6 +185,13 @@ ${OBJECTDIR}/_ext/1360937237/init_timer1.o: ../src/init_timer1.c  nbproject/Make
 	@${RM} ${OBJECTDIR}/_ext/1360937237/init_timer1.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/init_timer1.c  -o ${OBJECTDIR}/_ext/1360937237/init_timer1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/init_timer1.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/init_timer1.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1360937237/buttons.o: ../src/buttons.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/buttons.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/buttons.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/buttons.c  -o ${OBJECTDIR}/_ext/1360937237/buttons.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/buttons.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/buttons.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 
