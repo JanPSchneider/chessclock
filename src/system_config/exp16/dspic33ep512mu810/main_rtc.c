@@ -142,9 +142,9 @@ int main( void )
     
     if(BUTTON_IsPressed(BUTTON_S9) == false)
     {
-    Puts_LCD( ( uint8_t * ) "CHESSCLOCK", 10 );
+    Puts_LCD( ( uint8_t * ) "??????", 6 );
     line_2();
-    Puts_LCD( ( uint8_t * ) "START GAME?  ", 12 );    
+    Puts_LCD( ( uint8_t * ) "??????", 6 );    
     }
     
     if(BUTTON_IsPressed(BUTTON_S9) == true)
