@@ -151,7 +151,7 @@ int main( void )
     {
     Puts_LCD( ( uint8_t * ) "CHESSCLOCK", 10 );
     line_2();
-    Puts_LCD( ( uint8_t * ) "00 : 00 : 00 ", 12 );
+    Puts_LCD( ( uint8_t * ) "00 : 05 : 00 ", 12 );
 
     Delay( 1000 );
 
