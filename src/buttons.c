@@ -6,22 +6,12 @@
 
 /*** Button Definitions *********************************************/
 //      S1  is MCLR button
-#define S3_PORT  PORTDbits.RD6
-#define S6_PORT  PORTDbits.RD7
-#define S5_PORT  PORTAbits.RA7       //Overlaps with D10
-#define S4_PORT  PORTDbits.RD13
-#define S9_PORT  PORTDbits.RG9
+#define S3_PORT  PORTGbits.RG12
+#define S6_PORT  PORTGbits.RG13
 
-#define S3_TRIS  TRISDbits.TRISD6
-#define S6_TRIS  TRISDbits.TRISD7
-#define S5_TRIS  TRISAbits.TRISA7
-#define S4_TRIS  TRISDbits.TRISD13
-#define S9_TRIS  TRISDbits.TRISG9
+#define S3_TRIS  TRISGbits.TRISG12
+#define S6_TRIS  TRISGbits.TRISG13
 
-#define S3_ANSEL ANSELDbits.ANSD6
-#define S6_ANSEL ANSELDbits.ANSD7
-#define S5_ANSEL ANSELAbits.ANSA7
-#define S9_ANSEL ANSELAbits.ANSG9
 
 #define BUTTON_PRESSED      0
 #define BUTTON_NOT_PRESSED  1
@@ -54,19 +44,9 @@ bool BUTTON_IsPressed(BUTTON button)
     {
         case BUTTON_S3:
             return ( (S3_PORT == BUTTON_PRESSED) ? true : false);
-
+            
         case BUTTON_S6:
             return ( (S6_PORT == BUTTON_PRESSED) ? true : false);
-
-        case BUTTON_S5:
-            return ( (S5_PORT == BUTTON_PRESSED) ? true : false);
-
-        case BUTTON_S4:
-            return ( (S4_PORT == BUTTON_PRESSED) ? true : false);
-        
-        case BUTTON_S9:
-            return ( (S9_PORT == BUTTON_PRESSED) ? true : false);
-            
            
         default:
             return false;
@@ -97,26 +77,10 @@ void BUTTON_Enable(BUTTON button)
     {
         case BUTTON_S3:
             S3_TRIS = PIN_INPUT;
-            S3_ANSEL = PIN_DIGITAL ;
-            break;
-
-        case BUTTON_S6:
-            S6_TRIS = PIN_INPUT;
-            S6_ANSEL = PIN_DIGITAL ;
-            break;
-
-        case BUTTON_S5:
-            S5_TRIS = PIN_INPUT;
-            S5_ANSEL = PIN_DIGITAL ;
             break;
             
-        case BUTTON_S4:
-            S4_TRIS = PIN_INPUT;
-            break;
-        
-        case BUTTON_S9:
-            S9_TRIS = PIN_INPUT;
-            S9_ANSEL = PIN_DIGITAL;
+        case BUTTON_S6:
+            S6_TRIS = PIN_INPUT;
             break;
 
         default:

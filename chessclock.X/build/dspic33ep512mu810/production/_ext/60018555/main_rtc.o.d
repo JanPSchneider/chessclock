@@ -3,6 +3,4 @@ build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o:  \
  ../src/lcd_exp16brd.h  \
 ../src/common_rtc.h  \
 ../src/delay.h  \
- ../src/buttons.h  \
-../src/buttons.c  \
-../src/buttons.h 
+ ../src/buttons.h 

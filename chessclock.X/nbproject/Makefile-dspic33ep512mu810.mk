@@ -98,49 +98,49 @@ ${OBJECTDIR}/_ext/1360937237/hexdec.o: ../src/hexdec.c  nbproject/Makefile-${CND
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/hexdec.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/hexdec.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/hexdec.c  -o ${OBJECTDIR}/_ext/1360937237/hexdec.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/hexdec.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/hexdec.c  -o ${OBJECTDIR}/_ext/1360937237/hexdec.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/hexdec.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/hexdec.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/1360937237/traps.o: ../src/traps.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/traps.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/traps.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/traps.c  -o ${OBJECTDIR}/_ext/1360937237/traps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/traps.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/traps.c  -o ${OBJECTDIR}/_ext/1360937237/traps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/traps.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/traps.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o: ../src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/60018555" 
 	@${RM} ${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c  -o ${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c  -o ${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/60018555/lcd_exp16brd.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/60018555/main_rtc.o: ../src/system_config/exp16/dspic33ep512mu810/main_rtc.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/60018555" 
 	@${RM} ${OBJECTDIR}/_ext/60018555/main_rtc.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60018555/main_rtc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/system_config/exp16/dspic33ep512mu810/main_rtc.c  -o ${OBJECTDIR}/_ext/60018555/main_rtc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/60018555/main_rtc.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/system_config/exp16/dspic33ep512mu810/main_rtc.c  -o ${OBJECTDIR}/_ext/60018555/main_rtc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/60018555/main_rtc.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/60018555/main_rtc.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/60018555/isr_timer1.o: ../src/system_config/exp16/dspic33ep512mu810/isr_timer1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/60018555" 
 	@${RM} ${OBJECTDIR}/_ext/60018555/isr_timer1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60018555/isr_timer1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/system_config/exp16/dspic33ep512mu810/isr_timer1.c  -o ${OBJECTDIR}/_ext/60018555/isr_timer1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/60018555/isr_timer1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/system_config/exp16/dspic33ep512mu810/isr_timer1.c  -o ${OBJECTDIR}/_ext/60018555/isr_timer1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/60018555/isr_timer1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/60018555/isr_timer1.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/1360937237/init_timer1.o: ../src/init_timer1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/init_timer1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/init_timer1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/init_timer1.c  -o ${OBJECTDIR}/_ext/1360937237/init_timer1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/init_timer1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/init_timer1.c  -o ${OBJECTDIR}/_ext/1360937237/init_timer1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/init_timer1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/init_timer1.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/1360937237/buttons.o: ../src/buttons.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/buttons.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/buttons.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/buttons.c  -o ${OBJECTDIR}/_ext/1360937237/buttons.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/buttons.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../src/buttons.c  -o ${OBJECTDIR}/_ext/1360937237/buttons.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360937237/buttons.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -I"../src" -I"../src" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/buttons.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
@@ -202,14 +202,14 @@ ${OBJECTDIR}/_ext/1360937237/delay.o: ../src/delay.s  nbproject/Makefile-${CND_C
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/delay.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/delay.o 
-	${MP_CC} $(MP_EXTRA_AS_PRE)  ../src/delay.s  -o ${OBJECTDIR}/_ext/1360937237/delay.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  -Wa,-MD,"${OBJECTDIR}/_ext/1360937237/delay.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_ICD3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	${MP_CC} $(MP_EXTRA_AS_PRE)  ../src/delay.s  -o ${OBJECTDIR}/_ext/1360937237/delay.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  -Wa,-MD,"${OBJECTDIR}/_ext/1360937237/delay.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/delay.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/_ext/1360937237/en_sec_osc.o: ../src/en_sec_osc.s  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/en_sec_osc.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/en_sec_osc.o 
-	${MP_CC} $(MP_EXTRA_AS_PRE)  ../src/en_sec_osc.s  -o ${OBJECTDIR}/_ext/1360937237/en_sec_osc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  -Wa,-MD,"${OBJECTDIR}/_ext/1360937237/en_sec_osc.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_ICD3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	${MP_CC} $(MP_EXTRA_AS_PRE)  ../src/en_sec_osc.s  -o ${OBJECTDIR}/_ext/1360937237/en_sec_osc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  -Wa,-MD,"${OBJECTDIR}/_ext/1360937237/en_sec_osc.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/en_sec_osc.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
 	
 else
@@ -240,7 +240,7 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 dist/${CND_CONF}/${IMAGE_TYPE}/chessclock.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -o dist/${CND_CONF}/${IMAGE_TYPE}/chessclock.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)   -mreserve=data@0x1000:0x101B -mreserve=data@0x101C:0x101D -mreserve=data@0x101E:0x101F -mreserve=data@0x1020:0x1021 -mreserve=data@0x1022:0x1023 -mreserve=data@0x1024:0x1027 -mreserve=data@0x1028:0x104F   -Wl,--local-stack,,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_ICD3=1,$(MP_LINKER_FILE_OPTION),--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--report-mem,--memorysummary,dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml$(MP_EXTRA_LD_POST) 
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -o dist/${CND_CONF}/${IMAGE_TYPE}/chessclock.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_dspic33ep512mu810=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)   -mreserve=data@0x1000:0x101B -mreserve=data@0x101C:0x101D -mreserve=data@0x101E:0x101F -mreserve=data@0x1020:0x1021 -mreserve=data@0x1022:0x1023 -mreserve=data@0x1024:0x1027 -mreserve=data@0x1028:0x104F   -Wl,--local-stack,,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,$(MP_LINKER_FILE_OPTION),--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--report-mem,--memorysummary,dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml$(MP_EXTRA_LD_POST) 
 	
 else
 dist/${CND_CONF}/${IMAGE_TYPE}/chessclock.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   

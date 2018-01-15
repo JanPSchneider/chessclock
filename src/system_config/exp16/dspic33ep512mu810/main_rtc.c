@@ -4,7 +4,7 @@
 #include "common_rtc.h"
 #include "delay.h"
 #include "buttons.h"
-#include "buttons.c"
+#include "stdbool.h"
 
 #if __XC16_VERSION < 1011
 #warning "Please upgrade to XC16 v1.11 or newer."
@@ -138,20 +138,19 @@ int main( void )
     /* Initialize LCD */
     Init_LCD();
     home_clr();
-    BUTTON_Enable(BUTTON_S9);
     
-    if(BUTTON_IsPressed(BUTTON_S9) == false)
-    {
-    Puts_LCD( ( uint8_t * ) "??????", 6 );
+    //Button T0
+    BUTTON_Enable(BUTTON_S3);
+    
+     Puts_LCD( ( uint8_t * ) "Hello", 5 );
     line_2();
-    Puts_LCD( ( uint8_t * ) "??????", 6 );    
-    }
+    Puts_LCD( ( uint8_t * ) "Start Game? ", 12 );
     
-    if(BUTTON_IsPressed(BUTTON_S9) == true)
+    if(BUTTON_IsPressed(BUTTON_S3) == true)
     {
     Puts_LCD( ( uint8_t * ) "CHESSCLOCK", 10 );
     line_2();
-    Puts_LCD( ( uint8_t * ) "00 : 05 : 00 ", 12 );
+    Puts_LCD( ( uint8_t * ) "00 : 05 : 00 ", 16 );
 
     Delay( 1000 );
 
@@ -161,6 +160,8 @@ int main( void )
     while( 1 )
     {
 
+        
+    
 #ifdef TEST_MODE
           if( rtc_Lcd_Update )
           {
