@@ -7,7 +7,7 @@
 // *****************************************************************************
 // *****************************************************************************
 volatile uint8_t    hours;
-volatile uint8_t    minutes;
+volatile uint8_t    minutes = 5;
 volatile uint8_t    seconds;
 volatile uint8_t    rtc_Lcd_Update;
 
@@ -26,27 +26,27 @@ volatile uint8_t    rtc_Lcd_Update;
  *****************************************************************************/
 void __attribute__ ( (interrupt, no_auto_psv) ) _T1Interrupt( void )
 {
-    if( seconds < 59 )          // is cummulative seconds < 59?
+    if( seconds > 0 )          // is cummulative seconds < 59?
     {
-        seconds++;              // yes, so increment seconds
+        seconds--;              // yes, so increment seconds
     }
     else                        // else seconds => 59
     {
-        seconds = 0x00;         // reset seconds
-        if( minutes < 59 )      // is cummulative minutes < 59?
+        seconds = 0x3B;         // reset seconds
+        if( minutes > 0 )      // is cummulative minutes < 59?
         {
-            minutes++;          // yes, so updates minutes
+            minutes--;          // yes, so updates minutes
         }
         else                    // else minutes => 59
         {
-            minutes = 0x00;     // reset minutes
-            if( hours < 23 )    // is cummulative hours < 23
+            minutes = 0x3B;     // reset minutes
+            if( hours > 0 )    // is cummulative hours < 23
             {
-                hours++;        // yes, so update hours
+                hours--;        // yes, so update hours
             }
             else
             {
-                hours = 0x00;   // reset time
+                hours = 0x17;   // reset time
             }
         }
     }
