@@ -28,6 +28,7 @@ extern "C"
     #define display_shift() LCD_Cmd( 0x1C )
     #define home_clr()      LCD_Cmd( 0x01 )
     #define home_it()       LCD_Cmd( 0x02 )
+    #define line_1()        LCD_Cmd( 0x00 )
     #define line_2()        LCD_Cmd( 0xC0 ) // (0xC0)
     #ifdef __cplusplus                      // Provide C++ Compatibility
 }

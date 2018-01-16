@@ -166,11 +166,16 @@ int main( void )
 
     if(BUTTON_IsPressed(BUTTON_S6) == true)
     {
+        line_1();
+        Puts_LCD( ( uint8_t * ) "Player 2", 8 );
         changeStatus(1);
-    }
+   }
     if(BUTTON_IsPressed(BUTTON_S3) == true)
     {
+         line_1();
+        Puts_LCD( ( uint8_t * ) "Player 1", 8 );
         changeStatus(0);
+       
     }
     
 #ifdef TEST_MODE
