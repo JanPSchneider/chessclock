@@ -1,10 +1,11 @@
 /** 
- * @file   DigitalIO.c
- * @author Jan
- *
- * @date 30.11.2017, 14:36
+ * @file  digitalIO.c
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
- * @brief Libary for digital IO functions
+ * @brief Bit deklaration der verschiedenen Fälle, beispielsweise LED an/aus oder Taster gedrückt/nicht gedrückt.
+ * Außerdem Erstellung von digitalRead und digitalWrite um die Bits auszulesen bzw zu schreiben.
+ * 
+ * @date Created on 16.01.2017
  */
 
 #include <stdint.h>

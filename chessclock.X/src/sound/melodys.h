@@ -1,8 +1,10 @@
 /* 
- * File:   melodys.h
- * Author: jk
- *
- * Created on 8. Januar 2018, 21:22
+ * @file  melodys.h
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
+ * 
+ * @brief 
+ * 
+ * @date Created on 16.01.2017
  */
 
 #ifndef MELODYS_H

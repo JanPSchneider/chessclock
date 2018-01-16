@@ -1,8 +1,10 @@
 /** 
- * @file   Time.c
- * @author Jan
+ * @file  time.c
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
- * @brief Libary for timing fuctions
+ * @brief 
+ * 
+ * @date Created on 16.01.2017
  */
 
 #include "time.h"

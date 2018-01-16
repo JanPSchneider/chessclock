@@ -1,8 +1,10 @@
 /* 
- * File:   time.h
- * Author: jk
- *
- * Created on 11. Dezember 2017, 22:43
+ * @file  time.h
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
+ * 
+ * @brief Erstellung einer Zeiteinheit mithilfe der CPU Frequenz
+ * 
+ * @date Created on 16.01.2017
  */
 #include <stdint.h>
 #include <p33EP512MU810.h>

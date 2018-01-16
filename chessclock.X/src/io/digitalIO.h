@@ -1,8 +1,10 @@
 /* 
- * File:   digitalIO.h
- * Author: jk
- *
- * Created on 11. Dezember 2017, 13:47
+ * @file  digitalIO.h
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
+ * 
+ * @brief Definierung der LED's und Switches bzw. Buttons sowie dem Incrementer
+ * 
+ * @date Created on 16.01.2017
  */
 
 #include <stdint.h>

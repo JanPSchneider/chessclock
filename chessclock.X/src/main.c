@@ -2,7 +2,8 @@
  * @file  main.c
  * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
- * @brief main.c
+ * @brief Erstellung von Funktionen. Beispielsweise Menü und Einstellungen
+ * 
  * @date Created on 16.01.2017
  */
 
