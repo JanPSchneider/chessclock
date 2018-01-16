@@ -83,13 +83,13 @@ Program Memory  [Origin = 0x200, Length = 0x55600]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x200               0x14a           0x1ef  (495)
-.const                       0x34a                0x30            0x48  (72)
-.text                        0x37a               0x27a           0x3b7  (951)
-.dinit                       0x5f4                0x16            0x21  (33)
-.text                        0x60a                0x10            0x18  (24)
+.text                        0x200               0x174           0x22e  (558)
+.const                       0x374                0x30            0x48  (72)
+.text                        0x3a4               0x2e6           0x459  (1113)
+.dinit                       0x68a                0x16            0x21  (33)
+.text                        0x6a0                0x14            0x1e  (30)
 
-                 Total program memory used (bytes):          0x627  (1575) <1%
+                 Total program memory used (bytes):          0x70e  (1806) <1%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0x1fc]
@@ -116,10 +116,10 @@ Data Memory  [Origin = 0x1000, Length = 0xd000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                       0x1000                   0             0x6  (6)
-.ndata                      0x1006                   0             0x2  (2)
+.nbss                       0x1000                   0             0x8  (8)
+.ndata                      0x1008                   0             0x2  (2)
 
-                 Total data memory used (bytes):            0x8  (8) <1%
+                 Total data memory used (bytes):            0xa  (10) <1%
 
 
 Dynamic Memory Usage
@@ -127,28 +127,36 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                       0x1008                              0x6ff8  (28664)
+stack                       0x100a                              0x6ff6  (28662)
 
-                 Maximum dynamic memory (bytes):         0x6ff8  (28664)
+                 Maximum dynamic memory (bytes):         0x6ff6  (28662)
 
 
 External Symbols in Data Memory (by address):
 
                     0x1000                  _hours
                     0x1001                  _seconds
-                    0x1002                  _rtc_Lcd_Update
-                    0x1004                  _tens
-                    0x1005                  _ones
-                    0x1006                  _minutes
+                    0x1002                  _hourss
+                    0x1003                  _secondss
+                    0x1004                  _rtc_Lcd_Update
+                    0x1005                  _status
+                    0x1006                  _tens
+                    0x1007                  _ones
+                    0x1008                  _minutes
+                    0x1009                  _minutess
 
 External Symbols in Data Memory (by name):
 
                     0x1000                  _hours
-                    0x1006                  _minutes
-                    0x1005                  _ones
-                    0x1002                  _rtc_Lcd_Update
+                    0x1002                  _hourss
+                    0x1008                  _minutes
+                    0x1009                  _minutess
+                    0x1007                  _ones
+                    0x1004                  _rtc_Lcd_Update
                     0x1001                  _seconds
-                    0x1004                  _tens
+                    0x1003                  _secondss
+                    0x1005                  _status
+                    0x1006                  _tens
 
 External Symbols in Program Memory (by address):
 
@@ -162,39 +170,40 @@ External Symbols in Program Memory (by address):
                   0x000306                  __MathError
                   0x00030a                  __DMACError
                   0x00030e                  __T1Interrupt
-                  0x000344                  __DefaultInterrupt
-                  0x00037a                  _Update_LCD
-                  0x0003c2                  _main
-                  0x00045a                  _LCD_Cmd
-                  0x000478                  _Init_LCD
-                  0x0004e8                  _LCD_Data
-                  0x00050c                  _Puts_LCD
-                  0x000522                  _Delay
-                  0x00053c                  _Delay_Us
-                  0x00058c                  _BUTTON_IsPressed
-                  0x0005ae                  _BUTTON_Enable
-                  0x0005c0                  _HexDec
-                  0x0005da                  _Init_Timer1
-                  0x00060a                  _EnSecOsc
+                  0x00036e                  __DefaultInterrupt
+                  0x0003a4                  _Update_LCD
+                  0x000434                  _main
+                  0x0004f0                  _LCD_Cmd
+                  0x00050e                  _Init_LCD
+                  0x00057e                  _LCD_Data
+                  0x0005a2                  _Puts_LCD
+                  0x0005b8                  _Delay
+                  0x0005d2                  _Delay_Us
+                  0x000622                  _BUTTON_IsPressed
+                  0x000644                  _BUTTON_Enable
+                  0x000656                  _HexDec
+                  0x000670                  _Init_Timer1
+                  0x0006a0                  _EnSecOsc
+                  0x0006b0                  _changeStatus
                   0xf80004                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0005ae                  _BUTTON_Enable
-                  0x00058c                  _BUTTON_IsPressed
-                  0x000522                  _Delay
-                  0x00053c                  _Delay_Us
-                  0x00060a                  _EnSecOsc
-                  0x0005c0                  _HexDec
-                  0x000478                  _Init_LCD
-                  0x0005da                  _Init_Timer1
-                  0x00045a                  _LCD_Cmd
-                  0x0004e8                  _LCD_Data
-                  0x00050c                  _Puts_LCD
-                  0x00037a                  _Update_LCD
+                  0x000644                  _BUTTON_Enable
+                  0x000622                  _BUTTON_IsPressed
+                  0x0005b8                  _Delay
+                  0x0005d2                  _Delay_Us
+                  0x0006a0                  _EnSecOsc
+                  0x000656                  _HexDec
+                  0x00050e                  _Init_LCD
+                  0x000670                  _Init_Timer1
+                  0x0004f0                  _LCD_Cmd
+                  0x00057e                  _LCD_Data
+                  0x0005a2                  _Puts_LCD
+                  0x0003a4                  _Update_LCD
                   0x0002fe                  __AddressError
                   0x00030a                  __DMACError
-                  0x000344                  __DefaultInterrupt
+                  0x00036e                  __DefaultInterrupt
                   0xf80004                  __FGS.sec
                   0x000306                  __MathError
                   0x0002fa                  __OscillatorFail
@@ -204,7 +213,8 @@ External Symbols in Program Memory (by name):
                   0x000248                  __data_init_extended
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x0003c2                  _main
+                  0x0006b0                  _changeStatus
+                  0x000434                  _main
 
 Memory Configuration
 
@@ -262,7 +272,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000200        0x14a
+.text             0x000200        0x174
  *(.init)
  .init            0x000200         0x48 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libpic30-elf.a(crt0_extendedep.o)
                   0x000200                  __resetPRI
@@ -280,18 +290,18 @@ LOAD c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libfx-elf.a
                   0x000302                  __StackError
                   0x000306                  __MathError
                   0x00030a                  __DMACError
- .isr.text        0x00030e         0x36 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
+ .isr.text        0x00030e         0x60 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
                   0x00030e                  __T1Interrupt
- .isr             0x000344          0x4 default_isr
-                  0x000344                  __DefaultInterrupt
+ .isr             0x00036e          0x4 default_isr
+                  0x00036e                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x000348          0x2 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libpic30-elf.a(crt_start_mode_normalep.eo)
-                  0x000348                  __crt_start_mode
-                  0x000348                  __crt_start_mode_normal
+                  0x000372          0x2 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libpic30-elf.a(crt_start_mode_normalep.eo)
+                  0x000372                  __crt_start_mode
+                  0x000372                  __crt_start_mode_normal
 
 usercode
  *(usercode)
@@ -325,61 +335,61 @@ __FUID0
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x281e
+.debug_info       0x000000       0x2bed
  *(.debug_info)
- .debug_info      0x000000         0x8d build/dspic33ep512mu810/production/_ext/1360937237/delay.o
- .debug_info      0x00008d         0x92 build/dspic33ep512mu810/production/_ext/1360937237/en_sec_osc.o
- .debug_info      0x00011f        0x1ac build/dspic33ep512mu810/production/_ext/1360937237/hexdec.o
- .debug_info      0x0002cb        0x347 build/dspic33ep512mu810/production/_ext/1360937237/traps.o
- .debug_info      0x000612        0x8c2 build/dspic33ep512mu810/production/_ext/60018555/lcd_exp16brd.o
- .debug_info      0x000ed4        0x993 build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
- .debug_info      0x001867        0x3e8 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
- .debug_info      0x001c4f        0x785 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
- .debug_info      0x0023d4        0x44a build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
+ .debug_info      0x000000         0xd1 build/dspic33ep512mu810/production/_ext/1360937237/delay.o
+ .debug_info      0x0000d1         0xd6 build/dspic33ep512mu810/production/_ext/1360937237/en_sec_osc.o
+ .debug_info      0x0001a7        0x1f0 build/dspic33ep512mu810/production/_ext/1360937237/hexdec.o
+ .debug_info      0x000397        0x38b build/dspic33ep512mu810/production/_ext/1360937237/traps.o
+ .debug_info      0x000722        0x906 build/dspic33ep512mu810/production/_ext/60018555/lcd_exp16brd.o
+ .debug_info      0x001028        0xa86 build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
+ .debug_info      0x001aae        0x4e8 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
+ .debug_info      0x001f96        0x7c9 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
+ .debug_info      0x00275f        0x48e build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x579
+.debug_abbrev     0x000000        0x5cb
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x14 build/dspic33ep512mu810/production/_ext/1360937237/delay.o
  .debug_abbrev    0x000014         0x14 build/dspic33ep512mu810/production/_ext/1360937237/en_sec_osc.o
  .debug_abbrev    0x000028         0x7b build/dspic33ep512mu810/production/_ext/1360937237/hexdec.o
  .debug_abbrev    0x0000a3         0x8a build/dspic33ep512mu810/production/_ext/1360937237/traps.o
  .debug_abbrev    0x00012d         0xca build/dspic33ep512mu810/production/_ext/60018555/lcd_exp16brd.o
- .debug_abbrev    0x0001f7        0x114 build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
- .debug_abbrev    0x00030b         0xdf build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
- .debug_abbrev    0x0003ea         0xc5 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
- .debug_abbrev    0x0004af         0xca build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
+ .debug_abbrev    0x0001f7        0x140 build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
+ .debug_abbrev    0x000337        0x105 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
+ .debug_abbrev    0x00043c         0xc5 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
+ .debug_abbrev    0x000501         0xca build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
 
-.debug_line       0x000000        0x803
+.debug_line       0x000000        0x834
  *(.debug_line)
  .debug_line      0x000000         0x4f build/dspic33ep512mu810/production/_ext/1360937237/delay.o
  .debug_line      0x00004f         0x47 build/dspic33ep512mu810/production/_ext/1360937237/en_sec_osc.o
  .debug_line      0x000096         0x92 build/dspic33ep512mu810/production/_ext/1360937237/hexdec.o
  .debug_line      0x000128         0xf5 build/dspic33ep512mu810/production/_ext/1360937237/traps.o
  .debug_line      0x00021d        0x162 build/dspic33ep512mu810/production/_ext/60018555/lcd_exp16brd.o
- .debug_line      0x00037f        0x169 build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
- .debug_line      0x0004e8        0x121 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
- .debug_line      0x000609         0xf7 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
- .debug_line      0x000700        0x103 build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
+ .debug_line      0x00037f        0x17f build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
+ .debug_line      0x0004fe        0x13c build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
+ .debug_line      0x00063a         0xf7 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
+ .debug_line      0x000731        0x103 build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
 
-.debug_frame      0x000000        0x1be
+.debug_frame      0x000000        0x1ce
  *(.debug_frame)
  .debug_frame     0x000000         0x24 build/dspic33ep512mu810/production/_ext/1360937237/hexdec.o
  .debug_frame     0x000024         0x64 build/dspic33ep512mu810/production/_ext/1360937237/traps.o
  .debug_frame     0x000088         0x68 build/dspic33ep512mu810/production/_ext/60018555/lcd_exp16brd.o
  .debug_frame     0x0000f0         0x48 build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
- .debug_frame     0x000138         0x2e build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
- .debug_frame     0x000166         0x24 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
- .debug_frame     0x00018a         0x34 build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
+ .debug_frame     0x000138         0x3e build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
+ .debug_frame     0x000176         0x24 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
+ .debug_frame     0x00019a         0x34 build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
 
-.debug_str        0x000000         0xbb
+.debug_str        0x000000         0xec
  *(.debug_str)
  .debug_str       0x000000          0xc build/dspic33ep512mu810/production/_ext/1360937237/traps.o
  .debug_str       0x00000c         0x26 build/dspic33ep512mu810/production/_ext/60018555/lcd_exp16brd.o
- .debug_str       0x000032         0x38 build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
- .debug_str       0x00006a         0x18 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
- .debug_str       0x000082         0x25 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
- .debug_str       0x0000a7         0x14 build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
+ .debug_str       0x000032         0x57 build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
+ .debug_str       0x000089         0x2a build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
+ .debug_str       0x0000b3         0x25 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
+ .debug_str       0x0000d8         0x14 build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
 
 .debug_loc
  *(.debug_loc)
@@ -388,7 +398,7 @@ __FUID0
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x1b7
+                  0x000000        0x1f8
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x2f build/dspic33ep512mu810/production/_ext/1360937237/hexdec.o
@@ -399,11 +409,11 @@ __FUID0
  .debug_pubnames
                   0x0000da         0x2a build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
  .debug_pubnames
-                  0x000104         0x58 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
+                  0x000104         0x99 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
  .debug_pubnames
-                  0x00015c         0x22 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
+                  0x00019d         0x22 build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
  .debug_pubnames
-                  0x00017e         0x39 build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
+                  0x0001bf         0x39 build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -3166,18 +3176,22 @@ __c30_signature
  __c30_signature
                   0x00040f          0x6 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libpic30-elf.a(data_init_extended.o)
 
-.nbss               0x1000          0x6
- .nbss              0x1000          0x4 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
+.nbss               0x1000          0x8
+ .nbss              0x1000          0x6 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
                     0x1000                  _hours
                     0x1001                  _seconds
-                    0x1002                  _rtc_Lcd_Update
- .nbss              0x1004          0x2 build/dspic33ep512mu810/production/_ext/1360937237/hexdec.o
-                    0x1004                  _tens
-                    0x1005                  _ones
+                    0x1002                  _hourss
+                    0x1003                  _secondss
+                    0x1004                  _rtc_Lcd_Update
+                    0x1005                  _status
+ .nbss              0x1006          0x2 build/dspic33ep512mu810/production/_ext/1360937237/hexdec.o
+                    0x1006                  _tens
+                    0x1007                  _ones
 
-.ndata              0x1006          0x2
- .ndata             0x1006          0x2 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
-                    0x1006                  _minutes
+.ndata              0x1008          0x2
+ .ndata             0x1008          0x2 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
+                    0x1008                  _minutes
+                    0x1009                  _minutess
 
 .ivt._OscillatorFail
                   0x000004          0x2
@@ -3231,32 +3245,34 @@ __c30_signature
  .ivt._T1Interrupt
                   0x00001a          0x2 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
 
-.const              0x834a         0x30 load address 0x00034a  
- .const             0x834a         0x30 build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
+.const              0x8374         0x30 load address 0x000374  
+ .const             0x8374         0x30 build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
 
-.text             0x00037a        0x27a
- .text            0x00037a         0xe0 build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
-                  0x00037a                  _Update_LCD
-                  0x0003c2                  _main
- .text            0x00045a         0xc8 build/dspic33ep512mu810/production/_ext/60018555/lcd_exp16brd.o
-                  0x00045a                  _LCD_Cmd
-                  0x000478                  _Init_LCD
-                  0x0004e8                  _LCD_Data
-                  0x00050c                  _Puts_LCD
- .text            0x000522         0x6a build/dspic33ep512mu810/production/_ext/1360937237/delay.o
-                  0x000522                  _Delay
-                  0x00053c                  _Delay_Us
- .text            0x00058c         0x34 build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
-                  0x00058c                  _BUTTON_IsPressed
-                  0x0005ae                  _BUTTON_Enable
- .text            0x0005c0         0x1a build/dspic33ep512mu810/production/_ext/1360937237/hexdec.o
-                  0x0005c0                  _HexDec
- .text            0x0005da         0x1a build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
-                  0x0005da                  _Init_Timer1
+.text             0x0003a4        0x2e6
+ .text            0x0003a4        0x14c build/dspic33ep512mu810/production/_ext/60018555/main_rtc.o
+                  0x0003a4                  _Update_LCD
+                  0x000434                  _main
+ .text            0x0004f0         0xc8 build/dspic33ep512mu810/production/_ext/60018555/lcd_exp16brd.o
+                  0x0004f0                  _LCD_Cmd
+                  0x00050e                  _Init_LCD
+                  0x00057e                  _LCD_Data
+                  0x0005a2                  _Puts_LCD
+ .text            0x0005b8         0x6a build/dspic33ep512mu810/production/_ext/1360937237/delay.o
+                  0x0005b8                  _Delay
+                  0x0005d2                  _Delay_Us
+ .text            0x000622         0x34 build/dspic33ep512mu810/production/_ext/1360937237/buttons.o
+                  0x000622                  _BUTTON_IsPressed
+                  0x000644                  _BUTTON_Enable
+ .text            0x000656         0x1a build/dspic33ep512mu810/production/_ext/1360937237/hexdec.o
+                  0x000656                  _HexDec
+ .text            0x000670         0x1a build/dspic33ep512mu810/production/_ext/1360937237/init_timer1.o
+                  0x000670                  _Init_Timer1
 
-.dinit            0x0005f4         0x16
- .dinit           0x0005f4         0x16 data_init
+.dinit            0x00068a         0x16
+ .dinit           0x00068a         0x16 data_init
 
-.text             0x00060a         0x10
- .text            0x00060a         0x10 build/dspic33ep512mu810/production/_ext/1360937237/en_sec_osc.o
-                  0x00060a                  _EnSecOsc
+.text             0x0006a0         0x14
+ .text            0x0006a0         0x10 build/dspic33ep512mu810/production/_ext/1360937237/en_sec_osc.o
+                  0x0006a0                  _EnSecOsc
+ .text            0x0006b0          0x4 build/dspic33ep512mu810/production/_ext/60018555/isr_timer1.o
+                  0x0006b0                  _changeStatus

@@ -105,6 +105,9 @@ int main( void )
 #endif
     hours, minutes,
         seconds = 0;
+    hourss, minutess,
+        secondss = 0;
+    status = 0;
 
     // Configure Oscillator to operate the device at 60Mhz
     // Fosc= Fin*M/(N1*N2), Fcy=Fosc/2
@@ -141,6 +144,7 @@ int main( void )
     
     //Button T0
     BUTTON_Enable(BUTTON_S3);
+    BUTTON_Enable(BUTTON_S6);
     
      Puts_LCD( ( uint8_t * ) "Hello", 5 );
     line_2();
@@ -160,7 +164,14 @@ int main( void )
     while( 1 )
     {
 
-        
+    if(BUTTON_IsPressed(BUTTON_S6) == true)
+    {
+        changeStatus(1);
+    }
+    if(BUTTON_IsPressed(BUTTON_S3) == true)
+    {
+        changeStatus(0);
+    }
     
 #ifdef TEST_MODE
           if( rtc_Lcd_Update )
@@ -198,18 +209,38 @@ int main( void )
  *****************************************************************************/
 void Update_LCD( void )
 {
-    HexDec( hours );
-    line_2();
-    LCD_Data( tens + 0x30 );
-    LCD_Data( ones + 0x30 );
-    Puts_LCD( ( uint8_t * ) " : ", 3 );
+    if(status == 0)
+    {
+        HexDec( hours );
+        line_2();
+        LCD_Data( tens + 0x30 );
+        LCD_Data( ones + 0x30 );
+        Puts_LCD( ( uint8_t * ) " : ", 3 );
 
-    HexDec( minutes );
-    LCD_Data( tens + 0x30 );
-    LCD_Data( ones + 0x30 );
-    Puts_LCD( ( uint8_t * ) " : ", 3 );
+        HexDec( minutes );
+        LCD_Data( tens + 0x30 );
+        LCD_Data( ones + 0x30 );
+        Puts_LCD( ( uint8_t * ) " : ", 3 );
 
-    HexDec( seconds );
-    LCD_Data( tens + 0x30 );
-    LCD_Data( ones + 0x30 );
+        HexDec( seconds );
+        LCD_Data( tens + 0x30 );
+        LCD_Data( ones + 0x30 );
+    }
+    else
+    {
+        HexDec( hourss );
+        line_2();
+        LCD_Data( tens + 0x30 );
+        LCD_Data( ones + 0x30 );
+        Puts_LCD( ( uint8_t * ) " : ", 3 );
+
+        HexDec( minutess );
+        LCD_Data( tens + 0x30 );
+        LCD_Data( ones + 0x30 );
+        Puts_LCD( ( uint8_t * ) " : ", 3 );
+
+        HexDec( secondss );
+        LCD_Data( tens + 0x30 );
+        LCD_Data( ones + 0x30 );
+    }
 }

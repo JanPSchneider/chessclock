@@ -4,7 +4,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/jansc/OneDrive/_InternetofThings/HochschulefürGestaltung/Semester2/Embedded_Systems/chessclock/src/system_config/exp16/dspic33ep512mu810/isr_timer1.c</file>
+            <file>file:/C:/Users/jansc/OneDrive/_InternetofThings/HochschulefürGestaltung/Semester2/Embedded_Systems/chessclock/src/buttons.h</file>
             <file>file:/C:/Users/jansc/OneDrive/_InternetofThings/HochschulefürGestaltung/Semester2/Embedded_Systems/chessclock/src/system_config/exp16/dspic33ep512mu810/main_rtc.c</file>
+            <file>file:/C:/Users/jansc/OneDrive/_InternetofThings/HochschulefürGestaltung/Semester2/Embedded_Systems/chessclock/src/common_rtc.h</file>
+            <file>file:/C:/Users/jansc/OneDrive/_InternetofThings/HochschulefürGestaltung/Semester2/Embedded_Systems/chessclock/src/buttons.c</file>
+            <file>file:/C:/Users/jansc/OneDrive/_InternetofThings/HochschulefürGestaltung/Semester2/Embedded_Systems/chessclock/src/init_timer1.c</file>
+            <file>file:/C:/Users/jansc/OneDrive/_InternetofThings/HochschulefürGestaltung/Semester2/Embedded_Systems/chessclock/src/system_config/exp16/dspic33ep512mu810/lcd_exp16brd.c</file>
         </group>
     </open-files>
 </project-private>
