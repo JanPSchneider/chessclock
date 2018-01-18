@@ -4,7 +4,7 @@
  * 
  * @brief Erstellung einer Zeiteinheit mithilfe der CPU Frequenz
  * 
- * @date Created on 16.01.2017
+ * @date 11.12.2017
  */
 #include <stdint.h>
 #include <p33EP512MU810.h>

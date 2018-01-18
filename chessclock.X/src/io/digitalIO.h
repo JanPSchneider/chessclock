@@ -4,7 +4,7 @@
  * 
  * @brief Definierung der LED's und Switches bzw. Buttons sowie dem Incrementer
  * 
- * @date Created on 16.01.2017
+ * @date 11.12.2017
  */
 
 #include <stdint.h>

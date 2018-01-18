@@ -1,6 +1,11 @@
- /*************************************************
- * Public Constants (available at http://arduino.cc/en/Tutorial/tone )
- *************************************************/
+/* 
+ * @file  pitches.h
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
+ * 
+ * @brief Public Constants (available at http://arduino.cc/en/Tutorial/tone )
+ * 
+ * @date 11.12.2017
+ */
 
 #define NOTE_B0  31
 #define NOTE_C1  33

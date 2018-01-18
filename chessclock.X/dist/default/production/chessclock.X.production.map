@@ -462,30 +462,30 @@ __FUID0
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x2755
+.debug_info       0x000000       0x275a
  *(.debug_info)
- .debug_info      0x000000       0x132f build/default/production/src/io/digitalIO.o
- .debug_info      0x00132f        0x500 build/default/production/src/lcd/lcd.o
- .debug_info      0x00182f        0x184 build/default/production/src/sound/melodys.o
- .debug_info      0x0019b3        0x653 build/default/production/src/time/time.o
- .debug_info      0x002006        0x74f build/default/production/src/main.o
+ .debug_info      0x000000       0x1330 build/default/production/src/io/digitalIO.o
+ .debug_info      0x001330        0x500 build/default/production/src/lcd/lcd.o
+ .debug_info      0x001830        0x184 build/default/production/src/sound/melodys.o
+ .debug_info      0x0019b4        0x653 build/default/production/src/time/time.o
+ .debug_info      0x002007        0x753 build/default/production/src/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x498
+.debug_abbrev     0x000000        0x4e2
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0xfe build/default/production/src/io/digitalIO.o
- .debug_abbrev    0x0000fe         0xf8 build/default/production/src/lcd/lcd.o
- .debug_abbrev    0x0001f6         0x32 build/default/production/src/sound/melodys.o
- .debug_abbrev    0x000228        0x101 build/default/production/src/time/time.o
- .debug_abbrev    0x000329        0x16f build/default/production/src/main.o
+ .debug_abbrev    0x000000        0x111 build/default/production/src/io/digitalIO.o
+ .debug_abbrev    0x000111         0xf8 build/default/production/src/lcd/lcd.o
+ .debug_abbrev    0x000209         0x32 build/default/production/src/sound/melodys.o
+ .debug_abbrev    0x00023b        0x101 build/default/production/src/time/time.o
+ .debug_abbrev    0x00033c        0x1a6 build/default/production/src/main.o
 
-.debug_line       0x000000        0x678
+.debug_line       0x000000        0x67c
  *(.debug_line)
  .debug_line      0x000000        0x1cf build/default/production/src/io/digitalIO.o
  .debug_line      0x0001cf        0x183 build/default/production/src/lcd/lcd.o
- .debug_line      0x000352         0x42 build/default/production/src/sound/melodys.o
- .debug_line      0x000394        0x117 build/default/production/src/time/time.o
- .debug_line      0x0004ab        0x1cd build/default/production/src/main.o
+ .debug_line      0x000352         0x44 build/default/production/src/sound/melodys.o
+ .debug_line      0x000396        0x117 build/default/production/src/time/time.o
+ .debug_line      0x0004ad        0x1cf build/default/production/src/main.o
 
 .debug_frame      0x000000        0x4ca
  *(.debug_frame)

@@ -4,7 +4,7 @@
  * 
  * @brief Erstellung von Funktionen. Beispielsweise Menü und Einstellungen
  * 
- * @date Created on 16.01.2017
+ * @date 11.12.2017
  */
 
 #include <stdio.h>
@@ -30,6 +30,12 @@ uint16_t white_sec = INIT_TIME_S, black_sec = INIT_TIME_S;
 uint16_t white_turns = 0, black_turns = 0;
 bool white_turn = false, black_turn = false;
 
+/** 
+ * @brief switch LEDs
+ * @param dir
+ * @pre Switching the leds that are shining
+ * @attention !!!
+ */
 void doLEDSwitch(bool dir) {
     beep(50, 1000);
     int i;
@@ -46,6 +52,12 @@ void doLEDSwitch(bool dir) {
     }
 }
 
+/** 
+ * @brief show start screen
+ * @param -
+ * @pre Showing "Welcome to CHESSCLOCK"
+ * @attention if letters are changed change length of string
+ */
 void startSequence() {
     LCD_PutString("Welcome to  ", 16);
     LCD_setPosition(1, 0);
@@ -61,6 +73,12 @@ void startSequence() {
     doLEDSwitch(false);
 }
 
+/** 
+ * @brief open time setting
+ * @param -
+ * @pre open the setting to change the game length
+ * @attention !!!
+ */
 void openTimeSetting() {
     while(digitalRead(INC_SW)) {
         LCD_ClearScreen();
@@ -78,6 +96,12 @@ void openTimeSetting() {
     }
 }
 
+/** 
+ * @brief bonus settings open
+ * @param -
+ * @pre !!!
+ * @attention !!!
+ */
 void openBonusSetting() {
     while(digitalRead(INC_SW)) {
         LCD_ClearScreen();
@@ -95,6 +119,12 @@ void openBonusSetting() {
     }
 }
 
+/** 
+ * @brief open menu
+ * @param -
+ * @pre !!!
+ * @attention !!!
+ */
 void openMenu() {
     LCD_ClearScreen();
     LCD_PutString("Change Settings", 16);
@@ -125,7 +155,12 @@ void openMenu() {
 }
 
 
-
+/** 
+ * @brief show time statistics
+ * @param playerName, playerTime
+ * @pre !!!
+ * @attention !!!
+ */
 void showTimeStat(char* playerName, uint16_t playerTime) {
     LCD_ClearScreen();
     LCD_PutString(playerName, 5); LCD_PutString(" used time:", 11);
@@ -136,6 +171,12 @@ void showTimeStat(char* playerName, uint16_t playerTime) {
     LCD_PutString(string, 16);
 }
 
+/** 
+ * @brief show turns
+ * @param playName, playerTime, turns
+ * @pre !!!
+ * @attention !!!
+ */
 void showAvgStat(char* playerName, uint16_t playerTime, uint16_t turns) {
     LCD_ClearScreen();
     LCD_PutString(playerName, 5); LCD_PutString(" turns:", 11);
@@ -151,6 +192,12 @@ void showAvgStat(char* playerName, uint16_t playerTime, uint16_t turns) {
     }        
 }
 
+/** 
+ * @brief game over screen
+ * @param -
+ * @pre !!!
+ * @attention !!!
+ */
 void showGameOver() {
     LCD_ClearScreen();
     LCD_PutString("## Game Over ##", 15);
@@ -164,6 +211,12 @@ void showGameOver() {
     }    
 }
 
+/** 
+ * @brief handle game over
+ * @param -
+ * @pre happens when game is over
+ * @attention !!!
+ */
 void handleEnding() { 
     showGameOver();
     
@@ -196,6 +249,12 @@ void handleEnding() {
     beep(1000, 100);
 }
 
+/** 
+ * @brief reset game
+ * @param -
+ * @pre !!!
+ * @attention !!!
+ */
 void resetGame() {
     black_turn = false;
     white_turn = false;
@@ -205,6 +264,12 @@ void resetGame() {
     white_turns = 0;
 }
 
+/** 
+ * @brief show clock
+ * @param -
+ * @pre !!!
+ * @attention !!!
+ */
 void showClock() {
     char string[16];
     LCD_ClearScreen();
@@ -216,6 +281,12 @@ void showClock() {
     LCD_PutString(string, 16);
 }
 
+/** 
+ * @brief loop
+ * @param -
+ * @pre !!!
+ * @attention !!!
+ */
 void loop() {    
     while(1) {
         
@@ -270,8 +341,11 @@ void loop() {
     }
 }
 
-/*
- * 
+/** 
+ * @brief main
+ * @param argc, argv
+ * @pre main part of CHESSCLOCK to keep everything working
+ * @attention only works if everything
  */
 int main(int argc, char** argv) {
        

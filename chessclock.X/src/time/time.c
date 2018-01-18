@@ -4,7 +4,7 @@
  * 
  * @brief 
  * 
- * @date Created on 16.01.2017
+ * @date 11.12.2017
  */
 
 #include "time.h"
@@ -32,10 +32,22 @@ void delay_ms(uint16_t ms){
 
 }
 
+/** 
+ * @brief !!!
+ * @param us
+ * @pre !!!
+ * @attention !!!
+ */
 void delay_us(uint16_t us) {
     __delay_us(us);
 }
 
+/** 
+ * @brief beeping
+ * @param ms, freq
+ * @pre !!!
+ * @attention !!!
+ */
 void beep(uint16_t ms, uint16_t freq) {
     ms /= 10; // Only 10ms duration steps for higher freq resolution
     uint16_t freq_loop = freq/100; // 1/100 second to do in each loop
@@ -54,6 +66,12 @@ void beep(uint16_t ms, uint16_t freq) {
 
 }
 
+/** 
+ * @brief init timer 1
+ * @param -
+ * @pre initialise timer 1.
+ * @attention timer 1 uses 16 Bit.
+ */
 void initT1(){
     T1CONbits.TON = 0; // Enable Timer
     T1CONbits.TCS = 0; // Select internal instruction cycle clock

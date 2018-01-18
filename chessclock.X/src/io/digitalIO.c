@@ -18,6 +18,12 @@
 // LED 0...3: PB8..11
 // INC.A=G0; INC.B=G1; INC.SW=G9
 
+/** 
+ * @brief pinMode
+ * @param pin, mode
+ * @pre !!!
+ * @attention !!!
+ */
 void pinMode(uint16_t pin, uint8_t mode) {
     switch(pin) {
         case LED200:
@@ -141,6 +147,12 @@ void pinMode(uint16_t pin, uint8_t mode) {
     }
 }
 
+/** 
+ * @brief digital Ream
+ * @param pin
+ * @pre !!!
+ * @attention !!!
+ */
 uint8_t digitalRead(uint16_t pin) {
     switch(pin) {
         case SW200:
@@ -169,6 +181,12 @@ uint8_t digitalRead(uint16_t pin) {
     return 0;
 }
 
+/** 
+ * @brief digitalWrite
+ * @param pin, mode
+ * @pre !!!
+ * @attention !!!
+ */
 void digitalWrite(uint16_t pin, uint8_t mode) {
     switch(pin) {
         case LED200:
@@ -186,11 +204,23 @@ void digitalWrite(uint16_t pin, uint8_t mode) {
     }
 }
 
+/** 
+ * @brief digitalWriteLEDs
+ * @param mask
+ * @pre !!!
+ * @attention !!!
+ */
 void digitalWriteLEDs(uint16_t mask) {
     LATB &= 0xF0FF; // clear all four LEDs
     LATB |= (mask << 8); // set bits again
 }
 
+/** 
+ * @brief initEncoder
+ * @param -
+ * @pre initialise the encode
+ * @attention !!!
+ */
 void initEncoder() {
     // Set Encoder Pins as digital Inputs
     // Note: ANSEL G0,1 not existing, always digital
@@ -206,6 +236,12 @@ void initEncoder() {
     
 }
 
+/** 
+ * @brief readEncoderPulse
+ * @param -
+ * @pre !!!
+ * @attention !!!
+ */
 int8_t readEncoderPulse() {
     bool inc_a = digitalRead(INC_A);
     while (inc_a == digitalRead(INC_A)) { // do nothing while state stays the same
@@ -220,6 +256,12 @@ int8_t readEncoderPulse() {
     }
 }
 
+/** 
+ * @brief initPiezo
+ * @param -
+ * @pre initialize the piezo
+ * @attention !!!
+ */
 void initPiezo() {
     //Piezo Output
     ANSELGbits.ANSG8 = 0;

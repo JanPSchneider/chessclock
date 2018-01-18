@@ -1,8 +1,13 @@
-// DSPIC33EP512MU810 Configuration Bit Settings
-
-// 'C' source line config statements
-
-// Generated using Window / PIC Memory Views / Configuration Bits
+/* 
+ * @file  myxc.h
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
+ * 
+ * @brief DSPIC33EP512MU810 Configuration Bit Settings <br>
+ *        'C' source line config statements <br>
+ *        Generated using Window / PIC Memory Views / Configuration Bits
+ * 
+ * @date 11.12.2017
+ */
 
 // FGS
 #pragma config GWRP = OFF               // General Segment Write-Protect bit (General Segment may be written)
