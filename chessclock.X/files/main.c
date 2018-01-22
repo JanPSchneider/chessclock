@@ -416,14 +416,14 @@ void loop() {
  */
 int main(int argc, char** argv) {
        
-    pinMode(LED200, OUTPUT);
-    pinMode(LED201, OUTPUT);
-    pinMode(LED202, OUTPUT);
-    pinMode(LED203, OUTPUT);    
-    pinMode(SW200, INPUT_PULLUP);
-    pinMode(SW201, INPUT_PULLUP);
-    pinMode(SW202, INPUT_PULLUP);
-    pinMode(SW203, INPUT_PULLUP);
+    pinInit(LED200);
+    pinInit(LED201);
+    pinInit(LED202);
+    pinInit(LED203);    
+    pinInit(SW200);
+    pinInit(SW201);
+    pinInit(SW202);
+    pinInit(SW203);
     
     initEncoder();
     initT1(); 

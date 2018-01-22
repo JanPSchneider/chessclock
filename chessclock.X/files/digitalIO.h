@@ -39,7 +39,7 @@
 extern "C" {
 #endif
 
-void pinMode(uint16_t pin, uint8_t mode);
+void pinInit(uint16_t pin);
 void digitalWrite(uint16_t pin, uint8_t mode);
 void digitalWriteLEDs(uint16_t mask);
 uint8_t digitalRead(uint16_t pin);

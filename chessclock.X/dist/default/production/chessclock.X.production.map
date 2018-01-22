@@ -111,12 +111,12 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0xbd6          0x11c1  (4545)
 .const                       0xdd6               0x18e           0x255  (597)
-.text                        0xf64               0xc96          0x12e1  (4833)
-.dinit                      0x1bfa                0x4e            0x75  (117)
-.init.delay32               0x1c48                0x1c            0x2a  (42)
-.text                       0x1c64                0x18            0x24  (36)
+.text                        0xf64               0xac6          0x1029  (4137)
+.dinit                      0x1a2a                0x4e            0x75  (117)
+.init.delay32               0x1a78                0x1c            0x2a  (42)
+.text                       0x1a94                0x18            0x24  (36)
 
-                 Total program memory used (bytes):         0x27ba  (10170) 1%
+                 Total program memory used (bytes):         0x2502  (9474) 1%
 
 
 Auxflash Memory  [Origin = 0x7fc000, Length = 0x3ffa]
@@ -213,47 +213,47 @@ External Symbols in Program Memory (by address):
                   0x001364                  _showClock
                   0x0013d4                  _loop
                   0x001490                  _main
-                  0x0014d8                  _pinMode
-                  0x00172e                  _digitalRead
-                  0x001796                  _digitalWrite
-                  0x00180c                  _digitalWriteLEDs
-                  0x001826                  _initEncoder
-                  0x00183a                  _readEncoderPulse
-                  0x001880                  _initPiezo
-                  0x00188c                  _LCD_Initialize
-                  0x0018cc                  _LCD_PutString
-                  0x0018fe                  _LCD_PutChar
-                  0x001998                  _LCD_ClearScreen
-                  0x0019ba                  _LCD_CarriageReturn
-                  0x0019e2                  _LCD_ShiftCursorLeft
-                  0x001a38                  _LCD_ShiftCursorRight
-                  0x001a7e                  _LCD_ShiftCursorUp
-                  0x001a94                  _LCD_ShiftCursorDown
-                  0x001aaa                  _LCD_Wait
-                  0x001ac8                  _LCD_CursorEnable
-                  0x001af0                  _LCD_setPosition
-                  0x001b38                  _delay_ms
-                  0x001b5a                  _delay_us
-                  0x001b7c                  _beep
-                  0x001bda                  _initT1
-                  0x001c48                  ___delay32
-                  0x001c64                  _playStartMelody
+                  0x0014c8                  _LCD_Initialize
+                  0x001508                  _LCD_PutString
+                  0x00153a                  _LCD_PutChar
+                  0x0015d4                  _LCD_ClearScreen
+                  0x0015f6                  _LCD_CarriageReturn
+                  0x00161e                  _LCD_ShiftCursorLeft
+                  0x001674                  _LCD_ShiftCursorRight
+                  0x0016ba                  _LCD_ShiftCursorUp
+                  0x0016d0                  _LCD_ShiftCursorDown
+                  0x0016e6                  _LCD_Wait
+                  0x001704                  _LCD_CursorEnable
+                  0x00172c                  _LCD_setPosition
+                  0x001774                  _pinInit
+                  0x00180a                  _digitalRead
+                  0x001872                  _digitalWrite
+                  0x0018e8                  _digitalWriteLEDs
+                  0x001902                  _initEncoder
+                  0x001916                  _readEncoderPulse
+                  0x00195c                  _initPiezo
+                  0x001968                  _delay_ms
+                  0x00198a                  _delay_us
+                  0x0019ac                  _beep
+                  0x001a0a                  _initT1
+                  0x001a78                  ___delay32
+                  0x001a94                  _playStartMelody
                   0xf80004                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0019ba                  _LCD_CarriageReturn
-                  0x001998                  _LCD_ClearScreen
-                  0x001ac8                  _LCD_CursorEnable
-                  0x00188c                  _LCD_Initialize
-                  0x0018fe                  _LCD_PutChar
-                  0x0018cc                  _LCD_PutString
-                  0x001a94                  _LCD_ShiftCursorDown
-                  0x0019e2                  _LCD_ShiftCursorLeft
-                  0x001a38                  _LCD_ShiftCursorRight
-                  0x001a7e                  _LCD_ShiftCursorUp
-                  0x001aaa                  _LCD_Wait
-                  0x001af0                  _LCD_setPosition
+                  0x0015f6                  _LCD_CarriageReturn
+                  0x0015d4                  _LCD_ClearScreen
+                  0x001704                  _LCD_CursorEnable
+                  0x0014c8                  _LCD_Initialize
+                  0x00153a                  _LCD_PutChar
+                  0x001508                  _LCD_PutString
+                  0x0016d0                  _LCD_ShiftCursorDown
+                  0x00161e                  _LCD_ShiftCursorLeft
+                  0x001674                  _LCD_ShiftCursorRight
+                  0x0016ba                  _LCD_ShiftCursorUp
+                  0x0016e6                  _LCD_Wait
+                  0x00172c                  _LCD_setPosition
                   0x0002fe                  __DefaultInterrupt
                   0xf80004                  __FGS.sec
                   0x000b38                  __Litob
@@ -261,7 +261,7 @@ External Symbols in Program Memory (by name):
                   0x0008f0                  __Vacopy
                   0x0005ee                  ___Printf_cdnopuxX
                   0x0008f4                  ___Putfld_cdnopuxX
-                  0x001c48                  ___delay32
+                  0x001a78                  ___delay32
                   0x000470                  ___divdi3
                   0x000db2                  ___divsi3
                   0x0004d0                  ___moddi3
@@ -277,17 +277,17 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
                   0x0005d0                  __sprintf_cdnopuxX
-                  0x001b7c                  _beep
-                  0x001b38                  _delay_ms
-                  0x001b5a                  _delay_us
-                  0x00172e                  _digitalRead
-                  0x001796                  _digitalWrite
-                  0x00180c                  _digitalWriteLEDs
+                  0x0019ac                  _beep
+                  0x001968                  _delay_ms
+                  0x00198a                  _delay_us
+                  0x00180a                  _digitalRead
+                  0x001872                  _digitalWrite
+                  0x0018e8                  _digitalWriteLEDs
                   0x000f64                  _doLEDSwitch
                   0x0012c8                  _handleEnding
-                  0x001826                  _initEncoder
-                  0x001880                  _initPiezo
-                  0x001bda                  _initT1
+                  0x001902                  _initEncoder
+                  0x00195c                  _initPiezo
+                  0x001a0a                  _initT1
                   0x0013d4                  _loop
                   0x001490                  _main
                   0x000752                  _memcpy
@@ -295,9 +295,9 @@ External Symbols in Program Memory (by name):
                   0x001090                  _openCredits
                   0x001118                  _openMenu
                   0x000ff4                  _openTimeSetting
-                  0x0014d8                  _pinMode
-                  0x001c64                  _playStartMelody
-                  0x00183a                  _readEncoderPulse
+                  0x001774                  _pinInit
+                  0x001a94                  _playStartMelody
+                  0x001916                  _readEncoderPulse
                   0x00134e                  _resetGame
                   0x00123c                  _showAvgStat
                   0x001364                  _showClock
@@ -466,30 +466,30 @@ __FUID0
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x27ca
+.debug_info       0x000000       0x2710
  *(.debug_info)
- .debug_info      0x000000       0x132f build/default/production/files/digitalIO.o
- .debug_info      0x00132f        0x4fe build/default/production/files/lcd.o
- .debug_info      0x00182d        0x7cd build/default/production/files/main.o
- .debug_info      0x001ffa        0x180 build/default/production/files/melodys.o
- .debug_info      0x00217a        0x650 build/default/production/files/time.o
+ .debug_info      0x000000       0x12fd build/default/production/files/digitalIO.o
+ .debug_info      0x0012fd        0x4dc build/default/production/files/lcd.o
+ .debug_info      0x0017d9        0x7ab build/default/production/files/main.o
+ .debug_info      0x001f84        0x15e build/default/production/files/melodys.o
+ .debug_info      0x0020e2        0x62e build/default/production/files/time.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x4f1
+.debug_abbrev     0x000000        0x4de
  *(.debug_abbrev)
- .debug_abbrev    0x000000        0x111 build/default/production/files/digitalIO.o
- .debug_abbrev    0x000111         0xf8 build/default/production/files/lcd.o
- .debug_abbrev    0x000209        0x1b5 build/default/production/files/main.o
- .debug_abbrev    0x0003be         0x32 build/default/production/files/melodys.o
- .debug_abbrev    0x0003f0        0x101 build/default/production/files/time.o
+ .debug_abbrev    0x000000         0xfe build/default/production/files/digitalIO.o
+ .debug_abbrev    0x0000fe         0xf8 build/default/production/files/lcd.o
+ .debug_abbrev    0x0001f6        0x1b5 build/default/production/files/main.o
+ .debug_abbrev    0x0003ab         0x32 build/default/production/files/melodys.o
+ .debug_abbrev    0x0003dd        0x101 build/default/production/files/time.o
 
-.debug_line       0x000000        0x6a1
+.debug_line       0x000000        0x630
  *(.debug_line)
- .debug_line      0x000000        0x1ce build/default/production/files/digitalIO.o
- .debug_line      0x0001ce        0x181 build/default/production/files/lcd.o
- .debug_line      0x00034f        0x1fe build/default/production/files/main.o
- .debug_line      0x00054d         0x40 build/default/production/files/melodys.o
- .debug_line      0x00058d        0x114 build/default/production/files/time.o
+ .debug_line      0x000000        0x15d build/default/production/files/digitalIO.o
+ .debug_line      0x00015d        0x181 build/default/production/files/lcd.o
+ .debug_line      0x0002de        0x1fe build/default/production/files/main.o
+ .debug_line      0x0004dc         0x40 build/default/production/files/melodys.o
+ .debug_line      0x00051c        0x114 build/default/production/files/time.o
 
 .debug_frame      0x000000        0x4e6
  *(.debug_frame)
@@ -3348,8 +3348,8 @@ __c30_signature
 .const              0x8dd6        0x18e load address 0x000dd6  
  .const             0x8dd6        0x18e build/default/production/files/main.o
 
-.text             0x000f64        0xc96
- .text            0x000f64        0x574 build/default/production/files/main.o
+.text             0x000f64        0xac6
+ .text            0x000f64        0x564 build/default/production/files/main.o
                   0x000f64                  _doLEDSwitch
                   0x000fae                  _startSequence
                   0x000ff4                  _openTimeSetting
@@ -3364,40 +3364,40 @@ __c30_signature
                   0x001364                  _showClock
                   0x0013d4                  _loop
                   0x001490                  _main
- .text            0x0014d8        0x3b4 build/default/production/files/digitalIO.o
-                  0x0014d8                  _pinMode
-                  0x00172e                  _digitalRead
-                  0x001796                  _digitalWrite
-                  0x00180c                  _digitalWriteLEDs
-                  0x001826                  _initEncoder
-                  0x00183a                  _readEncoderPulse
-                  0x001880                  _initPiezo
- .text            0x00188c        0x2ac build/default/production/files/lcd.o
-                  0x00188c                  _LCD_Initialize
-                  0x0018cc                  _LCD_PutString
-                  0x0018fe                  _LCD_PutChar
-                  0x001998                  _LCD_ClearScreen
-                  0x0019ba                  _LCD_CarriageReturn
-                  0x0019e2                  _LCD_ShiftCursorLeft
-                  0x001a38                  _LCD_ShiftCursorRight
-                  0x001a7e                  _LCD_ShiftCursorUp
-                  0x001a94                  _LCD_ShiftCursorDown
-                  0x001aaa                  _LCD_Wait
-                  0x001ac8                  _LCD_CursorEnable
-                  0x001af0                  _LCD_setPosition
- .text            0x001b38         0xc2 build/default/production/files/time.o
-                  0x001b38                  _delay_ms
-                  0x001b5a                  _delay_us
-                  0x001b7c                  _beep
-                  0x001bda                  _initT1
+ .text            0x0014c8        0x2ac build/default/production/files/lcd.o
+                  0x0014c8                  _LCD_Initialize
+                  0x001508                  _LCD_PutString
+                  0x00153a                  _LCD_PutChar
+                  0x0015d4                  _LCD_ClearScreen
+                  0x0015f6                  _LCD_CarriageReturn
+                  0x00161e                  _LCD_ShiftCursorLeft
+                  0x001674                  _LCD_ShiftCursorRight
+                  0x0016ba                  _LCD_ShiftCursorUp
+                  0x0016d0                  _LCD_ShiftCursorDown
+                  0x0016e6                  _LCD_Wait
+                  0x001704                  _LCD_CursorEnable
+                  0x00172c                  _LCD_setPosition
+ .text            0x001774        0x1f4 build/default/production/files/digitalIO.o
+                  0x001774                  _pinInit
+                  0x00180a                  _digitalRead
+                  0x001872                  _digitalWrite
+                  0x0018e8                  _digitalWriteLEDs
+                  0x001902                  _initEncoder
+                  0x001916                  _readEncoderPulse
+                  0x00195c                  _initPiezo
+ .text            0x001968         0xc2 build/default/production/files/time.o
+                  0x001968                  _delay_ms
+                  0x00198a                  _delay_us
+                  0x0019ac                  _beep
+                  0x001a0a                  _initT1
 
-.dinit            0x001bfa         0x4e
- .dinit           0x001bfa         0x4e data_init
+.dinit            0x001a2a         0x4e
+ .dinit           0x001a2a         0x4e data_init
 
-.init.delay32     0x001c48         0x1c
- .init.delay32    0x001c48         0x1c c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
-                  0x001c48                  ___delay32
+.init.delay32     0x001a78         0x1c
+ .init.delay32    0x001a78         0x1c c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
+                  0x001a78                  ___delay32
 
-.text             0x001c64         0x18
- .text            0x001c64         0x18 build/default/production/files/melodys.o
-                  0x001c64                  _playStartMelody
+.text             0x001a94         0x18
+ .text            0x001a94         0x18 build/default/production/files/melodys.o
+                  0x001a94                  _playStartMelody

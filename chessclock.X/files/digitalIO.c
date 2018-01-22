@@ -24,125 +24,77 @@
  * @pre !!!
  * @attention !!!
  */
-void pinMode(uint16_t pin, uint8_t mode) {
+void pinInit(uint16_t pin) {
     switch(pin) {
         case LED200:
             ANSELBbits.ANSB8=0;   //Digital I/O
             CNENBbits.CNIEB8=0;   // Disable Interrrupt
-            if(mode == INPUT || mode == OUTPUT) {
-                TRISBbits.TRISB8=mode; // Input/Output
-                CNPUBbits.CNPUB8=0; CNPDBbits.CNPDB8=0; // No Pull up or down
-            } else if (mode == INPUT_PULLUP){
-                TRISBbits.TRISB8= 1; //Input
-                CNPUBbits.CNPUB8=1;
-            } else if(mode == INPUT_PULLDOWN) {
-                TRISBbits.TRISB8= 1; // Input
-                CNPDBbits.CNPDB8=1;
-            }
+            TRISBbits.TRISB8=0; // Input/Output
+            CNPUBbits.CNPUB8=0; CNPDBbits.CNPDB8=0; // No Pull up or down
+            
             break;
             
         case LED201:
             ANSELBbits.ANSB9=0;   //Digital I/O
             CNENBbits.CNIEB9=0;   // Disable Interrrupt
-            if(mode == INPUT || mode == OUTPUT) {
-                TRISBbits.TRISB9=mode; // Input/Output
-                CNPUBbits.CNPUB9=0; CNPDBbits.CNPDB9=0; // No Pull up or down
-            } else if (mode == INPUT_PULLUP){
-                TRISBbits.TRISB9= 1; //Input
-                CNPUBbits.CNPUB9=1;
-            } else if(mode == INPUT_PULLDOWN) {
-                TRISBbits.TRISB9= 1; // Input
-                CNPDBbits.CNPDB9=1;
-            }
+            TRISBbits.TRISB9=0; // Input/Output
+            CNPUBbits.CNPUB9=0; CNPDBbits.CNPDB9=0; // No Pull up or down
+            
             break;
             
         case LED202:
             ANSELBbits.ANSB10=0;   //Digital I/O
             CNENBbits.CNIEB10=0;   // Disable Interrrupt
-            if(mode == INPUT || mode == OUTPUT) {
-                TRISBbits.TRISB10=mode; // Input/Output
-                CNPUBbits.CNPUB10=0; CNPDBbits.CNPDB10=0; // No Pull up or down
-            } else if (mode == INPUT_PULLUP){
-                TRISBbits.TRISB10= 1; //Input
-                CNPUBbits.CNPUB10=1;
-            } else if(mode == INPUT_PULLDOWN) {
-                TRISBbits.TRISB10= 1; // Input
-                CNPDBbits.CNPDB10=1;
-            }
+            TRISBbits.TRISB10=0; // Input/Output
+            CNPUBbits.CNPUB10=0; CNPDBbits.CNPDB10=0; // No Pull up or down
+
             break;
             
         case LED203:
             ANSELBbits.ANSB11=0;   //Digital I/O
             CNENBbits.CNIEB11=0;   // Disable Interrrupt
-            if(mode == INPUT || mode == OUTPUT) {
-                TRISBbits.TRISB11=mode; // Input/Output
-                CNPUBbits.CNPUB11=0; CNPDBbits.CNPDB11=0; // No Pull up or down
-            } else if (mode == INPUT_PULLUP){
-                TRISBbits.TRISB11= 1; //Input
-                CNPUBbits.CNPUB11=1;
-            } else if(mode == INPUT_PULLDOWN) {
-                TRISBbits.TRISB11= 1; // Input
-                CNPDBbits.CNPDB11=1;
-            }
+            TRISBbits.TRISB11=0; // Input/Output
+            CNPUBbits.CNPUB11=0; CNPDBbits.CNPDB11=0; // No Pull up or down
+                
             break;
         
         case SW200:
             //ANSELGbits.ANSG12=0;   //Digital I/O
             CNENGbits.CNIEG12=0;   // Disable Interrrupt
-            if(mode == INPUT || mode == OUTPUT) {
-                TRISGbits.TRISG12=mode; // Input/Output
-                CNPUGbits.CNPUG12=0; CNPDGbits.CNPDG12=0; // No Pull up or down
-            } else if (mode == INPUT_PULLUP){
-                TRISGbits.TRISG12= 1; //Input
-                CNPUGbits.CNPUG12=1;
-            } else if(mode == INPUT_PULLDOWN) {
-                TRISGbits.TRISG12= 1; // Input
-                CNPDGbits.CNPDG12=1;
-            }
+            TRISGbits.TRISG12=1; // Input/Output
+            CNPUGbits.CNPUG12=0; CNPDGbits.CNPDG12=0; // No Pull up or down
+            TRISGbits.TRISG12= 1; //Input
+            CNPUGbits.CNPUG12=1;
+
             break;
         case SW201:
             //ANSELGbits.ANSG13=0;   //Digital I/O
             CNENGbits.CNIEG13=0;   // Disable Interrrupt
-            if(mode == INPUT || mode == OUTPUT) {
-                TRISGbits.TRISG13=mode; // Input/Output
-                CNPUGbits.CNPUG13=0; CNPDGbits.CNPDG13=0; // No Pull up or down
-            } else if (mode == INPUT_PULLUP){
-                TRISGbits.TRISG13= 1; //Input
-                CNPUGbits.CNPUG13=1;
-            } else if(mode == INPUT_PULLDOWN) {
-                TRISGbits.TRISG13= 1; // Input
-                CNPDGbits.CNPDG13=1;
-            }
+            TRISGbits.TRISG13=1; // Input/Output
+            CNPUGbits.CNPUG13=0; CNPDGbits.CNPDG13=0; // No Pull up or down
+            TRISGbits.TRISG13= 1; //Input
+            CNPUGbits.CNPUG13=1;
+
             break;
         
         case SW202:
             //ANSELGbits.ANSG14=0;   //Digital I/O
             CNENGbits.CNIEG14=0;   // Disable Interrrupt
-            if(mode == INPUT || mode == OUTPUT) {
-                TRISGbits.TRISG14=mode; // Input/Output
-                CNPUGbits.CNPUG14=0; CNPDGbits.CNPDG14=0; // No Pull up or down
-            } else if (mode == INPUT_PULLUP){
-                TRISGbits.TRISG14= 1; //Input
-                CNPUGbits.CNPUG14=1;
-            } else if(mode == INPUT_PULLDOWN) {
-                TRISGbits.TRISG14= 1; // Input
-                CNPDGbits.CNPDG14=1;
-            }
+            TRISGbits.TRISG14=1; // Input/Output
+            CNPUGbits.CNPUG14=0; CNPDGbits.CNPDG14=0; // No Pull up or down
+            TRISGbits.TRISG14= 1; //Input
+            CNPUGbits.CNPUG14=1;
+
             break;
             
         case SW203:
             //ANSELGbits.ANSG15=0;   //Digital I/O
             CNENGbits.CNIEG15=0;   // Disable Interrrupt
-            if(mode == INPUT || mode == OUTPUT) {
-                TRISGbits.TRISG15=mode; // Input/Output
-                CNPUGbits.CNPUG15=0; CNPDGbits.CNPDG15=0; // No Pull up or down
-            } else if (mode == INPUT_PULLUP){
-                TRISGbits.TRISG15= 1; //Input
-                CNPUGbits.CNPUG15=1;
-            } else if(mode == INPUT_PULLDOWN) {
-                TRISGbits.TRISG15= 1; // Input
-                CNPDGbits.CNPDG15=1;
-            }
+            TRISGbits.TRISG15=1; // Input/Output
+            CNPUGbits.CNPUG15=0; CNPDGbits.CNPDG15=0; // No Pull up or down
+            TRISGbits.TRISG15= 1; //Input
+            CNPUGbits.CNPUG15=1;
+                
             break;
     }
 }
