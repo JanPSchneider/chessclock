@@ -25,7 +25,7 @@
 
 uint16_t initTime = INIT_TIME;
 int16_t extra_time = EXTRA_TIME;
-int16_t scrolls2 = SCROLLING;
+int16_t scrolls3 = SCROLLING;
 
 uint16_t playertwo_sec = INIT_TIME, playerone_sec = INIT_TIME;
 uint16_t playerone_turns = 0, playertwo_turns = 0;
@@ -129,56 +129,56 @@ void openCredits() {
     LCD_setPosition(1,0);
     LCD_PutString("Students: ", 16);
     while(digitalRead(INC_SW)){
-        scrolls2 += readEncoder();
-        if(scrolls2 == 0){
+        scrolls3 += readEncoder();
+        if(scrolls3 == 0){
             LCD_ClearScreen();
             LCD_PutString("Created by: ", 16);
             LCD_setPosition(1,0);
             LCD_PutString("Students: ", 16);
         }
-        else if(scrolls2 == 1){
+        else if(scrolls3 == 1){
             LCD_ClearScreen();
             LCD_PutString("Students: ", 16);
             LCD_setPosition(1,0);
             LCD_PutString("Jan Schneider", 16);
         }
-        else if(scrolls2 == 2){
+        else if(scrolls3 == 2){
             LCD_ClearScreen();
             LCD_PutString("Jan Schneider", 16);
             LCD_setPosition(1,0);
             LCD_PutString("Tobias Haag", 16);
        }
-        else if(scrolls2 == 3){
+        else if(scrolls3 == 3){
             LCD_ClearScreen();
             LCD_PutString("Tobias Haag", 16);
             LCD_setPosition(1,0);
             LCD_PutString("Marcus Schoch", 16);
         }
-        else if(scrolls2 == 4){
+        else if(scrolls3 == 4){
             LCD_ClearScreen();
             LCD_PutString("Marcus Schoch", 16);
             LCD_setPosition(1,0);
             LCD_PutString("Felix Suess", 16);
         }
-        else if(scrolls2 == 5){
+        else if(scrolls3 == 5){
             LCD_ClearScreen();
             LCD_PutString("Felix Suess", 16);
             LCD_setPosition(1,0);
             LCD_PutString(" ", 16);
         }
-        else if(scrolls2 == 6){
+        else if(scrolls3 == 6){
             LCD_ClearScreen();
             LCD_PutString(" ", 16);
             LCD_setPosition(1,0);
             LCD_PutString("Special Thanks ", 16);
         }
-        else if(scrolls2 == 7){
+        else if(scrolls3 == 7){
             LCD_ClearScreen();
             LCD_PutString("Special Thanks ", 16);
             LCD_setPosition(1,0);
             LCD_PutString("to our Prof ", 16);
         }
-        else if(scrolls2 == 8){
+        else if(scrolls3 == 8){
             LCD_ClearScreen();
             LCD_PutString("to our Prof ", 16);
             LCD_setPosition(1,0);
@@ -203,31 +203,47 @@ void openMenu() {
     int8_t secondLine;
     int8_t thirdLine;
     int8_t scrolls1 = -1;
+    int8_t scrolls2 = scrolls1 - 1;
     while(digitalRead(INC_SW)) {
         scrolls1 += readEncoder();
         if (scrolls1 != 0) {                  
-            if(scrolls1 == 1){
+            if(scrolls1 == 1 && scrolls1 > scrolls2){
                 LCD_ClearScreen();
                 LCD_PutString("> Set total time", 16);
                 LCD_PutString("  Set turn bonus", 16);                      
             }
-            else if(scrolls1 == 2){
+            else if(scrolls1 == 2 && scrolls1 > scrolls2){
                 LCD_ClearScreen();
                 LCD_PutString("  Set total time\n", 16);
                 LCD_PutString("> Set turn bonus", 16);
                                        
             }
-            else if(scrolls1 == 3){
-                   LCD_ClearScreen();
-                   LCD_PutString("  Set turn bonus", 16);
-                   LCD_setPosition(1,0);
-                   LCD_PutString("> Credits", 16);
+            else if(scrolls1 >= 3 && scrolls1 > scrolls2){
+                LCD_ClearScreen();
+                LCD_PutString("  Set turn bonus", 16);
+                LCD_setPosition(1,0);
+                LCD_PutString("> Credits", 16);
             }
+            else if(scrolls1 == 2 && scrolls1 < scrolls2){
+                LCD_ClearScreen();
+                LCD_PutString("> Set turn bonus", 16);
+                LCD_setPosition(1,0);
+                LCD_PutString("  Credits", 16);
+            }
+            else if(scrolls1 == 1 && scrolls1 < scrolls2){
+                LCD_ClearScreen();
+                LCD_PutString("> Set total time\n", 16);
+                LCD_setPosition(1,0);
+                LCD_PutString("  Set turn bonus", 16);
+            }
+        if(scrolls2 != scrolls1){    
+            scrolls2 = scrolls1; 
+        }
         }                 
     }  
     firstLine = scrolls1 == 1;
     secondLine = scrolls1 == 2;
-    thirdLine = scrolls1 == 3;
+    thirdLine = scrolls1 >= 3;
    
    feedback(1000, 1000);
    if (firstLine) {
