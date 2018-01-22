@@ -37,27 +37,28 @@ uint8_t mutedStatus = 0;
  * @param argc, argv
  * @attention Funktioniert nur wenn der Rest des Codes abrufbar bzw vorhanden ist.
  */
-int main(int argc, char** argv) {
-       
+int main(int argc, char** argv)
+{
+
     initPin(LED_1);
     initPin(LED_2);
     initPin(LED_3);
-    initPin(LED_4);    
+    initPin(LED_4);
     initPin(BUTTON_T0);
     initPin(BUTTON_T1);
     initPin(BUTTON_T2);
     initPin(BUTTON_T3);
-    
+
     initEncoder();
-    initTimer(); 
-    initPiezo();    
+    initTimer();
+    initPiezo();
     LCD_Initialize();
-    
+
     initialization();
     delay_ms(1000);
 
-    loop();    
-    
+    loop();
+
     return (EXIT_SUCCESS);
 }
 
@@ -65,11 +66,12 @@ int main(int argc, char** argv) {
  * @brief Schleife des Programmes.
  * @attention Funktioniert nur der Rest des Codes abrufbar bzw. vorhanden ist.
  */
-void loop() {    
-    while(1) {
-        
+void loop()
+{
+    while (1) {
+
         while (IFS0bits.T1IF == 0) {
-            if(!digitalRead(BUTTON_T0) && !playertwo_turn) {
+            if (!digitalRead(BUTTON_T0) && !playertwo_turn) {
                 playertwo_turns++;
                 playertwo_sec += extra_time;
                 playertwo_turn = true;
@@ -77,7 +79,7 @@ void loop() {
                 showClock();
                 changeLED(false);
             }
-            if(!digitalRead(BUTTON_T3) && !playerone_turn) {
+            if (!digitalRead(BUTTON_T3) && !playerone_turn) {
                 playerone_turns++;
                 playerone_sec += extra_time;
                 playertwo_turn = false;
@@ -87,34 +89,36 @@ void loop() {
             }
         }
         // Check if Timer overflowed
-        if(IFS0bits.T1IF == 1){
+        if (IFS0bits.T1IF == 1) {
             // reset Timer
-            IFS0bits.T1IF = 0; 
+            IFS0bits.T1IF = 0;
             TMR1 = 0x00;
             PR1 = 62500; // 1 sec
-            
+
             ClrWdt(); // Reset Watchdog
-            
-            if(!digitalRead(INC_SW)) { // Open Settings
-                openMenu();                
+
+            if (!digitalRead(INC_SW)) { // Open Settings
+                openMenu();
                 resetGame();
             }
-            
-            if(playertwo_turn) {
+
+            if (playertwo_turn) {
                 playertwo_sec--;
-            } else if(playerone_turn) {
+            }
+            else if (playerone_turn) {
                 playerone_sec--;
-            } else {
+            }
+            else {
                 digitalWriteLEDs(0b0110);
             }
-            
+
             // Stop game on timeout or manual button press
-            if(playerone_sec == 0 || playertwo_sec == 0 || !digitalRead(BUTTON_T1)) {
+            if (playerone_sec == 0 || playertwo_sec == 0 || !digitalRead(BUTTON_T1)) {
                 handleEnding();
                 resetGame();
             }
         }
-        
+
         showClock();
     }
 }
@@ -123,21 +127,23 @@ void loop() {
  * @brief LEDs umschalten
  * @param change
  */
-void changeLED(bool change) {
-    
-        feedback(50, 800, mutedStatus);
-    
+void changeLED(bool change)
+{
+
+    feedback(50, 800, mutedStatus);
+
     int i;
-    if(change) { // von rechts nach links
+    if (change) { // von rechts nach links
         for (i = 8; i <= 11; i++) {
             digitalWriteLEDs(1 << i);
             delay_ms(50);
-        }        
-    } else { // von links nach rechts
+        }
+    }
+    else { // von links nach rechts
         for (i = 11; i >= 8; i--) {
             digitalWriteLEDs(1 << i);
             delay_ms(50);
-        } 
+        }
     }
 }
 
@@ -145,11 +151,12 @@ void changeLED(bool change) {
  * @brief Anzeige des Start Screens und LED-Startsequenz
  * @attention Wenn die Wortlänge geändert wird, muss die Länge des Stings geändert werden.
  */
-void initialization() {
+void initialization()
+{
     LCD_PutString("Welcome to  ", 16);
     LCD_setPosition(1, 0);
     LCD_PutString("CHESSCLOCK", 16);
-    
+
     changeLED(true);
     changeLED(false);
 }
@@ -158,20 +165,22 @@ void initialization() {
  * @brief Öffnet die Einstellungen um die Länge des Spiels zu ändern.
  * @attention Maximale Spielzeit beträgt 90 Minuten.
  */
-void timeSetting() {
-    while(digitalRead(INC_SW)) {
+void timeSetting()
+{
+    while (digitalRead(INC_SW)) {
         LCD_ClearScreen();
         char buffer[16];
-        sprintf(buffer, "Set Time: %02d min", initTime/60); //02: minimale Länge von 2 Chars, d: signed decimal integer
+        sprintf(buffer, "Set Time: %02d min", initTime / 60); //02: minimale Länge von 2 Chars, d: signed decimal integer
         LCD_PutString(buffer, 16);
-        
+
         initTime += readEncoder()*60;
-        
-        if(initTime < MIN_TIME) {
+
+        if (initTime < MIN_TIME) {
             initTime = MIN_TIME;
-        } else if(initTime > MAX_TIME) {
+        }
+        else if (initTime > MAX_TIME) {
             initTime = MAX_TIME;
-        }        
+        }
     }
 }
 
@@ -179,20 +188,22 @@ void timeSetting() {
  * @brief Öffnet die Einstellung Zusatzzeit je Zug einzustellen.
  * @attention Maximale Bonus Zeit beträgt 60 Sekunden
  */
-void bonusSetting() {
-    while(digitalRead(INC_SW)) {
+void bonusSetting()
+{
+    while (digitalRead(INC_SW)) {
         LCD_ClearScreen();
         char buffer[16];
         sprintf(buffer, "Set Bonus: %2d s", extra_time);
         LCD_PutString(buffer, 16);
-        
+
         extra_time += readEncoder();
-        
-        if(extra_time < 0) {
+
+        if (extra_time < 0) {
             extra_time = 0;
-        } else if(extra_time > MAX_EXTRA_TIME) {
+        }
+        else if (extra_time > MAX_EXTRA_TIME) {
             extra_time = MAX_EXTRA_TIME;
-        }       
+        }
     }
 }
 
@@ -200,179 +211,187 @@ void bonusSetting() {
  * @brief Schaltet Feedback Töne ein oder aus.
  * @attention Es wird eventuell schwieriger die Schachuhr zu bedienen.
  */
-void muted(){   
-    if(mutedStatus == 1){
+void muted()
+{
+    if (mutedStatus == 1) {
         mutedStatus = 0;
     }
-    else{
+    else {
         mutedStatus = 1;
     }
 }
 
-
 /** 
  * @brief  Öffnet das Menü um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits anzusehen.
  */
-void openMenu() {
+void openMenu()
+{
     LCD_ClearScreen();
     LCD_PutString("Settings", 16);
     feedback(1000, 800, mutedStatus);
- 
-   
+
+
     int8_t firstLine;
     int8_t secondLine;
     int8_t thirdLine;
     int8_t fourthLine;
     int8_t scrolls1 = -1;
     int8_t scrolls2 = scrolls1 - 1;
-    while(digitalRead(INC_SW)) {
+    while (digitalRead(INC_SW)) {
         scrolls1 += readEncoder();
-        if (scrolls1 != 0) {                  
-            if(scrolls1 == 1 && scrolls1 > scrolls2){
+        if (scrolls1 != 0) {
+            if (scrolls1 == 1 && scrolls1 > scrolls2) {
                 LCD_ClearScreen();
                 LCD_PutString("> Set total time", 16);
-                LCD_PutString("  Set turn bonus", 16);                      
+                LCD_PutString("  Set turn bonus", 16);
             }
-            else if(scrolls1 == 2 && scrolls1 > scrolls2){
+            else if (scrolls1 == 2 && scrolls1 > scrolls2) {
                 LCD_ClearScreen();
                 LCD_PutString("  Set total time\n", 16);
                 LCD_PutString("> Set turn bonus", 16);
-                                       
+
             }
-            else if(scrolls1 == 3 && scrolls1 > scrolls2){
+            else if (scrolls1 == 3 && scrolls1 > scrolls2) {
                 LCD_ClearScreen();
                 LCD_PutString("  Set turn bonus", 16);
-                LCD_setPosition(1,0);
+                LCD_setPosition(1, 0);
                 LCD_PutString("> Sounds On/Off", 16);
             }
-            else if(scrolls1 >= 4 && scrolls1 > scrolls2){
+            else if (scrolls1 >= 4 && scrolls1 > scrolls2) {
                 LCD_ClearScreen();
                 LCD_PutString("  Sounds On/Off", 16);
-                LCD_setPosition(1,0);
+                LCD_setPosition(1, 0);
                 LCD_PutString("> Credits", 16);
             }
-            else if(scrolls1 == 3 && scrolls1 < scrolls2){
+            else if (scrolls1 == 3 && scrolls1 < scrolls2) {
                 LCD_ClearScreen();
                 LCD_PutString("> Sounds On/Off", 16);
-                LCD_setPosition(1,0);
+                LCD_setPosition(1, 0);
                 LCD_PutString("  Credits", 16);
             }
-            else if(scrolls1 == 2 && scrolls1 < scrolls2){
+            else if (scrolls1 == 2 && scrolls1 < scrolls2) {
                 LCD_ClearScreen();
                 LCD_PutString("> Set turn bonus", 16);
-                LCD_setPosition(1,0);
+                LCD_setPosition(1, 0);
                 LCD_PutString("  Sounds On/Off", 16);
             }
-            else if(scrolls1 == 1 && scrolls1 < scrolls2){
+            else if (scrolls1 == 1 && scrolls1 < scrolls2) {
                 LCD_ClearScreen();
                 LCD_PutString("> Set total time\n", 16);
-                LCD_setPosition(1,0);
+                LCD_setPosition(1, 0);
                 LCD_PutString("  Set turn bonus", 16);
             }
-            else if(scrolls1 >= 4){
+            else if (scrolls1 >= 4) {
                 scrolls1 = 4;
             }
-            else if(scrolls1 <= 0){
+            else if (scrolls1 <= 0) {
                 scrolls1 = 1;
             }
-        if(scrolls2 != scrolls1){    
-            scrolls2 = scrolls1; 
+            if (scrolls2 != scrolls1) {
+                scrolls2 = scrolls1;
+            }
         }
-        }                 
-    }  
+    }
     firstLine = scrolls1 == 1;
     secondLine = scrolls1 == 2;
     thirdLine = scrolls1 == 3;
     fourthLine = scrolls1 >= 4;
-   
+
     feedback(1000, 800, mutedStatus);
 
-   if (firstLine) {
-       timeSetting();
-   }
-   else if(secondLine) {
-       bonusSetting();
-   }
-   else if(thirdLine){
-       muted();
-   }
-   else if(fourthLine) {
-       credits();
-   }   
+    if (firstLine) {
+        timeSetting();
+    }
+    else if (secondLine) {
+        bonusSetting();
+    }
+    else if (thirdLine) {
+        muted();
+    }
+    else if (fourthLine) {
+        credits();
+    }
 
-    feedback(1000, 1200, mutedStatus);   
+    feedback(1000, 1200, mutedStatus);
 }
 
 /** 
  * @brief Zeigt die pro Spieler gebrauchte Zeit an.
  * @param playerName, playerTime
  */
-void showTimePlayedStats(char* playerName, uint16_t playerTime) {
+void showTimePlayedStats(char* playerName, uint16_t playerTime)
+{
     LCD_ClearScreen();
-    LCD_PutString(playerName, 5); LCD_PutString(" used time:", 11);
+    LCD_PutString(playerName, 5);
+    LCD_PutString(" used time:", 11);
     uint16_t used_sec = initTime - playerTime;
     char string[16];
     LCD_setPosition(1, 0);
-    sprintf(string, "%02d:%02d min (%d%%)", used_sec/60, used_sec%60, used_sec*100/initTime);
+    sprintf(string, "%02d:%02d min (%d%%)", used_sec / 60, used_sec % 60, used_sec * 100 / initTime);
     LCD_PutString(string, 16);
 }
 
 /** 
  * @brief "Game Over" Screen. Kann durch Tastendruck bei einem Sieg hervorgerufen werden oder öffnet sich wenn die Zeit eines Spielers abgelaufen ist.
  */
-void showGameOver() {
+void showGameOver()
+{
     LCD_ClearScreen();
     LCD_PutString("   Game Over ", 15);
     LCD_setPosition(1, 0);
-    if(playerone_sec == 0) {
+    if (playerone_sec == 0) {
         LCD_PutString("Two Timeout!", 16);
-    } else if(playertwo_sec == 0) {
+    }
+    else if (playertwo_sec == 0) {
         LCD_PutString("One Timeout!", 16);
-    } else {
+    }
+    else {
         LCD_PutString("    in time    ", 14);
-    }    
+    }
 }
 
 /** 
  * @brief Definiert was nach einem "Game Over" passiert. Es kann hier nun durch Tastendruck T2 die Statistiken aufgerufen werden
  */
-void handleEnding() { 
+void handleEnding()
+{
     showGameOver();
-    
-    while(digitalRead(BUTTON_T2)) {
+
+    while (digitalRead(BUTTON_T2)) {
         Nop();
     }
-    
+
     uint8_t i = 0;
     while (digitalRead(BUTTON_T1)) {
-        if(!digitalRead(BUTTON_T2)) {
-            switch(i) {
-                case 0:
-                  showTimePlayedStats("P One", playerone_sec);
-                  break;
-                case 1:
-                  showTimePlayedStats("P Two", playertwo_sec);
-                  break;
-                default:
-                    LCD_ClearScreen();
-                    LCD_PutString(" Fail ", 16); 
-                  break;
+        if (!digitalRead(BUTTON_T2)) {
+            switch (i) {
+            case 0:
+                showTimePlayedStats("P One", playerone_sec);
+                break;
+            case 1:
+                showTimePlayedStats("P Two", playertwo_sec);
+                break;
+            default:
+                LCD_ClearScreen();
+                LCD_PutString(" Fail ", 16);
+                break;
             }
             i++;
             i %= 2; // maximal zwei Meldungen
-     
-        feedback(500, 800, mutedStatus);
-         
+
+            feedback(500, 800, mutedStatus);
+
         }
     }
-        feedback(1000, 150, mutedStatus);
-  
+    feedback(1000, 150, mutedStatus);
+
 }
 
 /** 
  * @brief Setzt das Spiel auf die Standard Werte zurück.
  */
-void resetGame() {
+void resetGame()
+{
     playerone_turn = false;
     playertwo_turn = false;
     playerone_sec = initTime;
@@ -387,13 +406,14 @@ void resetGame() {
  * @pre !!!
  * @attention !!!
  */
-void showClock() {
+void showClock()
+{
     char string[16];
     LCD_ClearScreen();
-    sprintf(string, "%2d.P One: %02d:%02d", playerone_turns, playerone_sec/60, playerone_sec%60);
+    sprintf(string, "%2d.P One: %02d:%02d", playerone_turns, playerone_sec / 60, playerone_sec % 60);
     LCD_setPosition(0, 0);
     LCD_PutString(string, 16);
-    sprintf(string, "%2d.P Two: %02d:%02d", playertwo_turns, playertwo_sec/60, playertwo_sec%60);
+    sprintf(string, "%2d.P Two: %02d:%02d", playertwo_turns, playertwo_sec / 60, playertwo_sec % 60);
     LCD_setPosition(1, 0);
     LCD_PutString(string, 16);
 }
@@ -401,65 +421,66 @@ void showClock() {
 /** 
  * @brief Öffnet die Credits: Studenten & Professor.
  */
-void credits() {
+void credits()
+{
     LCD_ClearScreen();
     LCD_PutString("Created by: ", 16);
-    LCD_setPosition(1,0);
+    LCD_setPosition(1, 0);
     LCD_PutString("Students: ", 16);
-    while(digitalRead(INC_SW)){
+    while (digitalRead(INC_SW)) {
         scrolls3 += readEncoder();
-        if(scrolls3 == 0){
+        if (scrolls3 == 0) {
             LCD_ClearScreen();
             LCD_PutString("Created by: ", 16);
-            LCD_setPosition(1,0);
+            LCD_setPosition(1, 0);
             LCD_PutString("Students: ", 16);
         }
-        else if(scrolls3 == 1){
+        else if (scrolls3 == 1) {
             LCD_ClearScreen();
             LCD_PutString("Students: ", 16);
-            LCD_setPosition(1,0);
+            LCD_setPosition(1, 0);
             LCD_PutString("Jan Schneider", 16);
         }
-        else if(scrolls3 == 2){
+        else if (scrolls3 == 2) {
             LCD_ClearScreen();
             LCD_PutString("Jan Schneider", 16);
-            LCD_setPosition(1,0);
+            LCD_setPosition(1, 0);
             LCD_PutString("Tobias Haag", 16);
-       }
-        else if(scrolls3 == 3){
+        }
+        else if (scrolls3 == 3) {
             LCD_ClearScreen();
             LCD_PutString("Tobias Haag", 16);
-            LCD_setPosition(1,0);
+            LCD_setPosition(1, 0);
             LCD_PutString("Marcus Schoch", 16);
         }
-        else if(scrolls3 == 4){
+        else if (scrolls3 == 4) {
             LCD_ClearScreen();
             LCD_PutString("Marcus Schoch", 16);
-            LCD_setPosition(1,0);
+            LCD_setPosition(1, 0);
             LCD_PutString("Felix Suess", 16);
         }
-        else if(scrolls3 == 5){
+        else if (scrolls3 == 5) {
             LCD_ClearScreen();
             LCD_PutString("Felix Suess", 16);
-            LCD_setPosition(1,0);
+            LCD_setPosition(1, 0);
             LCD_PutString(" ", 16);
         }
-        else if(scrolls3 == 6){
+        else if (scrolls3 == 6) {
             LCD_ClearScreen();
             LCD_PutString(" ", 16);
-            LCD_setPosition(1,0);
+            LCD_setPosition(1, 0);
             LCD_PutString("Special Thanks ", 16);
         }
-        else if(scrolls3 == 7){
+        else if (scrolls3 == 7) {
             LCD_ClearScreen();
             LCD_PutString("Special Thanks ", 16);
-            LCD_setPosition(1,0);
+            LCD_setPosition(1, 0);
             LCD_PutString("to our Prof ", 16);
         }
-        else if(scrolls3 == 8){
+        else if (scrolls3 == 8) {
             LCD_ClearScreen();
             LCD_PutString("to our Prof ", 16);
-            LCD_setPosition(1,0);
+            LCD_setPosition(1, 0);
             LCD_PutString("Juergen Schuele ", 16);
         }
     }
