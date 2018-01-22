@@ -123,40 +123,73 @@ void openBonusSetting() {
     }
 }
 
-
+/** 
+ * @brief open credits
+ * @param -
+ * @pre Shows students and Prof.
+ * @attention !!!
+ */
 void openCredits() {
-    while(digitalRead(INC_SW)){
-    scrolls2 += readEncoderPulse();
-    
-    if(scrolls2 > 0){
-        LCD_ClearScreen();
-        LCD_PutString("Created by: ", 16);
-    }
-    
-    if(scrolls2 > 1){
-        LCD_setPosition(1,0);
-        LCD_PutString("Jan Schneider", 16);
-    }
-     if(scrolls2 > 2){
-        LCD_ClearScreen();
-        LCD_PutString("Jan Schneider", 16);
-        LCD_setPosition(1,0);
-        LCD_PutString("Tobias Haag", 16);
-    }
-     if(scrolls2 > 3){
-        LCD_ClearScreen();
-        LCD_PutString("Tobias Haag", 16);
-        LCD_setPosition(1,0);
-        LCD_PutString("Marcus Schoch", 16);
-    }
-     if(scrolls2 > 4){
-        LCD_ClearScreen();
-        LCD_PutString("Marcus Schoch", 16);
-        LCD_setPosition(1,0);
-        LCD_PutString("Felix Suess", 16);
-    }
-    
-  }
+   while(digitalRead(INC_SW)){
+   scrolls2 += readEncoderPulse();
+   
+   if(scrolls2 == 0){
+       LCD_ClearScreen();
+       LCD_PutString("Created by: ", 16);
+       LCD_setPosition(1,0);
+       LCD_PutString("Students: ", 16);
+   }
+   
+   if(scrolls2 == 1){
+       LCD_ClearScreen();
+       LCD_PutString("Students: ", 16);
+       LCD_setPosition(1,0);
+       LCD_PutString("Jan Schneider", 16);
+   }
+    if(scrolls2 == 2){
+       LCD_ClearScreen();
+       LCD_PutString("Jan Schneider", 16);
+       LCD_setPosition(1,0);
+       LCD_PutString("Tobias Haag", 16);
+   }
+    if(scrolls2 == 3){
+       LCD_ClearScreen();
+       LCD_PutString("Tobias Haag", 16);
+       LCD_setPosition(1,0);
+       LCD_PutString("Marcus Schoch", 16);
+   }
+    if(scrolls2 == 4){
+       LCD_ClearScreen();
+       LCD_PutString("Marcus Schoch", 16);
+       LCD_setPosition(1,0);
+       LCD_PutString("Felix Suess", 16);
+   }
+   if(scrolls2 == 5){
+       LCD_ClearScreen();
+       LCD_PutString("Felix Suess", 16);
+       LCD_setPosition(1,0);
+       LCD_PutString(" ", 16);
+   }
+    if(scrolls2 == 6){
+       LCD_ClearScreen();
+       LCD_PutString(" ", 16);
+       LCD_setPosition(1,0);
+       LCD_PutString("Special Thanks ", 16);
+   }
+   if(scrolls2 == 7){
+       LCD_ClearScreen();
+       LCD_PutString("Special Thanks ", 16);
+       LCD_setPosition(1,0);
+       LCD_PutString("to our Prof ", 16);
+   }
+   if(scrolls2 == 8){
+       LCD_ClearScreen();
+       LCD_PutString("to our Prof ", 16);
+       LCD_setPosition(1,0);
+       LCD_PutString("Juergen Schuele ", 16);
+   }
+   
+ }
 }
 
 
@@ -167,59 +200,59 @@ void openCredits() {
  * @attention !!!
  */
 void openMenu() {
-    LCD_ClearScreen();
-    LCD_PutString("Settings", 16);
-    beep(1000, 1000);
-    
-    bool firstLine;
-    bool secondLine;
-    bool thirdLine;
-    int8_t scrolls1 = -1;
-    int8_t pulse = -1; // Set to first line (-1 means backward rotation)
-    while(digitalRead(INC_SW)) {
-        pulse = readEncoderPulse();
-        scrolls1 += readEncoderPulse();
-        if (pulse != 0) {
-            firstLine = pulse < 0;
-            secondLine = pulse < 1;
-            thirdLine = pulse < 2;
-             
-            
-               if(scrolls1 > 0){
+   LCD_ClearScreen();
+   LCD_PutString("Settings", 16);
+   beep(1000, 1000);
+   
+   int8_t firstLine;
+   int8_t secondLine;
+   int8_t thirdLine;
+   int8_t scrolls1 = -1;
+  // int8_t pulse = -1; // Set to first line (-1 means backward rotation)
+   while(digitalRead(INC_SW)) {
+     //  pulse = readEncoderPulse();
+       scrolls1 += readEncoderPulse();
+       if (scrolls1 != 0) {
+                 
+           
+              if(scrolls1 == 1){
+                  LCD_ClearScreen();
+                  LCD_PutString("> Set total time", 16);
+                  LCD_PutString("Set turn bonus", 16);
+                       
+              }
+       
+               if(scrolls1 == 2){
                    LCD_ClearScreen();
-                   LCD_PutString("> Set total time", 16);
-                   LCD_PutString("Set turn bonus", 16);
-       
+                   LCD_PutString("Set total time\n", 16);
+                   LCD_PutString("> Set turn bonus", 16);
+                                       
                }
-        
-                if(scrolls1 > 1){
-                    LCD_ClearScreen();
-                    LCD_PutString("Set total time\n", 16);
-                    LCD_PutString("> Set turn bonus", 16);
-                }
-                if(scrolls1 > 2){
-                    LCD_ClearScreen();
-                    LCD_PutString("Set turn bonus", 16);
-                    LCD_setPosition(1,0);
-                    LCD_PutString("> Credits", 16);
-    }
-            
-            
-            
-        }        
-       
-    }
-    
-    beep(1000, 1000);
-    if (firstLine) {
-        openTimeSetting();
-    } if(secondLine) {
-        openBonusSetting();
-    } if(thirdLine) {
-        openCredits();
-    }
-    
-    beep(1000, 2000);    
+               if(scrolls1 == 3){
+                   LCD_ClearScreen();
+                   LCD_PutString("Set turn bonus", 16);
+                   LCD_setPosition(1,0);
+                   LCD_PutString("> Credits", 16);
+                 }
+               }
+                   
+       }  
+     firstLine = scrolls1 == 1;
+           secondLine = scrolls1 == 2;
+           thirdLine = scrolls1 == 3;
+     
+   
+   
+   beep(1000, 1000);
+   if (firstLine) {
+       openTimeSetting();
+   }if(secondLine) {
+       openBonusSetting();
+   }if(thirdLine) {
+       openCredits();
+   }
+   
+   beep(1000, 2000);    
 }
 
 /** 
