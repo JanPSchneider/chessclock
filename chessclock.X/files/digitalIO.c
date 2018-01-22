@@ -158,13 +158,13 @@ void digitalWrite(uint16_t pin, uint8_t mode) {
 
 /** 
  * @brief digitalWriteLEDs
- * @param mask
+ * @param overwrite
  * @pre !!!
  * @attention !!!
  */
-void digitalWriteLEDs(uint16_t mask) {
+void digitalWriteLEDs(uint16_t overwrite) {
     LATB &= 0xF0FF; // clear all four LEDs
-    LATB |= (mask << 8); // set bits again
+    LATB |= overwrite; // set bits again
 }
 
 /** 

@@ -1,0 +1,6 @@
+<map id="digitalWriteLEDs" name="digitalWriteLEDs">
+<area shape="rect" id="node2" href="$main_8c.html#ad6a8a325993331420e5776ed4975cee9" title="switch LEDs " alt="" coords="172,5,261,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="loop " alt="" coords="331,56,378,83"/>
+<area shape="rect" id="node3" href="$main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="show start screen " alt="" coords="309,5,400,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main " alt="" coords="448,31,499,57"/>
+</map>

@@ -18,51 +18,28 @@
  * @attention Code has to be changed if a different oscillator frequency is used.
  */
 void delay_ms(uint16_t ms){
-//    if (ms == 0) return;
-//    uint16_t ui16_i=0;
-//    while(ms){
-//        for (ui16_i=0;ui16_i<331;ui16_i++){    //1 ms delay loop 331x4?
-//            __asm__ volatile("nop \n\t"
-//                             "nop \n\t"
-//                             "nop \n\t"); //Nop();
-//        }//for
-//        ms--;
-//    }//while
     __delay_ms(ms);
 
 }
 
 /** 
- * @brief !!!
- * @param us
- * @pre !!!
- * @attention !!!
- */
-void delay_us(uint16_t us) {
-    __delay_us(us);
-}
-
-/** 
  * @brief beeping
- * @param ms, freq
+ * @param ms, frequency
  * @pre !!!
  * @attention !!!
  */
-void feedback(uint16_t ms, uint16_t freq, uint8_t muted) {
-    ms /= 10; // Only 10ms duration steps for higher freq resolution
+void feedback(uint16_t ms, uint16_t frequency, uint8_t muted) {
+    ms /= 10; // Only 10ms duration steps for higher frequency resolution
     
-    uint16_t freq_loop = freq/100;
-    uint32_t cycles = (FCY/freq)/2;
+    uint32_t cycles = (FCY/frequency)/2;
     
     if(muted == 1){
         
         while (ms) {
             int i;
-            for (i = 0; i < freq_loop; i++) { 
+            for (i = 0; i < frequency/100; i++) { 
                 __delay32(cycles);
-                LATGbits.LATG8 = 1;
-                __delay32(cycles);
-                LATGbits.LATG8 = 1;
+                LATGbits.LATG8 = 0;
             }
             ms--;
         }
@@ -71,7 +48,7 @@ void feedback(uint16_t ms, uint16_t freq, uint8_t muted) {
        
         while (ms) {
             int i;
-            for (i = 0; i < freq_loop; i++) { 
+            for (i = 0; i < frequency/100; i++) { 
                 __delay32(cycles);
                 LATGbits.LATG8 = 1;
                 __delay32(cycles);

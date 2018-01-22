@@ -1,0 +1,12 @@
+<map id="handleEnding" name="handleEnding">
+<area shape="rect" id="node2" href="$main_8c.html#af6c30e8fd8656312c4eb7136fcb436b8" title="game over screen " alt="" coords="172,5,285,32"/>
+<area shape="rect" id="node8" href="$digital_i_o_8c.html#a5e4162b54ab2f8a428979678ec19b69d" title="digital Read " alt="" coords="185,157,272,184"/>
+<area shape="rect" id="node9" href="$main_8c.html#ac14b1aec4fc054de7bce10f7bdb61674" title="show time statistics " alt="" coords="153,56,304,83"/>
+<area shape="rect" id="node10" href="$main_8c.html#a98b6c659f289f20d5652b549765da2c0" title="show turns " alt="" coords="187,107,270,133"/>
+<area shape="rect" id="node11" href="$time_8c.html#a9347586e17fd4ece0f3a2f98a47e5fb6" title="beeping " alt="" coords="191,208,266,235"/>
+<area shape="rect" id="node3" href="$lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62" title="LCD_ClearScreen" alt="" coords="352,5,477,32"/>
+<area shape="rect" id="node4" href="$lcd_8c.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="361,56,469,83"/>
+<area shape="rect" id="node7" href="$lcd_8c.html#adad847c231be8127a1a4b4004a63a8eb" title="LCD_setPosition" alt="" coords="355,107,474,133"/>
+<area shape="rect" id="node5" href="$lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa" title="LCD_PutChar" alt="" coords="525,56,627,83"/>
+<area shape="rect" id="node6" href="$lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="675,56,815,83"/>
+</map>

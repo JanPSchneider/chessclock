@@ -1,0 +1,10 @@
+<map id="digitalRead" name="digitalRead">
+<area shape="rect" id="node2" href="$digital_i_o_8h.html#a7d44f5215696f8c31471cc5b3190875d" title="readEncoder " alt="" coords="140,117,235,144"/>
+<area shape="rect" id="node3" href="$main_8c.html#a6f2c11876c4935fad45c7e6494b9defe" title="open time setting " alt="" coords="287,168,406,194"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae0b1861d934f61491fad3142725daf56" title="open menu " alt="" coords="467,117,550,144"/>
+<area shape="rect" id="node5" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="loop " alt="" coords="607,117,653,144"/>
+<area shape="rect" id="node7" href="$main_8c.html#a60503c0e44bf2f6b0a85a67c9a0ab698" title="bonus settings open " alt="" coords="283,218,411,245"/>
+<area shape="rect" id="node8" href="$main_8c.html#abb20f8e462766e39d68b66d62fd8844f" title="open credits " alt="" coords="301,66,392,93"/>
+<area shape="rect" id="node9" href="$main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="handle game over " alt="" coords="459,218,559,245"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main " alt="" coords="701,117,752,144"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="LCD_PutChar" name="LCD_PutChar">
+<area shape="rect" id="node2" href="$lcd_8h.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="155,205,263,232"/>
+<area shape="rect" id="node3" href="$main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="show start screen " alt="" coords="657,41,748,68"/>
+<area shape="rect" id="node5" href="$main_8c.html#a6f2c11876c4935fad45c7e6494b9defe" title="open time setting " alt="" coords="327,53,445,80"/>
+<area shape="rect" id="node6" href="$main_8c.html#ae0b1861d934f61491fad3142725daf56" title="open menu " alt="" coords="518,155,601,181"/>
+<area shape="rect" id="node8" href="$main_8c.html#a60503c0e44bf2f6b0a85a67c9a0ab698" title="bonus settings open " alt="" coords="322,155,450,181"/>
+<area shape="rect" id="node9" href="$main_8c.html#abb20f8e462766e39d68b66d62fd8844f" title="open credits " alt="" coords="341,205,431,232"/>
+<area shape="rect" id="node10" href="$main_8c.html#ac14b1aec4fc054de7bce10f7bdb61674" title="show time statistics " alt="" coords="311,256,461,283"/>
+<area shape="rect" id="node12" href="$main_8c.html#a98b6c659f289f20d5652b549765da2c0" title="show turns " alt="" coords="345,307,427,333"/>
+<area shape="rect" id="node13" href="$main_8c.html#af6c30e8fd8656312c4eb7136fcb436b8" title="game over screen " alt="" coords="329,357,443,384"/>
+<area shape="rect" id="node14" href="$main_8c.html#a5449d35a2be928da9c72cae0281b2d67" title="show clock " alt="" coords="517,357,602,384"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main " alt="" coords="796,131,847,157"/>
+<area shape="rect" id="node7" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="loop " alt="" coords="679,219,726,245"/>
+<area shape="rect" id="node11" href="$main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="handle game over " alt="" coords="509,281,609,308"/>
+</map>
