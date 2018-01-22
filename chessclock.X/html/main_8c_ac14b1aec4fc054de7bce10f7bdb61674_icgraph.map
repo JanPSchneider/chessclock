@@ -1,5 +1,5 @@
 <map id="showTimePlayedStats" name="showTimePlayedStats">
-<area shape="rect" id="node2" href="$main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="handle game over " alt="" coords="204,5,304,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="loop " alt="" coords="352,5,399,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main " alt="" coords="447,5,497,32"/>
+<area shape="rect" id="node2" href="$main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="204,5,304,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="Schleife des Programmes. " alt="" coords="352,5,399,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="447,5,497,32"/>
 </map>

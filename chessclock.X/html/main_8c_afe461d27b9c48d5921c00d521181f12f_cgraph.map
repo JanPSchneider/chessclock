@@ -1,24 +1,23 @@
 <map id="loop" name="loop">
-<area shape="rect" id="node2" href="$digital_i_o_8c.html#a5e4162b54ab2f8a428979678ec19b69d" title="digital Read " alt="" coords="627,83,714,110"/>
-<area shape="rect" id="node3" href="$main_8c.html#a5449d35a2be928da9c72cae0281b2d67" title="show clock " alt="" coords="281,438,366,464"/>
-<area shape="rect" id="node9" href="$main_8c.html#ad6a8a325993331420e5776ed4975cee9" title="switch LEDs " alt="" coords="105,691,195,718"/>
-<area shape="rect" id="node11" href="$digital_i_o_8c.html#a6c5d2739ff89c01b75b7e78560e3b3c0" title="digitalWriteLEDs " alt="" coords="264,792,383,819"/>
-<area shape="rect" id="node13" href="$main_8c.html#ae0b1861d934f61491fad3142725daf56" title="open menu " alt="" coords="109,235,191,262"/>
-<area shape="rect" id="node19" href="$main_8c.html#af1de076469d08f717d537d1b6b028566" title="reset game " alt="" coords="107,792,193,819"/>
-<area shape="rect" id="node20" href="$main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="handle game over " alt="" coords="100,590,200,616"/>
-<area shape="rect" id="node4" href="$lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62" title="LCD_ClearScreen" alt="" coords="447,267,572,294"/>
-<area shape="rect" id="node5" href="$lcd_8c.html#adad847c231be8127a1a4b4004a63a8eb" title="LCD_setPosition" alt="" coords="450,463,569,490"/>
-<area shape="rect" id="node6" href="$lcd_8c.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="455,380,563,407"/>
-<area shape="rect" id="node7" href="$lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa" title="LCD_PutChar" alt="" coords="620,380,721,407"/>
-<area shape="rect" id="node8" href="$lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="769,380,909,407"/>
-<area shape="rect" id="node10" href="$time_8c.html#a9347586e17fd4ece0f3a2f98a47e5fb6" title="beeping " alt="" coords="286,691,361,718"/>
-<area shape="rect" id="node12" href="$time_8c.html#aa0dce6d249d81fb85b082273270ba710" title="Provides ms delay. " alt="" coords="284,742,363,768"/>
-<area shape="rect" id="node14" href="$digital_i_o_8c.html#a7d44f5215696f8c31471cc5b3190875d" title="readEncoder " alt="" coords="462,83,557,110"/>
-<area shape="rect" id="node15" href="$main_8c.html#a6f2c11876c4935fad45c7e6494b9defe" title="open time setting " alt="" coords="264,83,383,110"/>
-<area shape="rect" id="node16" href="$main_8c.html#a60503c0e44bf2f6b0a85a67c9a0ab698" title="bonus settings open " alt="" coords="259,134,387,160"/>
-<area shape="rect" id="node17" href="$main_8c.html#afb1e6ff8d2c61894939305cb24a20056" title="openmuted" alt="" coords="280,387,367,414"/>
-<area shape="rect" id="node18" href="$main_8c.html#abb20f8e462766e39d68b66d62fd8844f" title="open credits " alt="" coords="278,184,369,211"/>
-<area shape="rect" id="node21" href="$main_8c.html#af6c30e8fd8656312c4eb7136fcb436b8" title="game over screen " alt="" coords="267,488,380,515"/>
-<area shape="rect" id="node22" href="$main_8c.html#ac14b1aec4fc054de7bce10f7bdb61674" title="show time statistics " alt="" coords="248,539,399,566"/>
-<area shape="rect" id="node23" href="$main_8c.html#a98b6c659f289f20d5652b549765da2c0" title="show turns " alt="" coords="282,590,365,616"/>
+<area shape="rect" id="node2" href="$digital_i_o_8c.html#a5e4162b54ab2f8a428979678ec19b69d" title="digital Read " alt="" coords="627,385,714,412"/>
+<area shape="rect" id="node3" href="$main_8c.html#a5449d35a2be928da9c72cae0281b2d67" title="Zeigt die verbleibende Zeit der Spieler an. " alt="" coords="281,867,366,893"/>
+<area shape="rect" id="node9" href="$main_8c.html#ad6a8a325993331420e5776ed4975cee9" title="LEDs umschalten. " alt="" coords="105,56,195,83"/>
+<area shape="rect" id="node12" href="$digital_i_o_8c.html#abddcace85cc72e5a0763f345ede98746" title="digitalWriteLEDs " alt="" coords="264,5,383,32"/>
+<area shape="rect" id="node14" href="$main_8c.html#ae0b1861d934f61491fad3142725daf56" title="Öffnet das Menü um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits an..." alt="" coords="109,385,191,412"/>
+<area shape="rect" id="node19" href="$main_8c.html#af1de076469d08f717d537d1b6b028566" title="Setzt das Spiel auf die Standard Werte zurück. " alt="" coords="107,689,193,716"/>
+<area shape="rect" id="node20" href="$main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="100,639,200,665"/>
+<area shape="rect" id="node4" href="$lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62" title="LCD_ClearScreen" alt="" coords="447,583,572,609"/>
+<area shape="rect" id="node5" href="$lcd_8c.html#adad847c231be8127a1a4b4004a63a8eb" title="LCD_setPosition" alt="" coords="450,765,569,792"/>
+<area shape="rect" id="node6" href="$lcd_8c.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="455,715,563,741"/>
+<area shape="rect" id="node7" href="$lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa" title="LCD_PutChar" alt="" coords="620,715,721,741"/>
+<area shape="rect" id="node8" href="$lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="769,715,909,741"/>
+<area shape="rect" id="node10" href="$time_8c.html#aa147e4fc062ebcad160b842ff6046653" title="beeping " alt="" coords="286,208,361,235"/>
+<area shape="rect" id="node13" href="$time_8c.html#aa0dce6d249d81fb85b082273270ba710" title="Provides ms delay. " alt="" coords="284,56,363,83"/>
+<area shape="rect" id="node11" href="$main_8c.html#a0b041cda2a7b0bc73178a9ec78abd5cb" title="Schaltet Feedback Töne ein oder aus. " alt="" coords="480,183,539,209"/>
+<area shape="rect" id="node15" href="$digital_i_o_8c.html#a7d44f5215696f8c31471cc5b3190875d" title="readEncoder " alt="" coords="462,385,557,412"/>
+<area shape="rect" id="node16" href="$main_8c.html#aa7305d48b840eb4cffb865d4f4d685e4" title="Öffnet die Einstellungen um die Länge des Spiels zu ändern. " alt="" coords="279,411,367,437"/>
+<area shape="rect" id="node17" href="$main_8c.html#a8e6e40d345b6f76556e3f497c35fb3af" title="Öffnet die Einstellung Zusatzzeit je Zug einzustellen. " alt="" coords="274,360,373,387"/>
+<area shape="rect" id="node18" href="$main_8c.html#a5864f6393c74073a86a19645a5c55f24" title="Öffnet die Credits: Studenten &amp; Professor. " alt="" coords="293,512,354,539"/>
+<area shape="rect" id="node21" href="$main_8c.html#af6c30e8fd8656312c4eb7136fcb436b8" title="&quot;Game Over&quot; Screen. Kann durch Tastendruck bei einem Sieg hervorgerufen werden oder öffnet sich wenn d..." alt="" coords="267,715,380,741"/>
+<area shape="rect" id="node22" href="$main_8c.html#ac14b1aec4fc054de7bce10f7bdb61674" title="Zeigt die pro Spieler gebrauchte Zeit an. " alt="" coords="248,765,399,792"/>
 </map>

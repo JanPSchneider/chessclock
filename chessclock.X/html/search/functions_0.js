@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['changeled',['changeLED',['../main_8c.html#ad6a8a325993331420e5776ed4975cee9',1,'main.c']]]
+  ['bonussetting',['bonusSetting',['../main_8c.html#a8e6e40d345b6f76556e3f497c35fb3af',1,'main.c']]]
 ];
