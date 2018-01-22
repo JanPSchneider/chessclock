@@ -48,20 +48,37 @@ void delay_us(uint16_t us) {
  * @pre !!!
  * @attention !!!
  */
-void feedback(uint16_t ms, uint16_t freq) {
+void feedback(uint16_t ms, uint16_t freq, uint8_t muted) {
     ms /= 10; // Only 10ms duration steps for higher freq resolution
-    uint16_t freq_loop = freq/100; // 1/100 second to do in each loop
+    
+    uint16_t freq_loop = freq/100;
     uint32_t cycles = (FCY/freq)/2;
     
-    while (ms) {
-        int i;
-        for (i = 0; i < freq_loop; i++) { 
-            __delay32(cycles);
-            LATGbits.LATG8 = 1;
-            __delay32(cycles);
-            LATGbits.LATG8 = 0;
+    if(muted == 1){
+        
+        while (ms) {
+            int i;
+            for (i = 0; i < freq_loop; i++) { 
+                __delay32(cycles);
+                LATGbits.LATG8 = 1;
+                __delay32(cycles);
+                LATGbits.LATG8 = 1;
+            }
+            ms--;
         }
-        ms--;
+    }
+    else{
+       
+        while (ms) {
+            int i;
+            for (i = 0; i < freq_loop; i++) { 
+                __delay32(cycles);
+                LATGbits.LATG8 = 1;
+                __delay32(cycles);
+                LATGbits.LATG8 = 0;
+            }
+            ms--;
+        }
     }
 
 }

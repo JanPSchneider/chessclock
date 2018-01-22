@@ -21,7 +21,7 @@ extern "C" {
 
     void delay_ms(uint16_t ms);
     void delay_us(uint16_t us);
-    void feedback(uint16_t ms, uint16_t freq);
+    void feedback(uint16_t ms, uint16_t freq, uint8_t muted);
     void initTimer();
 
 #ifdef	__cplusplus

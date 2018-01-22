@@ -30,6 +30,7 @@ int16_t scrolls3 = SCROLLING;
 uint16_t playertwo_sec = INIT_TIME, playerone_sec = INIT_TIME;
 uint16_t playerone_turns = 0, playertwo_turns = 0;
 bool playertwo_turn = false, playerone_turn = false;
+uint8_t mutedStatus = 0;
 
 /** 
  * @brief switch LEDs
@@ -38,7 +39,9 @@ bool playertwo_turn = false, playerone_turn = false;
  * @attention !!!
  */
 void changeLED(bool change) {
-    feedback(50, 1000);
+    
+        feedback(50, 1000, mutedStatus);
+    
     int i;
     if(change) {
         for (i = 3; i <= 3; i++) {
@@ -187,6 +190,21 @@ void openCredits() {
     }
 }
 
+void openmuted(){
+   
+   
+    if(mutedStatus == 1){
+        mutedStatus = 0;
+           
+    }
+    else{
+        mutedStatus = 1;
+      
+   }
+    
+    
+}
+
 
 /** 
  * @brief open menu
@@ -197,11 +215,13 @@ void openCredits() {
 void openMenu() {
     LCD_ClearScreen();
     LCD_PutString("Settings", 16);
-    feedback(1000, 1000);
+        feedback(1000, 1000, mutedStatus);
+ 
    
     int8_t firstLine;
     int8_t secondLine;
     int8_t thirdLine;
+    int8_t fourthLine;
     int8_t scrolls1 = -1;
     int8_t scrolls2 = scrolls1 - 1;
     while(digitalRead(INC_SW)) {
@@ -218,23 +238,41 @@ void openMenu() {
                 LCD_PutString("> Set turn bonus", 16);
                                        
             }
-            else if(scrolls1 >= 3 && scrolls1 > scrolls2){
+            else if(scrolls1 == 3 && scrolls1 > scrolls2){
                 LCD_ClearScreen();
                 LCD_PutString("  Set turn bonus", 16);
                 LCD_setPosition(1,0);
+                LCD_PutString("> Sounds On/Off", 16);
+            }
+            else if(scrolls1 >= 4 && scrolls1 > scrolls2){
+                LCD_ClearScreen();
+                LCD_PutString("  Sounds On/Off", 16);
+                LCD_setPosition(1,0);
                 LCD_PutString("> Credits", 16);
+            }
+            else if(scrolls1 == 3 && scrolls1 < scrolls2){
+                LCD_ClearScreen();
+                LCD_PutString("> Sounds On/Off", 16);
+                LCD_setPosition(1,0);
+                LCD_PutString("  Credits", 16);
             }
             else if(scrolls1 == 2 && scrolls1 < scrolls2){
                 LCD_ClearScreen();
                 LCD_PutString("> Set turn bonus", 16);
                 LCD_setPosition(1,0);
-                LCD_PutString("  Credits", 16);
+                LCD_PutString("  Sounds On/Off", 16);
             }
             else if(scrolls1 == 1 && scrolls1 < scrolls2){
                 LCD_ClearScreen();
                 LCD_PutString("> Set total time\n", 16);
                 LCD_setPosition(1,0);
                 LCD_PutString("  Set turn bonus", 16);
+            }
+            else if(scrolls1 >= 4){
+                scrolls1 = 4;
+            }
+            else if(scrolls1 <= 0){
+                scrolls1 = 1;
             }
         if(scrolls2 != scrolls1){    
             scrolls2 = scrolls1; 
@@ -243,19 +281,25 @@ void openMenu() {
     }  
     firstLine = scrolls1 == 1;
     secondLine = scrolls1 == 2;
-    thirdLine = scrolls1 >= 3;
+    thirdLine = scrolls1 == 3;
+    fourthLine = scrolls1 >= 4;
    
-   feedback(1000, 1000);
+       feedback(1000, 1000, mutedStatus);
+
    if (firstLine) {
        openTimeSetting();
    }
    else if(secondLine) {
        openBonusSetting();
    }
-   else if(thirdLine) {
+   else if(thirdLine){
+       openmuted();
+   }
+   else if(fourthLine) {
        openCredits();
    }   
-   feedback(1000, 2000);    
+
+       feedback(1000, 2000, mutedStatus);   
 }
 
 /** 
@@ -346,10 +390,13 @@ void handleEnding() {
             }
             i++;
             i %= 4; // Max 4 pages
-            feedback(500, 1000);
+     
+                feedback(500, 1000, mutedStatus);
+         
         }
     }
-    feedback(1000, 100);
+        feedback(1000, 100, mutedStatus);
+  
 }
 
 /** 
@@ -467,6 +514,7 @@ int main(int argc, char** argv) {
     LCD_Initialize();
     
     initialization();
+    delay_ms(1000);
 
     loop();    
     
