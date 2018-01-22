@@ -24,9 +24,9 @@
  * @pre !!!
  * @attention !!!
  */
-void pinInit(uint16_t pin) {
+void initPin(uint16_t pin) {
     switch(pin) {
-        case LED200:
+        case LED_1:
             ANSELBbits.ANSB8=0;   //Digital I/O
             CNENBbits.CNIEB8=0;   // Disable Interrrupt
             TRISBbits.TRISB8=0; // Input/Output
@@ -34,7 +34,7 @@ void pinInit(uint16_t pin) {
             
             break;
             
-        case LED201:
+        case LED_2:
             ANSELBbits.ANSB9=0;   //Digital I/O
             CNENBbits.CNIEB9=0;   // Disable Interrrupt
             TRISBbits.TRISB9=0; // Input/Output
@@ -42,7 +42,7 @@ void pinInit(uint16_t pin) {
             
             break;
             
-        case LED202:
+        case LED_3:
             ANSELBbits.ANSB10=0;   //Digital I/O
             CNENBbits.CNIEB10=0;   // Disable Interrrupt
             TRISBbits.TRISB10=0; // Input/Output
@@ -50,7 +50,7 @@ void pinInit(uint16_t pin) {
 
             break;
             
-        case LED203:
+        case LED_4:
             ANSELBbits.ANSB11=0;   //Digital I/O
             CNENBbits.CNIEB11=0;   // Disable Interrrupt
             TRISBbits.TRISB11=0; // Input/Output
@@ -58,7 +58,7 @@ void pinInit(uint16_t pin) {
                 
             break;
         
-        case SW200:
+        case BUTTON_T0:
             //ANSELGbits.ANSG12=0;   //Digital I/O
             CNENGbits.CNIEG12=0;   // Disable Interrrupt
             TRISGbits.TRISG12=1; // Input/Output
@@ -67,7 +67,7 @@ void pinInit(uint16_t pin) {
             CNPUGbits.CNPUG12=1;
 
             break;
-        case SW201:
+        case BUTTON_T1:
             //ANSELGbits.ANSG13=0;   //Digital I/O
             CNENGbits.CNIEG13=0;   // Disable Interrrupt
             TRISGbits.TRISG13=1; // Input/Output
@@ -77,7 +77,7 @@ void pinInit(uint16_t pin) {
 
             break;
         
-        case SW202:
+        case BUTTON_T2:
             //ANSELGbits.ANSG14=0;   //Digital I/O
             CNENGbits.CNIEG14=0;   // Disable Interrrupt
             TRISGbits.TRISG14=1; // Input/Output
@@ -87,7 +87,7 @@ void pinInit(uint16_t pin) {
 
             break;
             
-        case SW203:
+        case BUTTON_T3:
             //ANSELGbits.ANSG15=0;   //Digital I/O
             CNENGbits.CNIEG15=0;   // Disable Interrrupt
             TRISGbits.TRISG15=1; // Input/Output
@@ -100,23 +100,23 @@ void pinInit(uint16_t pin) {
 }
 
 /** 
- * @brief digital Ream
+ * @brief digital Read
  * @param pin
  * @pre !!!
  * @attention !!!
  */
 uint8_t digitalRead(uint16_t pin) {
     switch(pin) {
-        case SW200:
+        case BUTTON_T0:
             return PORTGbits.RG12;
             break;
-        case SW201:
+        case BUTTON_T1:
             return PORTGbits.RG13;
             break;
-        case SW202:
+        case BUTTON_T2:
             return PORTGbits.RG14;
             break;
-        case SW203:
+        case BUTTON_T3:
             return PORTGbits.RG15;
             break;
             
@@ -141,16 +141,16 @@ uint8_t digitalRead(uint16_t pin) {
  */
 void digitalWrite(uint16_t pin, uint8_t mode) {
     switch(pin) {
-        case LED200:
+        case LED_1:
             LATBbits.LATB8 = mode;
             break;
-        case LED201:
+        case LED_2:
             LATBbits.LATB9 = mode;
             break;
-        case LED202:
+        case LED_3:
             LATBbits.LATB10 = mode;
             break;
-        case LED203:
+        case LED_4:
             LATBbits.LATB11= mode;
             break;
     }
@@ -189,12 +189,12 @@ void initEncoder() {
 }
 
 /** 
- * @brief readEncoderPulse
+ * @brief readEncoder
  * @param -
  * @pre !!!
  * @attention !!!
  */
-int8_t readEncoderPulse() {
+int8_t readEncoder() {
     bool inc_a = digitalRead(INC_A);
     while (inc_a == digitalRead(INC_A)) { // do nothing while state stays the same
         if (!digitalRead(INC_SW)) {

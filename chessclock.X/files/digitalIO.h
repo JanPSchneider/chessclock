@@ -18,15 +18,15 @@
 #define INPUT_PULLUP 2
 #define INPUT_PULLDOWN 3
 
-#define LED200 0 //PB8
-#define LED201 1
-#define LED202 2
-#define LED203 3 //PB11
+#define LED_1 0 //PB8
+#define LED_2 1
+#define LED_3 2
+#define LED_4 3 //PB11
 
-#define SW200 4 //PG12
-#define SW201 5
-#define SW202 6
-#define SW203 7 //PG15
+#define BUTTON_T0 4 //PG12
+#define BUTTON_T1 5
+#define BUTTON_T2 6
+#define BUTTON_T3 7 //PG15
 
 #define INC_A 11
 #define INC_B 12
@@ -39,12 +39,12 @@
 extern "C" {
 #endif
 
-void pinInit(uint16_t pin);
+void initPin(uint16_t pin);
 void digitalWrite(uint16_t pin, uint8_t mode);
 void digitalWriteLEDs(uint16_t mask);
 uint8_t digitalRead(uint16_t pin);
 void initEncoder();
-int8_t readEncoderPulse();
+int8_t readEncoder();
 void initPiezo();
 
 

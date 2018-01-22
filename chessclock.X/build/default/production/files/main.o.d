@@ -3,5 +3,4 @@ files/main.c  \
 files/myxc.h  \
  files/digitalIO.h  \
 files/time.h  \
-files/lcd.h  \
-files/melodys.h 
+files/lcd.h 
