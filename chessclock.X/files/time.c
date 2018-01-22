@@ -8,6 +8,7 @@
  */
 
 #include "time.h"
+
 /** 
  * @brief Provides ms delay
  * @param ms Delay in milliseconds
@@ -19,7 +20,6 @@
  */
 void delay_ms(uint16_t ms){
     __delay_ms(ms);
-
 }
 
 /** 
@@ -44,8 +44,7 @@ void feedback(uint16_t ms, uint16_t frequency, uint8_t muted) {
             ms--;
         }
     }
-    else{
-       
+    else{   
         while (ms) {
             int i;
             for (i = 0; i < frequency/100; i++) { 

@@ -69,7 +69,6 @@ int main(int argc, char** argv)
 void loop()
 {
     while (1) {
-
         while (IFS0bits.T1IF == 0) {
             if (!digitalRead(BUTTON_T0) && !playertwo_turn) {
                 playertwo_turns++;
@@ -101,7 +100,6 @@ void loop()
                 openMenu();
                 resetGame();
             }
-
             if (playertwo_turn) {
                 playertwo_sec--;
             }
@@ -118,7 +116,6 @@ void loop()
                 resetGame();
             }
         }
-
         showClock();
     }
 }
@@ -129,9 +126,7 @@ void loop()
  */
 void changeLED(bool change)
 {
-
     feedback(50, 800, mutedStatus);
-
     int i;
     if (change) { // von rechts nach links
         for (i = 8; i <= 11; i++) {
@@ -229,7 +224,6 @@ void openMenu()
     LCD_ClearScreen();
     LCD_PutString("Settings", 16);
     feedback(1000, 800, mutedStatus);
-
 
     int8_t firstLine;
     int8_t secondLine;
@@ -373,14 +367,13 @@ void handleEnding()
                 break;
             default:
                 LCD_ClearScreen();
-                LCD_PutString(" Fail ", 16);
+                LCD_PutString("! handleEnding", 16);
                 break;
             }
             i++;
             i %= 2; // maximal zwei Meldungen
 
             feedback(500, 800, mutedStatus);
-
         }
     }
     feedback(1000, 150, mutedStatus);

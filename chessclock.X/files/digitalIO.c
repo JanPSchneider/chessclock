@@ -11,6 +11,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <p33EP512MU810.h>
+#include "lcd.h"
 
 #include "digitalIO.h"
 
@@ -30,16 +31,14 @@ void initPin(uint16_t pin) {
             ANSELBbits.ANSB8=0;   //Digital I/O
             CNENBbits.CNIEB8=0;   // Disable Interrrupt
             TRISBbits.TRISB8=0; // Input/Output
-            CNPUBbits.CNPUB8=0; CNPDBbits.CNPDB8=0; // No Pull up or down
-            
+            CNPUBbits.CNPUB8=0; CNPDBbits.CNPDB8=0; // No Pull up or down           
             break;
             
         case LED_2:
             ANSELBbits.ANSB9=0;   //Digital I/O
             CNENBbits.CNIEB9=0;   // Disable Interrrupt
             TRISBbits.TRISB9=0; // Input/Output
-            CNPUBbits.CNPUB9=0; CNPDBbits.CNPDB9=0; // No Pull up or down
-            
+            CNPUBbits.CNPUB9=0; CNPDBbits.CNPDB9=0; // No Pull up or down           
             break;
             
         case LED_3:
@@ -47,15 +46,13 @@ void initPin(uint16_t pin) {
             CNENBbits.CNIEB10=0;   // Disable Interrrupt
             TRISBbits.TRISB10=0; // Input/Output
             CNPUBbits.CNPUB10=0; CNPDBbits.CNPDB10=0; // No Pull up or down
-
             break;
             
         case LED_4:
             ANSELBbits.ANSB11=0;   //Digital I/O
             CNENBbits.CNIEB11=0;   // Disable Interrrupt
             TRISBbits.TRISB11=0; // Input/Output
-            CNPUBbits.CNPUB11=0; CNPDBbits.CNPDB11=0; // No Pull up or down
-                
+            CNPUBbits.CNPUB11=0; CNPDBbits.CNPDB11=0; // No Pull up or down                
             break;
         
         case BUTTON_T0:
@@ -65,8 +62,8 @@ void initPin(uint16_t pin) {
             CNPUGbits.CNPUG12=0; CNPDGbits.CNPDG12=0; // No Pull up or down
             TRISGbits.TRISG12= 1; //Input
             CNPUGbits.CNPUG12=1;
-
             break;
+            
         case BUTTON_T1:
             //ANSELGbits.ANSG13=0;   //Digital I/O
             CNENGbits.CNIEG13=0;   // Disable Interrrupt
@@ -74,7 +71,6 @@ void initPin(uint16_t pin) {
             CNPUGbits.CNPUG13=0; CNPDGbits.CNPDG13=0; // No Pull up or down
             TRISGbits.TRISG13= 1; //Input
             CNPUGbits.CNPUG13=1;
-
             break;
         
         case BUTTON_T2:
@@ -84,7 +80,6 @@ void initPin(uint16_t pin) {
             CNPUGbits.CNPUG14=0; CNPDGbits.CNPDG14=0; // No Pull up or down
             TRISGbits.TRISG14= 1; //Input
             CNPUGbits.CNPUG14=1;
-
             break;
             
         case BUTTON_T3:
@@ -93,8 +88,11 @@ void initPin(uint16_t pin) {
             TRISGbits.TRISG15=1; // Input/Output
             CNPUGbits.CNPUG15=0; CNPDGbits.CNPDG15=0; // No Pull up or down
             TRISGbits.TRISG15= 1; //Input
-            CNPUGbits.CNPUG15=1;
-                
+            CNPUGbits.CNPUG15=1;                
+            break;
+        default:
+            LCD_ClearScreen();
+            LCD_PutString("! initPin", 16);
             break;
     }
 }
@@ -129,6 +127,11 @@ uint8_t digitalRead(uint16_t pin) {
         case INC_SW:
             return PORTGbits.RG9;
             break;
+            
+        default:
+            LCD_ClearScreen();
+            LCD_PutString("! digitalRead", 16);
+            break;
     }
     return 0;
 }
@@ -152,6 +155,10 @@ void digitalWrite(uint16_t pin, uint8_t mode) {
             break;
         case LED_4:
             LATBbits.LATB11= mode;
+            break;
+        default:
+            LCD_ClearScreen();
+            LCD_PutString("! digitalWrite", 16);
             break;
     }
 }
@@ -184,8 +191,7 @@ void initEncoder() {
     // Enable Pullup
     CNPUGbits.CNPUG0=1;
     CNPUGbits.CNPUG1=1;
-    CNPUGbits.CNPUG9=1;
-    
+    CNPUGbits.CNPUG9=1;    
 }
 
 /** 
@@ -203,7 +209,8 @@ int8_t readEncoder() {
     }
     if (!inc_a == digitalRead(INC_B)) { // A == B means backwards rotating, else forwards
         return -1;
-    } else {
+    } 
+    else {
         return 1;
     }
 }

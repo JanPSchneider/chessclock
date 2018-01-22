@@ -12,6 +12,6 @@
 #define FCY  4000000UL // CPU Frequenz für Verzögerungen
 #include <libpic30.h>
 
-    void delay_ms(uint16_t ms);
-    void feedback(uint16_t ms, uint16_t frequency, uint8_t muted);
-    void initTimer();
+void delay_ms(uint16_t ms);
+void feedback(uint16_t ms, uint16_t frequency, uint8_t muted);
+void initTimer();
