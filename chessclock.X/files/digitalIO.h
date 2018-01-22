@@ -1,6 +1,6 @@
 /* 
  * @file  digitalIO.h
- * @author Tobias Haag, Felix SÃ¼ÃŸ, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
  * @brief Definierung der LED's und Switches bzw. Buttons sowie dem Incrementer
  * 
@@ -53,4 +53,3 @@ void initPiezo();
 #endif
 
 #endif	/* DIGITALIO_H */
-

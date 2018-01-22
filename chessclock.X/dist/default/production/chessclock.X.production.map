@@ -16,11 +16,11 @@ Command:
   -Lc:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../support/dsPIC33C/gld \
   -Lc:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../support/dsPIC33F/gld \
-  build/default/production/src/io/digitalIO.o \
-  build/default/production/src/lcd/lcd.o \
-  build/default/production/src/sound/melodys.o \
-  build/default/production/src/time/time.o \
-  build/default/production/src/main.o \
+  build/default/production/files/digitalIO.o \
+  build/default/production/files/lcd.o \
+  build/default/production/files/main.o \
+  build/default/production/files/melodys.o \
+  build/default/production/files/time.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
   -Tp33EP512MU810.gld.00 \
@@ -56,17 +56,17 @@ c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-pic30-elf.
 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normalep.Leo)
                               (__crt_start_mode_normal)
 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
-                              build/default/production/src/time/time.o (___delay32)
+                              build/default/production/files/time.o (___delay32)
 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libm-elf.a(udivsi3.epeo)
-                              build/default/production/src/time/time.o (___udivsi3)
+                              build/default/production/files/time.o (___udivsi3)
 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libm-elf.a(divmoddi3.epeo)
-                              build/default/production/src/time/time.o (___udivdi3)
+                              build/default/production/files/time.o (___udivdi3)
 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libm-elf.a(muldi3.epeo)
-                              build/default/production/src/time/time.o (___muldi3)
+                              build/default/production/files/time.o (___muldi3)
 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libm-elf.a(umuldi3.epeo)
                               c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libm-elf.a(muldi3.epeo) (___umuldi3)
 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.EPeo)
-                              build/default/production/src/main.o (__sprintf_cdnopuxX)
+                              build/default/production/files/main.o (__sprintf_cdnopuxX)
 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.EPeo)
                               c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.EPeo) (___Printf_cdnopuxX)
 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-c-elf.a(memcpy.EP_eo)
@@ -328,11 +328,11 @@ aivt             0x000000           0xffffffff
 
 Linker script and memory map
 
-LOAD build/default/production/src/io/digitalIO.o
-LOAD build/default/production/src/lcd/lcd.o
-LOAD build/default/production/src/sound/melodys.o
-LOAD build/default/production/src/time/time.o
-LOAD build/default/production/src/main.o
+LOAD build/default/production/files/digitalIO.o
+LOAD build/default/production/files/lcd.o
+LOAD build/default/production/files/main.o
+LOAD build/default/production/files/melodys.o
+LOAD build/default/production/files/time.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD p33EP512MU810
 LOAD c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libfx-elf.a
@@ -466,44 +466,44 @@ __FUID0
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x2674
+.debug_info       0x000000       0x27ca
  *(.debug_info)
- .debug_info      0x000000       0x12ea build/default/production/src/io/digitalIO.o
- .debug_info      0x0012ea        0x4ba build/default/production/src/lcd/lcd.o
- .debug_info      0x0017a4        0x13e build/default/production/src/sound/melodys.o
- .debug_info      0x0018e2        0x60d build/default/production/src/time/time.o
- .debug_info      0x001eef        0x785 build/default/production/src/main.o
+ .debug_info      0x000000       0x132f build/default/production/files/digitalIO.o
+ .debug_info      0x00132f        0x4fe build/default/production/files/lcd.o
+ .debug_info      0x00182d        0x7cd build/default/production/files/main.o
+ .debug_info      0x001ffa        0x180 build/default/production/files/melodys.o
+ .debug_info      0x00217a        0x650 build/default/production/files/time.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x4f1
  *(.debug_abbrev)
- .debug_abbrev    0x000000        0x111 build/default/production/src/io/digitalIO.o
- .debug_abbrev    0x000111         0xf8 build/default/production/src/lcd/lcd.o
- .debug_abbrev    0x000209         0x32 build/default/production/src/sound/melodys.o
- .debug_abbrev    0x00023b        0x101 build/default/production/src/time/time.o
- .debug_abbrev    0x00033c        0x1b5 build/default/production/src/main.o
+ .debug_abbrev    0x000000        0x111 build/default/production/files/digitalIO.o
+ .debug_abbrev    0x000111         0xf8 build/default/production/files/lcd.o
+ .debug_abbrev    0x000209        0x1b5 build/default/production/files/main.o
+ .debug_abbrev    0x0003be         0x32 build/default/production/files/melodys.o
+ .debug_abbrev    0x0003f0        0x101 build/default/production/files/time.o
 
-.debug_line       0x000000        0x6a9
+.debug_line       0x000000        0x6a1
  *(.debug_line)
- .debug_line      0x000000        0x1cf build/default/production/src/io/digitalIO.o
- .debug_line      0x0001cf        0x183 build/default/production/src/lcd/lcd.o
- .debug_line      0x000352         0x44 build/default/production/src/sound/melodys.o
- .debug_line      0x000396        0x117 build/default/production/src/time/time.o
- .debug_line      0x0004ad        0x1fc build/default/production/src/main.o
+ .debug_line      0x000000        0x1ce build/default/production/files/digitalIO.o
+ .debug_line      0x0001ce        0x181 build/default/production/files/lcd.o
+ .debug_line      0x00034f        0x1fe build/default/production/files/main.o
+ .debug_line      0x00054d         0x40 build/default/production/files/melodys.o
+ .debug_line      0x00058d        0x114 build/default/production/files/time.o
 
 .debug_frame      0x000000        0x4e6
  *(.debug_frame)
- .debug_frame     0x000000         0xde build/default/production/src/io/digitalIO.o
- .debug_frame     0x0000de        0x164 build/default/production/src/lcd/lcd.o
- .debug_frame     0x000242         0x30 build/default/production/src/sound/melodys.o
- .debug_frame     0x000272         0x84 build/default/production/src/time/time.o
- .debug_frame     0x0002f6        0x1f0 build/default/production/src/main.o
+ .debug_frame     0x000000         0xde build/default/production/files/digitalIO.o
+ .debug_frame     0x0000de        0x164 build/default/production/files/lcd.o
+ .debug_frame     0x000242        0x1f0 build/default/production/files/main.o
+ .debug_frame     0x000432         0x30 build/default/production/files/melodys.o
+ .debug_frame     0x000462         0x84 build/default/production/files/time.o
 
 .debug_str        0x000000        0x125
  *(.debug_str)
- .debug_str       0x000000         0x79 build/default/production/src/io/digitalIO.o
- .debug_str       0x000079         0x1c build/default/production/src/time/time.o
- .debug_str       0x000095         0x90 build/default/production/src/main.o
+ .debug_str       0x000000         0x79 build/default/production/files/digitalIO.o
+ .debug_str       0x000079         0x90 build/default/production/files/main.o
+ .debug_str       0x000109         0x1c build/default/production/files/time.o
 
 .debug_loc
  *(.debug_loc)
@@ -515,15 +515,15 @@ __FUID0
                   0x000000        0x364
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x87 build/default/production/src/io/digitalIO.o
+                  0x000000         0x87 build/default/production/files/digitalIO.o
  .debug_pubnames
-                  0x000087        0x107 build/default/production/src/lcd/lcd.o
+                  0x000087        0x107 build/default/production/files/lcd.o
  .debug_pubnames
-                  0x00018e         0x26 build/default/production/src/sound/melodys.o
+                  0x00018e        0x170 build/default/production/files/main.o
  .debug_pubnames
-                  0x0001b4         0x40 build/default/production/src/time/time.o
+                  0x0002fe         0x26 build/default/production/files/melodys.o
  .debug_pubnames
-                  0x0001f4        0x170 build/default/production/src/main.o
+                  0x000324         0x40 build/default/production/files/time.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -531,15 +531,15 @@ __FUID0
 .debug_aranges    0x000000         0x78
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/production/src/io/digitalIO.o
+                  0x000000         0x18 build/default/production/files/digitalIO.o
  .debug_aranges
-                  0x000018         0x18 build/default/production/src/lcd/lcd.o
+                  0x000018         0x18 build/default/production/files/lcd.o
  .debug_aranges
-                  0x000030         0x18 build/default/production/src/sound/melodys.o
+                  0x000030         0x18 build/default/production/files/main.o
  .debug_aranges
-                  0x000048         0x18 build/default/production/src/time/time.o
+                  0x000048         0x18 build/default/production/files/melodys.o
  .debug_aranges
-                  0x000060         0x18 build/default/production/src/main.o
+                  0x000060         0x18 build/default/production/files/time.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -3244,28 +3244,28 @@ LOAD data_init
 .debug_pubtypes
                   0x000078        0x2da
  .debug_pubtypes
-                  0x000078        0x1ac build/default/production/src/io/digitalIO.o
+                  0x000078        0x1ac build/default/production/files/digitalIO.o
  .debug_pubtypes
-                  0x000224         0x38 build/default/production/src/lcd/lcd.o
+                  0x000224         0x38 build/default/production/files/lcd.o
  .debug_pubtypes
-                  0x00025c         0x12 build/default/production/src/sound/melodys.o
+                  0x00025c         0x5f build/default/production/files/main.o
  .debug_pubtypes
-                  0x00026e         0x85 build/default/production/src/time/time.o
+                  0x0002bb         0x12 build/default/production/files/melodys.o
  .debug_pubtypes
-                  0x0002f3         0x5f build/default/production/src/main.o
+                  0x0002cd         0x85 build/default/production/files/time.o
 
 __c30_signature
                   0x000352         0x84
  __c30_signature
-                  0x000352          0x6 build/default/production/src/io/digitalIO.o
+                  0x000352          0x6 build/default/production/files/digitalIO.o
  __c30_signature
-                  0x000358          0x6 build/default/production/src/lcd/lcd.o
+                  0x000358          0x6 build/default/production/files/lcd.o
  __c30_signature
-                  0x00035e          0x6 build/default/production/src/sound/melodys.o
+                  0x00035e          0x6 build/default/production/files/main.o
  __c30_signature
-                  0x000364          0x6 build/default/production/src/time/time.o
+                  0x000364          0x6 build/default/production/files/melodys.o
  __c30_signature
-                  0x00036a          0x6 build/default/production/src/main.o
+                  0x00036a          0x6 build/default/production/files/time.o
  __c30_signature
                   0x000370          0x6 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-pic30-elf.a(crt0_extendedep.o)
  __c30_signature
@@ -3302,7 +3302,7 @@ __c30_signature
                   0x0003d0          0x6 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\libm-elf.a(umodsi3.epeo)
 
 .nbss               0x1000          0xa
- .nbss              0x1000          0xa build/default/production/src/main.o
+ .nbss              0x1000          0xa build/default/production/files/main.o
                     0x1000                  _turn_bonus
                     0x1002                  _scrolls2
                     0x1004                  _white_turns
@@ -3311,45 +3311,45 @@ __c30_signature
                     0x1009                  _black_turn
 
 .ndata              0x100a          0x6
- .ndata             0x100a          0x6 build/default/production/src/main.o
+ .ndata             0x100a          0x6 build/default/production/files/main.o
                     0x100a                  _initalTime
                     0x100c                  _white_sec
                     0x100e                  _black_sec
 
 .nbss               0x1010          0x4
- .nbss              0x1010          0x4 build/default/production/src/lcd/lcd.o
+ .nbss              0x1010          0x4 build/default/production/files/lcd.o
 
 .data               0x1014         0x3c
  .data              0x1014         0x22 c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-c-elf.a(xlitob.EP_eo)
  .data              0x1036         0x1a c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.EPeo)
 
 .config_APLK      0xf80010          0x2
- .config_APLK     0xf80010          0x2 build/default/production/src/main.o
+ .config_APLK     0xf80010          0x2 build/default/production/files/main.o
 
 .config_JTAGEN    0xf8000e          0x2
  .config_JTAGEN
-                  0xf8000e          0x2 build/default/production/src/main.o
+                  0xf8000e          0x2 build/default/production/files/main.o
 
 .config_ALTI2C2
                   0xf8000c          0x2
  .config_ALTI2C2
-                  0xf8000c          0x2 build/default/production/src/main.o
+                  0xf8000c          0x2 build/default/production/files/main.o
 
 .config_FWDTEN    0xf8000a          0x2
  .config_FWDTEN
-                  0xf8000a          0x2 build/default/production/src/main.o
+                  0xf8000a          0x2 build/default/production/files/main.o
 
 .config_FCKSM     0xf80008          0x2
- .config_FCKSM    0xf80008          0x2 build/default/production/src/main.o
+ .config_FCKSM    0xf80008          0x2 build/default/production/files/main.o
 
 .config_IESO      0xf80006          0x2
- .config_IESO     0xf80006          0x2 build/default/production/src/main.o
+ .config_IESO     0xf80006          0x2 build/default/production/files/main.o
 
 .const              0x8dd6        0x18e load address 0x000dd6  
- .const             0x8dd6        0x18e build/default/production/src/main.o
+ .const             0x8dd6        0x18e build/default/production/files/main.o
 
 .text             0x000f64        0xc96
- .text            0x000f64        0x574 build/default/production/src/main.o
+ .text            0x000f64        0x574 build/default/production/files/main.o
                   0x000f64                  _doLEDSwitch
                   0x000fae                  _startSequence
                   0x000ff4                  _openTimeSetting
@@ -3364,7 +3364,7 @@ __c30_signature
                   0x001364                  _showClock
                   0x0013d4                  _loop
                   0x001490                  _main
- .text            0x0014d8        0x3b4 build/default/production/src/io/digitalIO.o
+ .text            0x0014d8        0x3b4 build/default/production/files/digitalIO.o
                   0x0014d8                  _pinMode
                   0x00172e                  _digitalRead
                   0x001796                  _digitalWrite
@@ -3372,7 +3372,7 @@ __c30_signature
                   0x001826                  _initEncoder
                   0x00183a                  _readEncoderPulse
                   0x001880                  _initPiezo
- .text            0x00188c        0x2ac build/default/production/src/lcd/lcd.o
+ .text            0x00188c        0x2ac build/default/production/files/lcd.o
                   0x00188c                  _LCD_Initialize
                   0x0018cc                  _LCD_PutString
                   0x0018fe                  _LCD_PutChar
@@ -3385,7 +3385,7 @@ __c30_signature
                   0x001aaa                  _LCD_Wait
                   0x001ac8                  _LCD_CursorEnable
                   0x001af0                  _LCD_setPosition
- .text            0x001b38         0xc2 build/default/production/src/time/time.o
+ .text            0x001b38         0xc2 build/default/production/files/time.o
                   0x001b38                  _delay_ms
                   0x001b5a                  _delay_us
                   0x001b7c                  _beep
@@ -3399,5 +3399,5 @@ __c30_signature
                   0x001c48                  ___delay32
 
 .text             0x001c64         0x18
- .text            0x001c64         0x18 build/default/production/src/sound/melodys.o
+ .text            0x001c64         0x18 build/default/production/files/melodys.o
                   0x001c64                  _playStartMelody

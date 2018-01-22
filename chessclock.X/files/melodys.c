@@ -1,8 +1,8 @@
 /**
  * @file  melody.c
- * @author Tobias Haag, Felix SÃ¼ÃŸ, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
- * @brief FUnktion zum Abspielen der Startmelodie.
+ * @brief Funktion zum Abspielen der Startmelodie.
  * 
  * @date 11.12.2017
  */
@@ -10,7 +10,7 @@
 #include "melodys.h"
 #include "pitches.h"
 
-#include "../time/time.h"
+#include "time.h"
 
 /** 
  * @brief playing start meoldie
@@ -19,8 +19,7 @@
  * @attention Totally annoying.
  */
 void playStartMelody() {
-    beep(500, NOTE_D6);
-    beep(500, NOTE_D4);
-    beep(500, NOTE_D6);
+    beep(500, NOTE_B0);
+    beep(500, NOTE_C1);
+    beep(500, NOTE_CS1);
 }
-

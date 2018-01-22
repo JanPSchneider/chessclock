@@ -1,9 +1,9 @@
 /** 
  * @file  digitalIO.c
- * @author Tobias Haag, Felix SÃ¼ÃŸ, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
- * @brief Bit deklaration der verschiedenen FÃ¤lle, beispielsweise LED an/aus oder Taster gedrÃ¼ckt/nicht gedrÃ¼ckt.
- * AuÃŸerdem Erstellung von digitalRead und digitalWrite um die Bits auszulesen bzw zu schreiben.
+ * @brief Bit deklaration der verschiedenen Fälle, beispielsweise LED an/aus oder Taster gedrückt/nicht gedrückt.
+ * Außerdem Erstellung von digitalRead und digitalWrite um die Bits auszulesen bzw zu schreiben.
  * 
  * @date Created on 16.01.2017
  */

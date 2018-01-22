@@ -1,6 +1,6 @@
 /* 
  * @file  pitches.h
- * @author Tobias Haag, Felix SÃ¼ÃŸ, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
  * @brief Public Constants (available at http://arduino.cc/en/Tutorial/tone )
  * 
@@ -96,4 +96,3 @@
 #define NOTE_CS8 4435
 #define NOTE_D8  4699
 #define NOTE_DS8 4978
-

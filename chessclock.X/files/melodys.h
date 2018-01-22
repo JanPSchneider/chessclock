@@ -1,6 +1,6 @@
 /* 
  * @file  melodys.h
- * @author Tobias Haag, Felix SÃ¼ÃŸ, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
  * @brief 
  * 
@@ -25,4 +25,3 @@ void playEndingMelody();
 #endif
 
 #endif	/* MELODYS_H */
-

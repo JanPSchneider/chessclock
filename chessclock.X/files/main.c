@@ -1,8 +1,8 @@
 /**
  * @file  main.c
- * @author Tobias Haag, Felix SÃ¼ÃŸ, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
- * @brief Erstellung von Funktionen. Beispielsweise MenÃ¼ und Einstellungen
+ * @brief Erstellung von Funktionen. Beispielsweise Menü und Einstellungen
  * 
  * @date 11.12.2017
  */
@@ -12,10 +12,10 @@
 #include <p33EP512MU810.h>
 #include "myxc.h"
 
-#include "io/digitalIO.h"
-#include "time/time.h"
-#include "lcd/lcd.h"
-#include "sound/melodys.h"
+#include "digitalIO.h"
+#include "time.h"
+#include "lcd.h"
+#include "melodys.h"
 
 #define MIN_TIME_S 60
 #define MAX_TIME_S 5400 // 90 min
@@ -437,5 +437,3 @@ int main(int argc, char** argv) {
     
     return (EXIT_SUCCESS);
 }
-
-

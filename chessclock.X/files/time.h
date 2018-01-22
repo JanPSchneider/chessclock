@@ -1,6 +1,6 @@
 /* 
  * @file  time.h
- * @author Tobias Haag, Felix SÃ¼ÃŸ, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
  * @brief Erstellung einer Zeiteinheit mithilfe der CPU Frequenz
  * 
@@ -29,4 +29,3 @@ extern "C" {
 #endif
 
 #endif	/* TIME_H */
-

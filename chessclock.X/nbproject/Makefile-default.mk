@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=src/io/digitalIO.c src/lcd/lcd.c src/sound/melodys.c src/time/time.c src/main.c
+SOURCEFILES_QUOTED_IF_SPACED=files/digitalIO.c files/lcd.c files/main.c files/melodys.c files/time.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/src/io/digitalIO.o ${OBJECTDIR}/src/lcd/lcd.o ${OBJECTDIR}/src/sound/melodys.o ${OBJECTDIR}/src/time/time.o ${OBJECTDIR}/src/main.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/src/io/digitalIO.o.d ${OBJECTDIR}/src/lcd/lcd.o.d ${OBJECTDIR}/src/sound/melodys.o.d ${OBJECTDIR}/src/time/time.o.d ${OBJECTDIR}/src/main.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/files/digitalIO.o ${OBJECTDIR}/files/lcd.o ${OBJECTDIR}/files/main.o ${OBJECTDIR}/files/melodys.o ${OBJECTDIR}/files/time.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/files/digitalIO.o.d ${OBJECTDIR}/files/lcd.o.d ${OBJECTDIR}/files/main.o.d ${OBJECTDIR}/files/melodys.o.d ${OBJECTDIR}/files/time.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/src/io/digitalIO.o ${OBJECTDIR}/src/lcd/lcd.o ${OBJECTDIR}/src/sound/melodys.o ${OBJECTDIR}/src/time/time.o ${OBJECTDIR}/src/main.o
+OBJECTFILES=${OBJECTDIR}/files/digitalIO.o ${OBJECTDIR}/files/lcd.o ${OBJECTDIR}/files/main.o ${OBJECTDIR}/files/melodys.o ${OBJECTDIR}/files/time.o
 
 # Source Files
-SOURCEFILES=src/io/digitalIO.c src/lcd/lcd.c src/sound/melodys.c src/time/time.c src/main.c
+SOURCEFILES=files/digitalIO.c files/lcd.c files/main.c files/melodys.c files/time.c
 
 
 CFLAGS=
@@ -94,76 +94,76 @@ MP_LINKER_FILE_OPTION=,--script=p33EP512MU810.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/src/io/digitalIO.o: src/io/digitalIO.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/src/io" 
-	@${RM} ${OBJECTDIR}/src/io/digitalIO.o.d 
-	@${RM} ${OBJECTDIR}/src/io/digitalIO.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  src/io/digitalIO.c  -o ${OBJECTDIR}/src/io/digitalIO.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/src/io/digitalIO.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/src/io/digitalIO.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/files/digitalIO.o: files/digitalIO.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/files" 
+	@${RM} ${OBJECTDIR}/files/digitalIO.o.d 
+	@${RM} ${OBJECTDIR}/files/digitalIO.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  files/digitalIO.c  -o ${OBJECTDIR}/files/digitalIO.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/files/digitalIO.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/files/digitalIO.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/src/lcd/lcd.o: src/lcd/lcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/src/lcd" 
-	@${RM} ${OBJECTDIR}/src/lcd/lcd.o.d 
-	@${RM} ${OBJECTDIR}/src/lcd/lcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  src/lcd/lcd.c  -o ${OBJECTDIR}/src/lcd/lcd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/src/lcd/lcd.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/src/lcd/lcd.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/files/lcd.o: files/lcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/files" 
+	@${RM} ${OBJECTDIR}/files/lcd.o.d 
+	@${RM} ${OBJECTDIR}/files/lcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  files/lcd.c  -o ${OBJECTDIR}/files/lcd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/files/lcd.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/files/lcd.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/src/sound/melodys.o: src/sound/melodys.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/src/sound" 
-	@${RM} ${OBJECTDIR}/src/sound/melodys.o.d 
-	@${RM} ${OBJECTDIR}/src/sound/melodys.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  src/sound/melodys.c  -o ${OBJECTDIR}/src/sound/melodys.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/src/sound/melodys.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/src/sound/melodys.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/files/main.o: files/main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/files" 
+	@${RM} ${OBJECTDIR}/files/main.o.d 
+	@${RM} ${OBJECTDIR}/files/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  files/main.c  -o ${OBJECTDIR}/files/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/files/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/files/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/src/time/time.o: src/time/time.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/src/time" 
-	@${RM} ${OBJECTDIR}/src/time/time.o.d 
-	@${RM} ${OBJECTDIR}/src/time/time.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  src/time/time.c  -o ${OBJECTDIR}/src/time/time.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/src/time/time.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/src/time/time.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/files/melodys.o: files/melodys.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/files" 
+	@${RM} ${OBJECTDIR}/files/melodys.o.d 
+	@${RM} ${OBJECTDIR}/files/melodys.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  files/melodys.c  -o ${OBJECTDIR}/files/melodys.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/files/melodys.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/files/melodys.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/src/main.o: src/main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/src" 
-	@${RM} ${OBJECTDIR}/src/main.o.d 
-	@${RM} ${OBJECTDIR}/src/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  src/main.c  -o ${OBJECTDIR}/src/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/src/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/src/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/files/time.o: files/time.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/files" 
+	@${RM} ${OBJECTDIR}/files/time.o.d 
+	@${RM} ${OBJECTDIR}/files/time.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  files/time.c  -o ${OBJECTDIR}/files/time.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/files/time.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/files/time.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
-${OBJECTDIR}/src/io/digitalIO.o: src/io/digitalIO.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/src/io" 
-	@${RM} ${OBJECTDIR}/src/io/digitalIO.o.d 
-	@${RM} ${OBJECTDIR}/src/io/digitalIO.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  src/io/digitalIO.c  -o ${OBJECTDIR}/src/io/digitalIO.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/src/io/digitalIO.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/src/io/digitalIO.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/files/digitalIO.o: files/digitalIO.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/files" 
+	@${RM} ${OBJECTDIR}/files/digitalIO.o.d 
+	@${RM} ${OBJECTDIR}/files/digitalIO.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  files/digitalIO.c  -o ${OBJECTDIR}/files/digitalIO.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/files/digitalIO.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/files/digitalIO.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/src/lcd/lcd.o: src/lcd/lcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/src/lcd" 
-	@${RM} ${OBJECTDIR}/src/lcd/lcd.o.d 
-	@${RM} ${OBJECTDIR}/src/lcd/lcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  src/lcd/lcd.c  -o ${OBJECTDIR}/src/lcd/lcd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/src/lcd/lcd.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/src/lcd/lcd.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/files/lcd.o: files/lcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/files" 
+	@${RM} ${OBJECTDIR}/files/lcd.o.d 
+	@${RM} ${OBJECTDIR}/files/lcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  files/lcd.c  -o ${OBJECTDIR}/files/lcd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/files/lcd.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/files/lcd.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/src/sound/melodys.o: src/sound/melodys.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/src/sound" 
-	@${RM} ${OBJECTDIR}/src/sound/melodys.o.d 
-	@${RM} ${OBJECTDIR}/src/sound/melodys.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  src/sound/melodys.c  -o ${OBJECTDIR}/src/sound/melodys.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/src/sound/melodys.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/src/sound/melodys.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/files/main.o: files/main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/files" 
+	@${RM} ${OBJECTDIR}/files/main.o.d 
+	@${RM} ${OBJECTDIR}/files/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  files/main.c  -o ${OBJECTDIR}/files/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/files/main.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/files/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/src/time/time.o: src/time/time.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/src/time" 
-	@${RM} ${OBJECTDIR}/src/time/time.o.d 
-	@${RM} ${OBJECTDIR}/src/time/time.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  src/time/time.c  -o ${OBJECTDIR}/src/time/time.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/src/time/time.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/src/time/time.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/files/melodys.o: files/melodys.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/files" 
+	@${RM} ${OBJECTDIR}/files/melodys.o.d 
+	@${RM} ${OBJECTDIR}/files/melodys.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  files/melodys.c  -o ${OBJECTDIR}/files/melodys.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/files/melodys.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/files/melodys.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/src/main.o: src/main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/src" 
-	@${RM} ${OBJECTDIR}/src/main.o.d 
-	@${RM} ${OBJECTDIR}/src/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  src/main.c  -o ${OBJECTDIR}/src/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/src/main.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/src/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/files/time.o: files/time.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/files" 
+	@${RM} ${OBJECTDIR}/files/time.o.d 
+	@${RM} ${OBJECTDIR}/files/time.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  files/time.c  -o ${OBJECTDIR}/files/time.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/files/time.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/files/time.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 
