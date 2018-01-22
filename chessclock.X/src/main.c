@@ -22,9 +22,13 @@
 #define INIT_TIME_S 180
 #define TURN_BONUS 0
 #define MAX_TURN_BONUS 60
+#//define SCROLLING_1 0
+#define SCROLLING_2 0
 
 uint16_t initalTime = INIT_TIME_S;
 int16_t turn_bonus = TURN_BONUS;
+//int16_t scrolls1 = SCROLLING_1;
+int16_t scrolls2 = SCROLLING_2;
 
 uint16_t white_sec = INIT_TIME_S, black_sec = INIT_TIME_S;
 uint16_t white_turns = 0, black_turns = 0;
@@ -40,12 +44,12 @@ void doLEDSwitch(bool dir) {
     beep(50, 1000);
     int i;
     if(dir) {
-        for (i = 0; i <= 3; i++) {
+        for (i = 3; i <= 3; i++) {
             digitalWriteLEDs(1 << i);
             delay_ms(50);
         }        
     } else {
-        for (i = 3; i >= 0; i--) {
+        for (i = 0; i >= 0; i--) {
             digitalWriteLEDs(1 << i);
             delay_ms(50);
         } 
@@ -119,6 +123,43 @@ void openBonusSetting() {
     }
 }
 
+
+void openCredits() {
+    while(digitalRead(INC_SW)){
+    scrolls2 += readEncoderPulse();
+    
+    if(scrolls2 > 0){
+        LCD_ClearScreen();
+        LCD_PutString("Created by: ", 16);
+    }
+    
+    if(scrolls2 > 1){
+        LCD_setPosition(1,0);
+        LCD_PutString("Jan Schneider", 16);
+    }
+     if(scrolls2 > 2){
+        LCD_ClearScreen();
+        LCD_PutString("Jan Schneider", 16);
+        LCD_setPosition(1,0);
+        LCD_PutString("Tobias Haag", 16);
+    }
+     if(scrolls2 > 3){
+        LCD_ClearScreen();
+        LCD_PutString("Tobias Haag", 16);
+        LCD_setPosition(1,0);
+        LCD_PutString("Marcus Schoch", 16);
+    }
+     if(scrolls2 > 4){
+        LCD_ClearScreen();
+        LCD_PutString("Marcus Schoch", 16);
+        LCD_setPosition(1,0);
+        LCD_PutString("Felix Suess", 16);
+    }
+    
+  }
+}
+
+
 /** 
  * @brief open menu
  * @param -
@@ -127,33 +168,59 @@ void openBonusSetting() {
  */
 void openMenu() {
     LCD_ClearScreen();
-    LCD_PutString("Change Settings", 16);
+    LCD_PutString("Settings", 16);
     beep(1000, 1000);
     
     bool firstLine;
+    bool secondLine;
+    bool thirdLine;
+    int8_t scrolls1 = -1;
     int8_t pulse = -1; // Set to first line (-1 means backward rotation)
     while(digitalRead(INC_SW)) {
+        pulse = readEncoderPulse();
+        scrolls1 += readEncoderPulse();
         if (pulse != 0) {
             firstLine = pulse < 0;
-            LCD_ClearScreen();
-            LCD_PutChar(firstLine? '>':' ');
-            LCD_PutString("Set total time\n", 16);
-            LCD_PutChar(firstLine? ' ':'>');
-            LCD_PutString("Set turn bonus", 16);
+            secondLine = pulse < 1;
+            thirdLine = pulse < 2;
+             
+            
+               if(scrolls1 > 0){
+                   LCD_ClearScreen();
+                   LCD_PutString("> Set total time", 16);
+                   LCD_PutString("Set turn bonus", 16);
+       
+               }
+        
+                if(scrolls1 > 1){
+                    LCD_ClearScreen();
+                    LCD_PutString("Set total time\n", 16);
+                    LCD_PutString("> Set turn bonus", 16);
+                }
+                if(scrolls1 > 2){
+                    LCD_ClearScreen();
+                    LCD_PutString("Set turn bonus", 16);
+                    LCD_setPosition(1,0);
+                    LCD_PutString("> Credits", 16);
+    }
+            
+            
+            
         }        
-        pulse = readEncoderPulse();
+       
     }
     
     beep(1000, 1000);
     if (firstLine) {
         openTimeSetting();
-    } else {
+    } if(secondLine) {
         openBonusSetting();
+    } if(thirdLine) {
+        openCredits();
     }
     
     beep(1000, 2000);    
 }
-
 
 /** 
  * @brief show time statistics
@@ -220,13 +287,13 @@ void showGameOver() {
 void handleEnding() { 
     showGameOver();
     
-    while(digitalRead(SW200)) {
+    while(digitalRead(SW202)) {
         Nop();
     }
     
     uint8_t i = 0;
     while (digitalRead(SW201)) {
-        if(!digitalRead(SW200)) {
+        if(!digitalRead(SW202)) {
             switch(i) {
                 case 0:
                   showTimeStat("Black", black_sec);
@@ -291,7 +358,7 @@ void loop() {
     while(1) {
         
         while (IFS0bits.T1IF == 0) {
-            if(!digitalRead(SW202) && !white_turn) {
+            if(!digitalRead(SW200) && !white_turn) {
                 white_turns++;
                 white_sec += turn_bonus;
                 white_turn = true;
