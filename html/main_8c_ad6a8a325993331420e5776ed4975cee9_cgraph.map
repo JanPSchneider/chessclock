@@ -1,0 +1,6 @@
+<map id="changeLED" name="changeLED">
+<area shape="rect" id="node2" href="$time_8c.html#aa147e4fc062ebcad160b842ff6046653" title="Legt einen Sound(Feedback) fest und die möglichkeit den Sound zu deaktivieren bzw zu aktivieren..." alt="" coords="165,5,239,32"/>
+<area shape="rect" id="node4" href="$digital_i_o_8c.html#abddcace85cc72e5a0763f345ede98746" title="Setzt die Bits der LEDs, Schaltet die LEDs somit an oder aus. " alt="" coords="143,56,261,83"/>
+<area shape="rect" id="node5" href="$time_8c.html#aa0dce6d249d81fb85b082273270ba710" title="Provides ms delay. " alt="" coords="163,107,241,133"/>
+<area shape="rect" id="node3" href="$main_8c.html#a0b041cda2a7b0bc73178a9ec78abd5cb" title="Schaltet Feedback Töne ein oder aus. " alt="" coords="309,5,368,32"/>
+</map>

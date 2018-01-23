@@ -1,0 +1,872 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>chessclock documentation: chessclock.X/files/lcd.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">chessclock documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_005ac21b2752f5bf909c089817a3ea4e.html">chessclock.X</a></li><li class="navelem"><a class="el" href="dir_791194cc0587ffe5f03b09647d717a12.html">files</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">lcd.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;xc.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="lcd_8h_source.html">lcd.h</a>&quot;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abh√§ngigkeitsdiagramm f√ºr lcd.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c__incl.png" border="0" usemap="#chessclock_8_x_2files_2lcd_8c" alt=""/></div>
+<map name="chessclock_8_x_2files_2lcd_8c" id="chessclock_8_x_2files_2lcd_8c">
+<area shape="rect" id="node3" href="lcd_8h.html" title="lcd.h" alt="" coords="127,95,178,121"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:aa4c88432f61389d5c64ba2d141944120"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#aa4c88432f61389d5c64ba2d141944120">SYSTEM_PERIPHERAL_CLOCK</a>&#160;&#160;&#160;(7370000/2)</td></tr>
+<tr class="separator:aa4c88432f61389d5c64ba2d141944120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeff5eb3ddbdc44853c6f0bfb9bf636ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#aeff5eb3ddbdc44853c6f0bfb9bf636ef">CYCLES_PER_DELAY_LOOP</a>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:aeff5eb3ddbdc44853c6f0bfb9bf636ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ea24380d57f19b7d5c0df74e58ff2de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a7ea24380d57f19b7d5c0df74e58ff2de">LCD_SIGNAL_TIMING</a>&#160;&#160;&#160;(((<a class="el" href="lcd_8c.html#aa4c88432f61389d5c64ba2d141944120">SYSTEM_PERIPHERAL_CLOCK</a>/1000)*1)/1000)/<a class="el" href="lcd_8c.html#aeff5eb3ddbdc44853c6f0bfb9bf636ef">CYCLES_PER_DELAY_LOOP</a></td></tr>
+<tr class="separator:a7ea24380d57f19b7d5c0df74e58ff2de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2006e1c38899753848c6c13383ffbbba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a2006e1c38899753848c6c13383ffbbba">LCD_F_INSTR</a>&#160;&#160;&#160;(((<a class="el" href="lcd_8c.html#aa4c88432f61389d5c64ba2d141944120">SYSTEM_PERIPHERAL_CLOCK</a>/1000)*40)/1000)/<a class="el" href="lcd_8c.html#aeff5eb3ddbdc44853c6f0bfb9bf636ef">CYCLES_PER_DELAY_LOOP</a></td></tr>
+<tr class="separator:a2006e1c38899753848c6c13383ffbbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b16f8fdfe28daaa95b4d51c41cbd46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#af5b16f8fdfe28daaa95b4d51c41cbd46">LCD_S_INSTR</a>&#160;&#160;&#160;(((<a class="el" href="lcd_8c.html#aa4c88432f61389d5c64ba2d141944120">SYSTEM_PERIPHERAL_CLOCK</a>/1000)*1640)/1000)/<a class="el" href="lcd_8c.html#aeff5eb3ddbdc44853c6f0bfb9bf636ef">CYCLES_PER_DELAY_LOOP</a></td></tr>
+<tr class="separator:af5b16f8fdfe28daaa95b4d51c41cbd46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064b0f92f54c1aab1e6731ff24b4cce7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a064b0f92f54c1aab1e6731ff24b4cce7">LCD_STARTUP</a>&#160;&#160;&#160;(((<a class="el" href="lcd_8c.html#aa4c88432f61389d5c64ba2d141944120">SYSTEM_PERIPHERAL_CLOCK</a>/1000)*60000)/1000)/<a class="el" href="lcd_8c.html#aeff5eb3ddbdc44853c6f0bfb9bf636ef">CYCLES_PER_DELAY_LOOP</a></td></tr>
+<tr class="separator:a064b0f92f54c1aab1e6731ff24b4cce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a1c1e8f0697c5894a84a3f9c9347c43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a0a1c1e8f0697c5894a84a3f9c9347c43">LCD_MAX_COLUMN</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:a0a1c1e8f0697c5894a84a3f9c9347c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8b37360395c579ae0dd00f0d84204f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#abb8b37360395c579ae0dd00f0d84204f">LCD_SendData</a>(data)&#160;&#160;&#160;{ PMADDR = 0x0001; PMDIN1 = data; LCD_Wait(LCD_F_INSTR); }</td></tr>
+<tr class="separator:abb8b37360395c579ae0dd00f0d84204f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba6e0cdaf453a59ad4b811a000248681"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#aba6e0cdaf453a59ad4b811a000248681">LCD_SendCommand</a>(command,  delay)&#160;&#160;&#160;{ PMADDR = 0x0000; PMDIN1 = command; LCD_Wait(delay); }</td></tr>
+<tr class="separator:aba6e0cdaf453a59ad4b811a000248681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e4778571bb86fb6f57b745caa62349e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a4e4778571bb86fb6f57b745caa62349e">LCD_COMMAND_CLEAR_SCREEN</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:a4e4778571bb86fb6f57b745caa62349e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbee4da6e8597ec6e33f26245ffb2cfe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#acbee4da6e8597ec6e33f26245ffb2cfe">LCD_COMMAND_RETURN_HOME</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:acbee4da6e8597ec6e33f26245ffb2cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd8779b5f173dbad8998d9bb381d7d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#aadd8779b5f173dbad8998d9bb381d7d4">LCD_COMMAND_ENTER_DATA_MODE</a>&#160;&#160;&#160;0x06</td></tr>
+<tr class="separator:aadd8779b5f173dbad8998d9bb381d7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac21b3c8a7464d2f3a8b93d818a668853"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#ac21b3c8a7464d2f3a8b93d818a668853">LCD_COMMAND_CURSOR_OFF</a>&#160;&#160;&#160;0x0C</td></tr>
+<tr class="separator:ac21b3c8a7464d2f3a8b93d818a668853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924f1b426623c56b91d49fc03dc6576f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a924f1b426623c56b91d49fc03dc6576f">LCD_COMMAND_CURSOR_ON</a>&#160;&#160;&#160;0x0F</td></tr>
+<tr class="separator:a924f1b426623c56b91d49fc03dc6576f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab299e88858a1ca72d3ae6b8e6cc13a12"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#ab299e88858a1ca72d3ae6b8e6cc13a12">LCD_COMMAND_MOVE_CURSOR_LEFT</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:ab299e88858a1ca72d3ae6b8e6cc13a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2719e4b8fb15618396d5f95ae00136da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a2719e4b8fb15618396d5f95ae00136da">LCD_COMMAND_MOVE_CURSOR_RIGHT</a>&#160;&#160;&#160;0x14</td></tr>
+<tr class="separator:a2719e4b8fb15618396d5f95ae00136da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaa93d9a7959c26b97779b2067d25fbd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#adaa93d9a7959c26b97779b2067d25fbd">LCD_COMMAND_SET_MODE_8_BIT</a>&#160;&#160;&#160;0x38</td></tr>
+<tr class="separator:adaa93d9a7959c26b97779b2067d25fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08100a827b4809f74956339f7e4e2126"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a08100a827b4809f74956339f7e4e2126">LCD_COMMAND_ROW_0_HOME</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:a08100a827b4809f74956339f7e4e2126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a8c55d39e64a7b78cae4bc592d7c92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#ab1a8c55d39e64a7b78cae4bc592d7c92">LCD_COMMAND_ROW_1_HOME</a>&#160;&#160;&#160;0xC0</td></tr>
+<tr class="separator:ab1a8c55d39e64a7b78cae4bc592d7c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a5bb9320725084cc0fc68c2d15d0fcc2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a5bb9320725084cc0fc68c2d15d0fcc2d">LCD_Initialize</a> (void)</td></tr>
+<tr class="separator:a5bb9320725084cc0fc68c2d15d0fcc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34b4c6478ad043d6bd9a64df8f4db763"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a34b4c6478ad043d6bd9a64df8f4db763">LCD_PutString</a> (char *inputString, uint16_t length)</td></tr>
+<tr class="separator:a34b4c6478ad043d6bd9a64df8f4db763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bbd8a3addf7efb3ed628b000298bbfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa">LCD_PutChar</a> (char inputCharacter)</td></tr>
+<tr class="separator:a9bbd8a3addf7efb3ed628b000298bbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e1f60dd77e50ae7ded44a431214c62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62">LCD_ClearScreen</a> (void)</td></tr>
+<tr class="separator:a25e1f60dd77e50ae7ded44a431214c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712d0a47147dfd0d883719518e78b988"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a712d0a47147dfd0d883719518e78b988">LCD_CarriageReturn</a> (void)</td></tr>
+<tr class="separator:a712d0a47147dfd0d883719518e78b988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ea7a630f592e093ac5183fe949b7d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#af0ea7a630f592e093ac5183fe949b7d0">LCD_ShiftCursorLeft</a> (void)</td></tr>
+<tr class="separator:af0ea7a630f592e093ac5183fe949b7d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12720c1305e7456a6a18026fcbc07ff9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a12720c1305e7456a6a18026fcbc07ff9">LCD_ShiftCursorRight</a> (void)</td></tr>
+<tr class="separator:a12720c1305e7456a6a18026fcbc07ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6915b5f6b08cbe44ff500754a2f20e57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a6915b5f6b08cbe44ff500754a2f20e57">LCD_ShiftCursorUp</a> (void)</td></tr>
+<tr class="separator:a6915b5f6b08cbe44ff500754a2f20e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a176c293b59f4bc1487620d41f0d7dcb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a176c293b59f4bc1487620d41f0d7dcb2">LCD_ShiftCursorDown</a> (void)</td></tr>
+<tr class="separator:a176c293b59f4bc1487620d41f0d7dcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a31be2073f118b2811e28f19ded450a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a6a31be2073f118b2811e28f19ded450a">LCD_Wait</a> (uint32_t delay)</td></tr>
+<tr class="separator:a6a31be2073f118b2811e28f19ded450a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dee3d5785a8d1ac222bbe0d7407b9d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#a7dee3d5785a8d1ac222bbe0d7407b9d4">LCD_CursorEnable</a> (bool enable)</td></tr>
+<tr class="separator:a7dee3d5785a8d1ac222bbe0d7407b9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad847c231be8127a1a4b4004a63a8eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8c.html#adad847c231be8127a1a4b4004a63a8eb">LCD_setPosition</a> (uint16_t row, uint16_t col)</td></tr>
+<tr class="separator:adad847c231be8127a1a4b4004a63a8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Makro-Dokumentation</h2>
+<a id="aeff5eb3ddbdc44853c6f0bfb9bf636ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeff5eb3ddbdc44853c6f0bfb9bf636ef">&#9670;&nbsp;</a></span>CYCLES_PER_DELAY_LOOP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CYCLES_PER_DELAY_LOOP&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e4778571bb86fb6f57b745caa62349e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e4778571bb86fb6f57b745caa62349e">&#9670;&nbsp;</a></span>LCD_COMMAND_CLEAR_SCREEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COMMAND_CLEAR_SCREEN&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac21b3c8a7464d2f3a8b93d818a668853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac21b3c8a7464d2f3a8b93d818a668853">&#9670;&nbsp;</a></span>LCD_COMMAND_CURSOR_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COMMAND_CURSOR_OFF&#160;&#160;&#160;0x0C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a924f1b426623c56b91d49fc03dc6576f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a924f1b426623c56b91d49fc03dc6576f">&#9670;&nbsp;</a></span>LCD_COMMAND_CURSOR_ON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COMMAND_CURSOR_ON&#160;&#160;&#160;0x0F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aadd8779b5f173dbad8998d9bb381d7d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd8779b5f173dbad8998d9bb381d7d4">&#9670;&nbsp;</a></span>LCD_COMMAND_ENTER_DATA_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COMMAND_ENTER_DATA_MODE&#160;&#160;&#160;0x06</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab299e88858a1ca72d3ae6b8e6cc13a12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab299e88858a1ca72d3ae6b8e6cc13a12">&#9670;&nbsp;</a></span>LCD_COMMAND_MOVE_CURSOR_LEFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COMMAND_MOVE_CURSOR_LEFT&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2719e4b8fb15618396d5f95ae00136da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2719e4b8fb15618396d5f95ae00136da">&#9670;&nbsp;</a></span>LCD_COMMAND_MOVE_CURSOR_RIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COMMAND_MOVE_CURSOR_RIGHT&#160;&#160;&#160;0x14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbee4da6e8597ec6e33f26245ffb2cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbee4da6e8597ec6e33f26245ffb2cfe">&#9670;&nbsp;</a></span>LCD_COMMAND_RETURN_HOME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COMMAND_RETURN_HOME&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08100a827b4809f74956339f7e4e2126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08100a827b4809f74956339f7e4e2126">&#9670;&nbsp;</a></span>LCD_COMMAND_ROW_0_HOME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COMMAND_ROW_0_HOME&#160;&#160;&#160;0x80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1a8c55d39e64a7b78cae4bc592d7c92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a8c55d39e64a7b78cae4bc592d7c92">&#9670;&nbsp;</a></span>LCD_COMMAND_ROW_1_HOME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COMMAND_ROW_1_HOME&#160;&#160;&#160;0xC0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adaa93d9a7959c26b97779b2067d25fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaa93d9a7959c26b97779b2067d25fbd">&#9670;&nbsp;</a></span>LCD_COMMAND_SET_MODE_8_BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COMMAND_SET_MODE_8_BIT&#160;&#160;&#160;0x38</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2006e1c38899753848c6c13383ffbbba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2006e1c38899753848c6c13383ffbbba">&#9670;&nbsp;</a></span>LCD_F_INSTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_F_INSTR&#160;&#160;&#160;(((<a class="el" href="lcd_8c.html#aa4c88432f61389d5c64ba2d141944120">SYSTEM_PERIPHERAL_CLOCK</a>/1000)*40)/1000)/<a class="el" href="lcd_8c.html#aeff5eb3ddbdc44853c6f0bfb9bf636ef">CYCLES_PER_DELAY_LOOP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a1c1e8f0697c5894a84a3f9c9347c43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a1c1e8f0697c5894a84a3f9c9347c43">&#9670;&nbsp;</a></span>LCD_MAX_COLUMN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_MAX_COLUMN&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5b16f8fdfe28daaa95b4d51c41cbd46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5b16f8fdfe28daaa95b4d51c41cbd46">&#9670;&nbsp;</a></span>LCD_S_INSTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_S_INSTR&#160;&#160;&#160;(((<a class="el" href="lcd_8c.html#aa4c88432f61389d5c64ba2d141944120">SYSTEM_PERIPHERAL_CLOCK</a>/1000)*1640)/1000)/<a class="el" href="lcd_8c.html#aeff5eb3ddbdc44853c6f0bfb9bf636ef">CYCLES_PER_DELAY_LOOP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba6e0cdaf453a59ad4b811a000248681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba6e0cdaf453a59ad4b811a000248681">&#9670;&nbsp;</a></span>LCD_SendCommand</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_SendCommand</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">command, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">delay&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;{ PMADDR = 0x0000; PMDIN1 = command; LCD_Wait(delay); }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb8b37360395c579ae0dd00f0d84204f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb8b37360395c579ae0dd00f0d84204f">&#9670;&nbsp;</a></span>LCD_SendData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_SendData</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data</td><td>)</td>
+          <td>&#160;&#160;&#160;{ PMADDR = 0x0001; PMDIN1 = data; LCD_Wait(LCD_F_INSTR); }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ea24380d57f19b7d5c0df74e58ff2de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ea24380d57f19b7d5c0df74e58ff2de">&#9670;&nbsp;</a></span>LCD_SIGNAL_TIMING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_SIGNAL_TIMING&#160;&#160;&#160;(((<a class="el" href="lcd_8c.html#aa4c88432f61389d5c64ba2d141944120">SYSTEM_PERIPHERAL_CLOCK</a>/1000)*1)/1000)/<a class="el" href="lcd_8c.html#aeff5eb3ddbdc44853c6f0bfb9bf636ef">CYCLES_PER_DELAY_LOOP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a064b0f92f54c1aab1e6731ff24b4cce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064b0f92f54c1aab1e6731ff24b4cce7">&#9670;&nbsp;</a></span>LCD_STARTUP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_STARTUP&#160;&#160;&#160;(((<a class="el" href="lcd_8c.html#aa4c88432f61389d5c64ba2d141944120">SYSTEM_PERIPHERAL_CLOCK</a>/1000)*60000)/1000)/<a class="el" href="lcd_8c.html#aeff5eb3ddbdc44853c6f0bfb9bf636ef">CYCLES_PER_DELAY_LOOP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4c88432f61389d5c64ba2d141944120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4c88432f61389d5c64ba2d141944120">&#9670;&nbsp;</a></span>SYSTEM_PERIPHERAL_CLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYSTEM_PERIPHERAL_CLOCK&#160;&#160;&#160;(7370000/2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a712d0a47147dfd0d883719518e78b988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712d0a47147dfd0d883719518e78b988">&#9670;&nbsp;</a></span>LCD_CarriageReturn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_CarriageReturn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a712d0a47147dfd0d883719518e78b988_icgraph.png" border="0" usemap="#lcd_8c_a712d0a47147dfd0d883719518e78b988_icgraph" alt=""/></div>
+<map name="lcd_8c_a712d0a47147dfd0d883719518e78b988_icgraph" id="lcd_8c_a712d0a47147dfd0d883719518e78b988_icgraph">
+<area shape="rect" id="node2" href="lcd_8h.html#aeb9a477392f5841aa5128bec698702a8" title="LCD_PutChar" alt="" coords="193,365,295,391"/>
+<area shape="rect" id="node3" href="lcd_8h.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="343,365,451,391"/>
+<area shape="rect" id="node4" href="digital_i_o_8h.html#af45835ae132b28795d8ed348c090790c" title="Initialisiert die Pins. Setzt die Bits der einzelnen Pins. " alt="" coords="1004,42,1063,69"/>
+<area shape="rect" id="node6" href="digital_i_o_8h.html#a5e4162b54ab2f8a428979678ec19b69d" title="lieﬂt die einzelnen bits der Buttons T0&#45;T3 aus, sowie die Bits des Inkrementers. " alt="" coords="531,365,617,391"/>
+<area shape="rect" id="node8" href="main_8c.html#aa7305d48b840eb4cffb865d4f4d685e4" title="÷ffnet die Einstellungen um die L‰nge des Spiels zu ‰ndern. " alt="" coords="851,542,939,569"/>
+<area shape="rect" id="node9" href="main_8c.html#ae0b1861d934f61491fad3142725daf56" title="÷ffnet das Men¸ um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits an..." alt="" coords="992,466,1075,493"/>
+<area shape="rect" id="node11" href="main_8c.html#a9e3b22ae2e0234b51f4f2df58e6a6128" title="turnSetting" alt="" coords="852,593,937,619"/>
+<area shape="rect" id="node12" href="main_8c.html#a8e6e40d345b6f76556e3f497c35fb3af" title="÷ffnet die Einstellung Zusatzzeit je Zug einzustellen. " alt="" coords="845,365,944,391"/>
+<area shape="rect" id="node13" href="main_8c.html#a5864f6393c74073a86a19645a5c55f24" title="credits" alt="" coords="864,441,925,467"/>
+<area shape="rect" id="node14" href="main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="697,86,797,113"/>
+<area shape="rect" id="node15" href="digital_i_o_8h.html#a9a9747f5c74c6f562923c41ae973b1f1" title="Steuert die LEDs an. " alt="" coords="531,491,617,518"/>
+<area shape="rect" id="node16" href="main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="Anzeige des Start Screens und LED&#45;Startsequenz. " alt="" coords="1123,506,1213,533"/>
+<area shape="rect" id="node17" href="main_8c.html#ac14b1aec4fc054de7bce10f7bdb61674" title="Zeigt die pro Spieler gebrauchte Zeit an. " alt="" coords="499,187,649,214"/>
+<area shape="rect" id="node18" href="main_8c.html#af6c30e8fd8656312c4eb7136fcb436b8" title="&quot;Game Over&quot; Screen. Kann durch Tastendruck bei einem Sieg hervorgerufen werden oder ˆffnet sich wenn d..." alt="" coords="517,86,631,113"/>
+<area shape="rect" id="node19" href="main_8c.html#a5449d35a2be928da9c72cae0281b2d67" title="Zeigt die verbleibende Zeit der Spieler an. " alt="" coords="705,137,790,163"/>
+<area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="1261,202,1312,229"/>
+<area shape="rect" id="node7" href="digital_i_o_8h.html#a7d44f5215696f8c31471cc5b3190875d" title="Lieﬂt die Werte des Drehencoders aus. " alt="" coords="700,491,795,518"/>
+<area shape="rect" id="node10" href="main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="÷ffnet die Credits: Studenten &amp; Professor. " alt="" coords="1145,202,1191,229"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a25e1f60dd77e50ae7ded44a431214c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25e1f60dd77e50ae7ded44a431214c62">&#9670;&nbsp;</a></span>LCD_ClearScreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ClearScreen </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a25e1f60dd77e50ae7ded44a431214c62_icgraph.png" border="0" usemap="#lcd_8c_a25e1f60dd77e50ae7ded44a431214c62_icgraph" alt=""/></div>
+<map name="lcd_8c_a25e1f60dd77e50ae7ded44a431214c62_icgraph" id="lcd_8c_a25e1f60dd77e50ae7ded44a431214c62_icgraph">
+<area shape="rect" id="node2" href="digital_i_o_8h.html#af45835ae132b28795d8ed348c090790c" title="Initialisiert die Pins. Setzt die Bits der einzelnen Pins. " alt="" coords="684,41,743,68"/>
+<area shape="rect" id="node4" href="digital_i_o_8h.html#a5e4162b54ab2f8a428979678ec19b69d" title="lieﬂt die einzelnen bits der Buttons T0&#45;T3 aus, sowie die Bits des Inkrementers. " alt="" coords="211,364,297,390"/>
+<area shape="rect" id="node6" href="main_8c.html#aa7305d48b840eb4cffb865d4f4d685e4" title="÷ffnet die Einstellungen um die L‰nge des Spiels zu ‰ndern. " alt="" coords="531,541,619,568"/>
+<area shape="rect" id="node7" href="main_8c.html#ae0b1861d934f61491fad3142725daf56" title="÷ffnet das Men¸ um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits an..." alt="" coords="672,465,755,492"/>
+<area shape="rect" id="node9" href="main_8c.html#a9e3b22ae2e0234b51f4f2df58e6a6128" title="turnSetting" alt="" coords="532,592,617,618"/>
+<area shape="rect" id="node10" href="main_8c.html#a8e6e40d345b6f76556e3f497c35fb3af" title="÷ffnet die Einstellung Zusatzzeit je Zug einzustellen. " alt="" coords="525,364,624,390"/>
+<area shape="rect" id="node11" href="main_8c.html#a5864f6393c74073a86a19645a5c55f24" title="credits" alt="" coords="544,440,605,466"/>
+<area shape="rect" id="node12" href="main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="377,85,477,112"/>
+<area shape="rect" id="node13" href="digital_i_o_8h.html#a9a9747f5c74c6f562923c41ae973b1f1" title="Steuert die LEDs an. " alt="" coords="211,490,297,517"/>
+<area shape="rect" id="node14" href="lcd_8h.html#a5bb9320725084cc0fc68c2d15d0fcc2d" title="LCD_Initialize" alt="" coords="803,505,904,532"/>
+<area shape="rect" id="node15" href="main_8c.html#ac14b1aec4fc054de7bce10f7bdb61674" title="Zeigt die pro Spieler gebrauchte Zeit an. " alt="" coords="179,186,329,213"/>
+<area shape="rect" id="node16" href="main_8c.html#af6c30e8fd8656312c4eb7136fcb436b8" title="&quot;Game Over&quot; Screen. Kann durch Tastendruck bei einem Sieg hervorgerufen werden oder ˆffnet sich wenn d..." alt="" coords="197,85,311,112"/>
+<area shape="rect" id="node17" href="main_8c.html#a5449d35a2be928da9c72cae0281b2d67" title="Zeigt die verbleibende Zeit der Spieler an. " alt="" coords="385,136,470,162"/>
+<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="952,201,1003,228"/>
+<area shape="rect" id="node5" href="digital_i_o_8h.html#a7d44f5215696f8c31471cc5b3190875d" title="Lieﬂt die Werte des Drehencoders aus. " alt="" coords="380,490,475,517"/>
+<area shape="rect" id="node8" href="main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="÷ffnet die Credits: Studenten &amp; Professor. " alt="" coords="830,201,877,228"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7dee3d5785a8d1ac222bbe0d7407b9d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dee3d5785a8d1ac222bbe0d7407b9d4">&#9670;&nbsp;</a></span>LCD_CursorEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_CursorEnable </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bb9320725084cc0fc68c2d15d0fcc2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb9320725084cc0fc68c2d15d0fcc2d">&#9670;&nbsp;</a></span>LCD_Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LCD_Initialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a5bb9320725084cc0fc68c2d15d0fcc2d_cgraph.png" border="0" usemap="#lcd_8c_a5bb9320725084cc0fc68c2d15d0fcc2d_cgraph" alt=""/></div>
+<map name="lcd_8c_a5bb9320725084cc0fc68c2d15d0fcc2d_cgraph" id="lcd_8c_a5bb9320725084cc0fc68c2d15d0fcc2d_cgraph">
+<area shape="rect" id="node2" href="lcd_8c.html#a6a31be2073f118b2811e28f19ded450a" title="LCD_Wait" alt="" coords="177,5,258,32"/>
+<area shape="rect" id="node3" href="lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62" title="LCD_ClearScreen" alt="" coords="155,56,280,83"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a5bb9320725084cc0fc68c2d15d0fcc2d_icgraph.png" border="0" usemap="#lcd_8c_a5bb9320725084cc0fc68c2d15d0fcc2d_icgraph" alt=""/></div>
+<map name="lcd_8c_a5bb9320725084cc0fc68c2d15d0fcc2d_icgraph" id="lcd_8c_a5bb9320725084cc0fc68c2d15d0fcc2d_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="155,5,205,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9bbd8a3addf7efb3ed628b000298bbfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bbd8a3addf7efb3ed628b000298bbfa">&#9670;&nbsp;</a></span>LCD_PutChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_PutChar </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>inputCharacter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a9bbd8a3addf7efb3ed628b000298bbfa_cgraph.png" border="0" usemap="#lcd_8c_a9bbd8a3addf7efb3ed628b000298bbfa_cgraph" alt=""/></div>
+<map name="lcd_8c_a9bbd8a3addf7efb3ed628b000298bbfa_cgraph" id="lcd_8c_a9bbd8a3addf7efb3ed628b000298bbfa_cgraph">
+<area shape="rect" id="node2" href="lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="155,5,295,32"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a9bbd8a3addf7efb3ed628b000298bbfa_icgraph.png" border="0" usemap="#lcd_8c_a9bbd8a3addf7efb3ed628b000298bbfa_icgraph" alt=""/></div>
+<map name="lcd_8c_a9bbd8a3addf7efb3ed628b000298bbfa_icgraph" id="lcd_8c_a9bbd8a3addf7efb3ed628b000298bbfa_icgraph">
+<area shape="rect" id="node2" href="lcd_8h.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="155,365,263,391"/>
+<area shape="rect" id="node3" href="digital_i_o_8h.html#af45835ae132b28795d8ed348c090790c" title="Initialisiert die Pins. Setzt die Bits der einzelnen Pins. " alt="" coords="816,42,875,69"/>
+<area shape="rect" id="node5" href="digital_i_o_8h.html#a5e4162b54ab2f8a428979678ec19b69d" title="lieﬂt die einzelnen bits der Buttons T0&#45;T3 aus, sowie die Bits des Inkrementers. " alt="" coords="343,365,429,391"/>
+<area shape="rect" id="node7" href="main_8c.html#aa7305d48b840eb4cffb865d4f4d685e4" title="÷ffnet die Einstellungen um die L‰nge des Spiels zu ‰ndern. " alt="" coords="663,542,751,569"/>
+<area shape="rect" id="node8" href="main_8c.html#ae0b1861d934f61491fad3142725daf56" title="÷ffnet das Men¸ um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits an..." alt="" coords="804,466,887,493"/>
+<area shape="rect" id="node10" href="main_8c.html#a9e3b22ae2e0234b51f4f2df58e6a6128" title="turnSetting" alt="" coords="664,593,749,619"/>
+<area shape="rect" id="node11" href="main_8c.html#a8e6e40d345b6f76556e3f497c35fb3af" title="÷ffnet die Einstellung Zusatzzeit je Zug einzustellen. " alt="" coords="657,365,756,391"/>
+<area shape="rect" id="node12" href="main_8c.html#a5864f6393c74073a86a19645a5c55f24" title="credits" alt="" coords="676,441,737,467"/>
+<area shape="rect" id="node13" href="main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="509,86,609,113"/>
+<area shape="rect" id="node14" href="digital_i_o_8h.html#a9a9747f5c74c6f562923c41ae973b1f1" title="Steuert die LEDs an. " alt="" coords="343,491,429,518"/>
+<area shape="rect" id="node15" href="main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="Anzeige des Start Screens und LED&#45;Startsequenz. " alt="" coords="935,506,1025,533"/>
+<area shape="rect" id="node16" href="main_8c.html#ac14b1aec4fc054de7bce10f7bdb61674" title="Zeigt die pro Spieler gebrauchte Zeit an. " alt="" coords="311,187,461,214"/>
+<area shape="rect" id="node17" href="main_8c.html#af6c30e8fd8656312c4eb7136fcb436b8" title="&quot;Game Over&quot; Screen. Kann durch Tastendruck bei einem Sieg hervorgerufen werden oder ˆffnet sich wenn d..." alt="" coords="329,86,443,113"/>
+<area shape="rect" id="node18" href="main_8c.html#a5449d35a2be928da9c72cae0281b2d67" title="Zeigt die verbleibende Zeit der Spieler an. " alt="" coords="517,137,602,163"/>
+<area shape="rect" id="node4" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="1073,202,1124,229"/>
+<area shape="rect" id="node6" href="digital_i_o_8h.html#a7d44f5215696f8c31471cc5b3190875d" title="Lieﬂt die Werte des Drehencoders aus. " alt="" coords="512,491,607,518"/>
+<area shape="rect" id="node9" href="main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="÷ffnet die Credits: Studenten &amp; Professor. " alt="" coords="957,202,1003,229"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a34b4c6478ad043d6bd9a64df8f4db763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34b4c6478ad043d6bd9a64df8f4db763">&#9670;&nbsp;</a></span>LCD_PutString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_PutString </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>inputString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a34b4c6478ad043d6bd9a64df8f4db763_cgraph.png" border="0" usemap="#lcd_8c_a34b4c6478ad043d6bd9a64df8f4db763_cgraph" alt=""/></div>
+<map name="lcd_8c_a34b4c6478ad043d6bd9a64df8f4db763_cgraph" id="lcd_8c_a34b4c6478ad043d6bd9a64df8f4db763_cgraph">
+<area shape="rect" id="node2" href="lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa" title="LCD_PutChar" alt="" coords="161,5,263,32"/>
+<area shape="rect" id="node3" href="lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="311,5,451,32"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a34b4c6478ad043d6bd9a64df8f4db763_icgraph.png" border="0" usemap="#lcd_8c_a34b4c6478ad043d6bd9a64df8f4db763_icgraph" alt=""/></div>
+<map name="lcd_8c_a34b4c6478ad043d6bd9a64df8f4db763_icgraph" id="lcd_8c_a34b4c6478ad043d6bd9a64df8f4db763_icgraph">
+<area shape="rect" id="node2" href="digital_i_o_8h.html#af45835ae132b28795d8ed348c090790c" title="Initialisiert die Pins. Setzt die Bits der einzelnen Pins. " alt="" coords="667,42,725,69"/>
+<area shape="rect" id="node4" href="digital_i_o_8h.html#a5e4162b54ab2f8a428979678ec19b69d" title="lieﬂt die einzelnen bits der Buttons T0&#45;T3 aus, sowie die Bits des Inkrementers. " alt="" coords="193,365,280,391"/>
+<area shape="rect" id="node6" href="main_8c.html#aa7305d48b840eb4cffb865d4f4d685e4" title="÷ffnet die Einstellungen um die L‰nge des Spiels zu ‰ndern. " alt="" coords="513,542,601,569"/>
+<area shape="rect" id="node7" href="main_8c.html#ae0b1861d934f61491fad3142725daf56" title="÷ffnet das Men¸ um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits an..." alt="" coords="655,466,737,493"/>
+<area shape="rect" id="node9" href="main_8c.html#a9e3b22ae2e0234b51f4f2df58e6a6128" title="turnSetting" alt="" coords="515,593,600,619"/>
+<area shape="rect" id="node10" href="main_8c.html#a8e6e40d345b6f76556e3f497c35fb3af" title="÷ffnet die Einstellung Zusatzzeit je Zug einzustellen. " alt="" coords="508,365,607,391"/>
+<area shape="rect" id="node11" href="main_8c.html#a5864f6393c74073a86a19645a5c55f24" title="credits" alt="" coords="527,441,588,467"/>
+<area shape="rect" id="node12" href="main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="360,86,460,113"/>
+<area shape="rect" id="node13" href="digital_i_o_8h.html#a9a9747f5c74c6f562923c41ae973b1f1" title="Steuert die LEDs an. " alt="" coords="193,491,280,518"/>
+<area shape="rect" id="node14" href="main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="Anzeige des Start Screens und LED&#45;Startsequenz. " alt="" coords="785,506,876,533"/>
+<area shape="rect" id="node15" href="main_8c.html#ac14b1aec4fc054de7bce10f7bdb61674" title="Zeigt die pro Spieler gebrauchte Zeit an. " alt="" coords="161,187,312,214"/>
+<area shape="rect" id="node16" href="main_8c.html#af6c30e8fd8656312c4eb7136fcb436b8" title="&quot;Game Over&quot; Screen. Kann durch Tastendruck bei einem Sieg hervorgerufen werden oder ˆffnet sich wenn d..." alt="" coords="180,86,293,113"/>
+<area shape="rect" id="node17" href="main_8c.html#a5449d35a2be928da9c72cae0281b2d67" title="Zeigt die verbleibende Zeit der Spieler an. " alt="" coords="367,137,453,163"/>
+<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="924,202,975,229"/>
+<area shape="rect" id="node5" href="digital_i_o_8h.html#a7d44f5215696f8c31471cc5b3190875d" title="Lieﬂt die Werte des Drehencoders aus. " alt="" coords="363,491,457,518"/>
+<area shape="rect" id="node8" href="main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="÷ffnet die Credits: Studenten &amp; Professor. " alt="" coords="807,202,854,229"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adad847c231be8127a1a4b4004a63a8eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adad847c231be8127a1a4b4004a63a8eb">&#9670;&nbsp;</a></span>LCD_setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_setPosition </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_adad847c231be8127a1a4b4004a63a8eb_icgraph.png" border="0" usemap="#lcd_8c_adad847c231be8127a1a4b4004a63a8eb_icgraph" alt=""/></div>
+<map name="lcd_8c_adad847c231be8127a1a4b4004a63a8eb_icgraph" id="lcd_8c_adad847c231be8127a1a4b4004a63a8eb_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="Anzeige des Start Screens und LED&#45;Startsequenz. " alt="" coords="519,35,609,62"/>
+<area shape="rect" id="node4" href="main_8c.html#a9e3b22ae2e0234b51f4f2df58e6a6128" title="turnSetting" alt="" coords="205,47,290,74"/>
+<area shape="rect" id="node5" href="main_8c.html#ae0b1861d934f61491fad3142725daf56" title="÷ffnet das Men¸ um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits an..." alt="" coords="379,123,462,150"/>
+<area shape="rect" id="node7" href="main_8c.html#a5864f6393c74073a86a19645a5c55f24" title="credits" alt="" coords="217,148,278,175"/>
+<area shape="rect" id="node8" href="main_8c.html#ac14b1aec4fc054de7bce10f7bdb61674" title="Zeigt die pro Spieler gebrauchte Zeit an. " alt="" coords="172,199,323,226"/>
+<area shape="rect" id="node10" href="main_8c.html#af6c30e8fd8656312c4eb7136fcb436b8" title="&quot;Game Over&quot; Screen. Kann durch Tastendruck bei einem Sieg hervorgerufen werden oder ˆffnet sich wenn d..." alt="" coords="191,250,304,276"/>
+<area shape="rect" id="node11" href="main_8c.html#a5449d35a2be928da9c72cae0281b2d67" title="Zeigt die verbleibende Zeit der Spieler an. " alt="" coords="378,275,463,302"/>
+<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="657,99,708,126"/>
+<area shape="rect" id="node6" href="main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="÷ffnet die Credits: Studenten &amp; Professor. " alt="" coords="541,162,587,188"/>
+<area shape="rect" id="node9" href="main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="371,199,471,226"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a176c293b59f4bc1487620d41f0d7dcb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a176c293b59f4bc1487620d41f0d7dcb2">&#9670;&nbsp;</a></span>LCD_ShiftCursorDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ShiftCursorDown </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a176c293b59f4bc1487620d41f0d7dcb2_cgraph.png" border="0" usemap="#lcd_8c_a176c293b59f4bc1487620d41f0d7dcb2_cgraph" alt=""/></div>
+<map name="lcd_8c_a176c293b59f4bc1487620d41f0d7dcb2_cgraph" id="lcd_8c_a176c293b59f4bc1487620d41f0d7dcb2_cgraph">
+<area shape="rect" id="node2" href="lcd_8c.html#a12720c1305e7456a6a18026fcbc07ff9" title="LCD_ShiftCursorRight" alt="" coords="204,5,352,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af0ea7a630f592e093ac5183fe949b7d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ea7a630f592e093ac5183fe949b7d0">&#9670;&nbsp;</a></span>LCD_ShiftCursorLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ShiftCursorLeft </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_af0ea7a630f592e093ac5183fe949b7d0_icgraph.png" border="0" usemap="#lcd_8c_af0ea7a630f592e093ac5183fe949b7d0_icgraph" alt=""/></div>
+<map name="lcd_8c_af0ea7a630f592e093ac5183fe949b7d0_icgraph" id="lcd_8c_af0ea7a630f592e093ac5183fe949b7d0_icgraph">
+<area shape="rect" id="node2" href="lcd_8h.html#a6915b5f6b08cbe44ff500754a2f20e57" title="LCD_ShiftCursorUp" alt="" coords="192,5,327,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a12720c1305e7456a6a18026fcbc07ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12720c1305e7456a6a18026fcbc07ff9">&#9670;&nbsp;</a></span>LCD_ShiftCursorRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ShiftCursorRight </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a12720c1305e7456a6a18026fcbc07ff9_icgraph.png" border="0" usemap="#lcd_8c_a12720c1305e7456a6a18026fcbc07ff9_icgraph" alt=""/></div>
+<map name="lcd_8c_a12720c1305e7456a6a18026fcbc07ff9_icgraph" id="lcd_8c_a12720c1305e7456a6a18026fcbc07ff9_icgraph">
+<area shape="rect" id="node2" href="lcd_8h.html#a176c293b59f4bc1487620d41f0d7dcb2" title="LCD_ShiftCursorDown" alt="" coords="201,5,352,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6915b5f6b08cbe44ff500754a2f20e57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6915b5f6b08cbe44ff500754a2f20e57">&#9670;&nbsp;</a></span>LCD_ShiftCursorUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ShiftCursorUp </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a6915b5f6b08cbe44ff500754a2f20e57_cgraph.png" border="0" usemap="#lcd_8c_a6915b5f6b08cbe44ff500754a2f20e57_cgraph" alt=""/></div>
+<map name="lcd_8c_a6915b5f6b08cbe44ff500754a2f20e57_cgraph" id="lcd_8c_a6915b5f6b08cbe44ff500754a2f20e57_cgraph">
+<area shape="rect" id="node2" href="lcd_8c.html#af0ea7a630f592e093ac5183fe949b7d0" title="LCD_ShiftCursorLeft" alt="" coords="188,5,327,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6a31be2073f118b2811e28f19ded450a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a31be2073f118b2811e28f19ded450a">&#9670;&nbsp;</a></span>LCD_Wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_Wait </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>delay</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="lcd_8c_a6a31be2073f118b2811e28f19ded450a_icgraph.png" border="0" usemap="#lcd_8c_a6a31be2073f118b2811e28f19ded450a_icgraph" alt=""/></div>
+<map name="lcd_8c_a6a31be2073f118b2811e28f19ded450a_icgraph" id="lcd_8c_a6a31be2073f118b2811e28f19ded450a_icgraph">
+<area shape="rect" id="node2" href="lcd_8h.html#a5bb9320725084cc0fc68c2d15d0fcc2d" title="LCD_Initialize" alt="" coords="135,5,236,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="284,5,335,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<map id="readEncoder" name="readEncoder">
+<area shape="rect" id="node2" href="$main_8c.html#aa7305d48b840eb4cffb865d4f4d685e4" title="Öffnet die Einstellungen um die Länge des Spiels zu ändern. " alt="" coords="153,5,241,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae0b1861d934f61491fad3142725daf56" title="Öffnet das Menü um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits an..." alt="" coords="295,107,377,133"/>
+<area shape="rect" id="node6" href="$main_8c.html#a9e3b22ae2e0234b51f4f2df58e6a6128" title="turnSetting" alt="" coords="155,107,240,133"/>
+<area shape="rect" id="node7" href="$main_8c.html#a8e6e40d345b6f76556e3f497c35fb3af" title="Öffnet die Einstellung Zusatzzeit je Zug einzustellen. " alt="" coords="148,157,247,184"/>
+<area shape="rect" id="node8" href="$main_8c.html#a5864f6393c74073a86a19645a5c55f24" title="credits" alt="" coords="167,208,228,235"/>
+<area shape="rect" id="node4" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="Öffnet die Credits: Studenten &amp; Professor. " alt="" coords="425,107,472,133"/>
+<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="520,107,571,133"/>
+</map>

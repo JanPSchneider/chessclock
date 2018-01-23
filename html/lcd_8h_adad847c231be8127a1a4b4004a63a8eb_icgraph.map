@@ -1,0 +1,12 @@
+<map id="LCD_setPosition" name="LCD_setPosition">
+<area shape="rect" id="node2" href="$main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="Anzeige des Start Screens und LED&#45;Startsequenz. " alt="" coords="519,35,609,62"/>
+<area shape="rect" id="node4" href="$main_8c.html#a9e3b22ae2e0234b51f4f2df58e6a6128" title="turnSetting" alt="" coords="205,47,290,74"/>
+<area shape="rect" id="node5" href="$main_8c.html#ae0b1861d934f61491fad3142725daf56" title="Öffnet das Menü um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits an..." alt="" coords="379,123,462,150"/>
+<area shape="rect" id="node7" href="$main_8c.html#a5864f6393c74073a86a19645a5c55f24" title="credits" alt="" coords="217,148,278,175"/>
+<area shape="rect" id="node8" href="$main_8c.html#ac14b1aec4fc054de7bce10f7bdb61674" title="Zeigt die pro Spieler gebrauchte Zeit an. " alt="" coords="172,199,323,226"/>
+<area shape="rect" id="node10" href="$main_8c.html#af6c30e8fd8656312c4eb7136fcb436b8" title="&quot;Game Over&quot; Screen. Kann durch Tastendruck bei einem Sieg hervorgerufen werden oder öffnet sich wenn d..." alt="" coords="191,250,304,276"/>
+<area shape="rect" id="node11" href="$main_8c.html#a5449d35a2be928da9c72cae0281b2d67" title="Zeigt die verbleibende Zeit der Spieler an. " alt="" coords="378,275,463,302"/>
+<area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="657,99,708,126"/>
+<area shape="rect" id="node6" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="Öffnet die Credits: Studenten &amp; Professor. " alt="" coords="541,162,587,188"/>
+<area shape="rect" id="node9" href="$main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="371,199,471,226"/>
+</map>

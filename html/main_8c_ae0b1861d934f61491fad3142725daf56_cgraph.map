@@ -1,0 +1,15 @@
+<map id="openMenu" name="openMenu">
+<area shape="rect" id="node2" href="$lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62" title="LCD_ClearScreen" alt="" coords="584,257,709,284"/>
+<area shape="rect" id="node3" href="$lcd_8c.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="593,460,701,486"/>
+<area shape="rect" id="node6" href="$time_8c.html#aa147e4fc062ebcad160b842ff6046653" title="Legt einen Sound(Feedback) fest und die möglichkeit den Sound zu deaktivieren bzw zu aktivieren..." alt="" coords="148,840,223,866"/>
+<area shape="rect" id="node7" href="$main_8c.html#a0b041cda2a7b0bc73178a9ec78abd5cb" title="Schaltet Feedback Töne ein oder aus. " alt="" coords="313,865,371,892"/>
+<area shape="rect" id="node8" href="$digital_i_o_8c.html#a5e4162b54ab2f8a428979678ec19b69d" title="ließt die einzelnen bits der Buttons T0&#45;T3 aus, sowie die Bits des Inkrementers. " alt="" coords="449,358,536,385"/>
+<area shape="rect" id="node9" href="$digital_i_o_8c.html#a7d44f5215696f8c31471cc5b3190875d" title="Ließt die Werte des Drehencoders aus. " alt="" coords="295,384,389,410"/>
+<area shape="rect" id="node10" href="$lcd_8c.html#adad847c231be8127a1a4b4004a63a8eb" title="LCD_setPosition" alt="" coords="283,586,401,613"/>
+<area shape="rect" id="node11" href="$main_8c.html#aa7305d48b840eb4cffb865d4f4d685e4" title="Öffnet die Einstellungen um die Länge des Spiels zu ändern. " alt="" coords="141,282,229,309"/>
+<area shape="rect" id="node12" href="$main_8c.html#a9e3b22ae2e0234b51f4f2df58e6a6128" title="turnSetting" alt="" coords="143,485,228,512"/>
+<area shape="rect" id="node13" href="$main_8c.html#a8e6e40d345b6f76556e3f497c35fb3af" title="Öffnet die Einstellung Zusatzzeit je Zug einzustellen. " alt="" coords="136,130,235,157"/>
+<area shape="rect" id="node14" href="$main_8c.html#a5864f6393c74073a86a19645a5c55f24" title="credits" alt="" coords="155,624,216,650"/>
+<area shape="rect" id="node4" href="$lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa" title="LCD_PutChar" alt="" coords="757,460,859,486"/>
+<area shape="rect" id="node5" href="$lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="907,460,1047,486"/>
+</map>
