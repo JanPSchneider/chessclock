@@ -480,12 +480,12 @@ __FUID0
  .debug_abbrev    0x0001f6        0x1df build/default/production/files/main.o
  .debug_abbrev    0x0003d5        0x10c build/default/production/files/time.o
 
-.debug_line       0x000000        0x64f
+.debug_line       0x000000        0x64d
  *(.debug_line)
  .debug_line      0x000000        0x165 build/default/production/files/digitalIO.o
  .debug_line      0x000165        0x181 build/default/production/files/lcd.o
- .debug_line      0x0002e6        0x24f build/default/production/files/main.o
- .debug_line      0x000535        0x11a build/default/production/files/time.o
+ .debug_line      0x0002e6        0x24d build/default/production/files/main.o
+ .debug_line      0x000533        0x11a build/default/production/files/time.o
 
 .debug_frame      0x000000        0x4c4
  *(.debug_frame)
