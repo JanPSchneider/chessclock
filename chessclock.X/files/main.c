@@ -432,17 +432,17 @@ void credits()
             LCD_ClearScreen();
             LCD_PutString("Students: ", 16);
             LCD_setPosition(1, 0);
-            LCD_PutString("Jan Schneider", 16);
+            LCD_PutString("Tobias Haag", 16);
         }
         else if (scrolls3 == 2) {
             LCD_ClearScreen();
-            LCD_PutString("Jan Schneider", 16);
-            LCD_setPosition(1, 0);
             LCD_PutString("Tobias Haag", 16);
+            LCD_setPosition(1, 0);
+            LCD_PutString("Jan Schneider", 16);
         }
         else if (scrolls3 == 3) {
             LCD_ClearScreen();
-            LCD_PutString("Tobias Haag", 16);
+            LCD_PutString("Jan Schneider", 16);
             LCD_setPosition(1, 0);
             LCD_PutString("Marcus Schoch", 16);
         }
