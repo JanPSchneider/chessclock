@@ -23,10 +23,8 @@ void delay_ms(uint16_t ms){
 }
 
 /** 
- * @brief beeping
+ * @brief Legt einen Sound(Feedback) fest und die möglichkeit den Sound zu deaktivieren bzw zu aktivieren.
  * @param ms, frequency
- * @pre !!!
- * @attention !!!
  */
 void feedback(uint16_t ms, uint16_t frequency, uint8_t muted) {
     ms /= 10; // Only 10ms duration steps for higher frequency resolution
@@ -60,10 +58,8 @@ void feedback(uint16_t ms, uint16_t frequency, uint8_t muted) {
 }
 
 /** 
- * @brief init timer 1
- * @param -
- * @pre initialise timer 1.
- * @attention timer 1 uses 16 Bit.
+ * @brief Initialisiert den TImer. Legt Bits für den Timer fest.
+ * @attention Timer braucht 16 bits.
  */
 void initTimer(){
     T1CONbits.TON = 0; // Enable Timer

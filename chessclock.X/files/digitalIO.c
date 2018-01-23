@@ -20,10 +20,8 @@
 // INC.A=G0; INC.B=G1; INC.SW=G9
 
 /** 
- * @brief pinMode
- * @param pin, mode
- * @pre !!!
- * @attention !!!
+ * @brief Initialisiert die Pins. Setzt die Bits der einzelnen Pins
+ * @param pin
  */
 void initPin(uint16_t pin) {
     switch(pin) {
@@ -98,10 +96,8 @@ void initPin(uint16_t pin) {
 }
 
 /** 
- * @brief digital Read
+ * @brief lieﬂt die einzelnen bits der Buttons T0-T3 aus, sowie die Bits des Inkrementers.
  * @param pin
- * @pre !!!
- * @attention !!!
  */
 uint8_t digitalRead(uint16_t pin) {
     switch(pin) {
@@ -137,10 +133,8 @@ uint8_t digitalRead(uint16_t pin) {
 }
 
 /** 
- * @brief digitalWrite
+ * @brief Steuert die LEDs an.
  * @param pin, mode
- * @pre !!!
- * @attention !!!
  */
 void digitalWrite(uint16_t pin, uint8_t mode) {
     switch(pin) {
@@ -164,10 +158,8 @@ void digitalWrite(uint16_t pin, uint8_t mode) {
 }
 
 /** 
- * @brief digitalWriteLEDs
+ * @brief Setzt die Bits der LEDs, Schaltet die LEDs somit an oder aus
  * @param overwrite
- * @pre !!!
- * @attention !!!
  */
 void digitalWriteLEDs(uint16_t overwrite) {
     LATB &= 0xF0FF; // clear all four LEDs
@@ -175,14 +167,11 @@ void digitalWriteLEDs(uint16_t overwrite) {
 }
 
 /** 
- * @brief initEncoder
- * @param -
- * @pre initialise the encode
- * @attention !!!
+ * @brief Initialisiert den Encoder. Setzt die Pins des Encoders als digitale Inputs
+ * @attention ANSEL G0,1 not existing, always digital
  */
 void initEncoder() {
-    // Set Encoder Pins as digital Inputs
-    // Note: ANSEL G0,1 not existing, always digital
+   
     ANSELGbits.ANSG9 = 0;
     TRISGbits.TRISG0 = 1;
     TRISGbits.TRISG1 = 1;
@@ -195,10 +184,7 @@ void initEncoder() {
 }
 
 /** 
- * @brief readEncoder
- * @param -
- * @pre !!!
- * @attention !!!
+ * @brief Lieﬂt die Werte des Drehencoders aus.
  */
 int8_t readEncoder() {
     bool inc_a = digitalRead(INC_A);
@@ -216,10 +202,7 @@ int8_t readEncoder() {
 }
 
 /** 
- * @brief initPiezo
- * @param -
- * @pre initialize the piezo
- * @attention !!!
+ * @brief Initialisiert den Piezo. Legt die Bits des Piezo fest.
  */
 void initPiezo() {
     //Piezo Output
