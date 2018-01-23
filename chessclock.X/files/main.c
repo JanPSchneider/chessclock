@@ -33,94 +33,6 @@ bool playertwo_turn = false, playerone_turn = false;
 uint8_t mutedStatus = 0;
 
 /** 
- * @brief Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen.
- * @param argc, argv
- * @attention Funktioniert nur wenn der Rest des Codes abrufbar bzw vorhanden ist.
- */
-int main(int argc, char** argv)
-{
-
-    initPin(LED_1);
-    initPin(LED_2);
-    initPin(LED_3);
-    initPin(LED_4);
-    initPin(BUTTON_T0);
-    initPin(BUTTON_T1);
-    initPin(BUTTON_T2);
-    initPin(BUTTON_T3);
-
-    initEncoder();
-    initTimer();
-    initPiezo();
-    LCD_Initialize();
-
-    initialization();
-    delay_ms(1000);
-
-    loop();
-
-    return (EXIT_SUCCESS);
-}
-
-/** 
- * @brief Schleife des Programmes.
- * @attention Funktioniert nur der Rest des Codes abrufbar bzw. vorhanden ist.
- */
-void loop()
-{
-    while (1) {
-        while (IFS0bits.T1IF == 0) {
-            if (!digitalRead(BUTTON_T0) && !playertwo_turn) {
-                playertwo_turns++;
-                playertwo_sec += extra_time;
-                playertwo_turn = true;
-                playerone_turn = false;
-                showClock();
-                changeLED(false);
-            }
-            if (!digitalRead(BUTTON_T3) && !playerone_turn) {
-                playerone_turns++;
-                playerone_sec += extra_time;
-                playertwo_turn = false;
-                playerone_turn = true;
-                showClock();
-                changeLED(true);
-            }
-        }
-        // Check if Timer overflowed
-        if (IFS0bits.T1IF == 1) {
-            // reset Timer
-            IFS0bits.T1IF = 0;
-            TMR1 = 0x00;
-            PR1 = 62500; // 1 sec
-
-            ClrWdt(); // Reset Watchdog
-
-            if (!digitalRead(INC_SW)) { // Open Settings
-                openMenu();
-                resetGame();
-            }
-            if (playertwo_turn) {
-                playertwo_sec--;
-            }
-            else if (playerone_turn) {
-                playerone_sec--;
-            }
-            else {
-                digitalWriteLEDs(0b0110);
-            }
-
-            // Stop game on timeout or manual button press
-            if (playerone_sec == 0 || playertwo_sec == 0 || !digitalRead(BUTTON_T1)) {
-                handleEnding();
-                resetGame();
-            }
-        }
-        showClock();
-    }
-}
-
-/** 
  * @brief LEDs umschalten
  * @param change
  */
@@ -476,5 +388,93 @@ void credits()
             LCD_setPosition(1, 0);
             LCD_PutString("Juergen Schuele ", 16);
         }
+    }   
+}
+
+/** 
+ * @brief Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen.
+ * @param argc, argv
+ * @attention Funktioniert nur wenn der Rest des Codes abrufbar bzw vorhanden ist.
+ */
+int main(int argc, char** argv)
+{
+
+    initPin(LED_1);
+    initPin(LED_2);
+    initPin(LED_3);
+    initPin(LED_4);
+    initPin(BUTTON_T0);
+    initPin(BUTTON_T1);
+    initPin(BUTTON_T2);
+    initPin(BUTTON_T3);
+
+    initEncoder();
+    initTimer();
+    initPiezo();
+    LCD_Initialize();
+
+    initialization();
+    delay_ms(1000);
+
+    loop();
+
+    return (EXIT_SUCCESS);
+}
+
+/** 
+ * @brief Schleife des Programmes.
+ * @attention Funktioniert nur der Rest des Codes abrufbar bzw. vorhanden ist.
+ */
+void loop()
+{
+    while (1) {
+        while (IFS0bits.T1IF == 0) {
+            if (!digitalRead(BUTTON_T0) && !playertwo_turn) {
+                playertwo_turns++;
+                playertwo_sec += extra_time;
+                playertwo_turn = true;
+                playerone_turn = false;
+                showClock();
+                changeLED(false);
+            }
+            if (!digitalRead(BUTTON_T3) && !playerone_turn) {
+                playerone_turns++;
+                playerone_sec += extra_time;
+                playertwo_turn = false;
+                playerone_turn = true;
+                showClock();
+                changeLED(true);
+            }
+        }
+        // Check if Timer overflowed
+        if (IFS0bits.T1IF == 1) {
+            // reset Timer
+            IFS0bits.T1IF = 0;
+            TMR1 = 0x00;
+            PR1 = 62500; // 1 sec
+
+            ClrWdt(); // Reset Watchdog
+
+            if (!digitalRead(INC_SW)) { // Open Settings
+                openMenu();
+                resetGame();
+            }
+            if (playertwo_turn) {
+                playertwo_sec--;
+            }
+            else if (playerone_turn) {
+                playerone_sec--;
+            }
+            else {
+                digitalWriteLEDs(0b0110);
+            }
+
+            // Stop game on timeout or manual button press
+            if (playerone_sec == 0 || playertwo_sec == 0 || !digitalRead(BUTTON_T1)) {
+                handleEnding();
+                resetGame();
+            }
+        }
+        showClock();
     }
 }
