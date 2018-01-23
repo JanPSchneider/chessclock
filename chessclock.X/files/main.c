@@ -421,9 +421,6 @@ void resetGame()
 
 /** 
  * @brief Zeigt die verbleibende Zeit der Spieler an
- * @param -
- * @pre !!!
- * @attention !!!
  */
 void showClock()
 {
@@ -466,7 +463,7 @@ void loop()
                 changeLED(true);
             }
         }
-        // Check if Timer overflowed
+        // Überprüft ob die Zeit abgelaufen ist
         if (IFS0bits.T1IF == 1) {
             // reset Timer
             IFS0bits.T1IF = 0;
@@ -475,7 +472,7 @@ void loop()
 
             ClrWdt(); // Reset Watchdog
 
-            if (!digitalRead(INC_SW)) { // Open Settings
+            if (!digitalRead(INC_SW)) { // öffnet Einstellungen
                 openMenu();
                 resetGame();
             }
@@ -489,7 +486,7 @@ void loop()
                 digitalWriteLEDs(0b0110);
             }
 
-            // Stop game on timeout or manual button press or no Turns left
+            // Stopt das Spiel wenn keine Zeit, keine Züge mehr übrig sind oder kann manuell geöffnet werden
             if ((playerone_turns >= turns && playertwo_turns >= turns) || playerone_sec == 0 || playertwo_sec == 0 || !digitalRead(BUTTON_T1)) {
                 handleEnding();
                 resetGame();

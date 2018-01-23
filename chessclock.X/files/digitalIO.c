@@ -162,13 +162,13 @@ void digitalWrite(uint16_t pin, uint8_t mode) {
  * @param overwrite
  */
 void digitalWriteLEDs(uint16_t overwrite) {
-    LATB &= 0xF0FF; // clear all four LEDs
-    LATB |= overwrite; // set bits again
+    LATB &= 0xF0FF; // schalte alle LEDs aus
+    LATB |= overwrite; // setzt bits neu
 }
 
 /** 
  * @brief Initialisiert den Encoder. Setzt die Pins des Encoders als digitale Inputs
- * @attention ANSEL G0,1 not existing, always digital
+ * @attention ANSEL G0,1 existiert nicht, alles digitale Eingänge
  */
 void initEncoder() {
    
@@ -188,12 +188,12 @@ void initEncoder() {
  */
 int8_t readEncoder() {
     bool inc_a = digitalRead(INC_A);
-    while (inc_a == digitalRead(INC_A)) { // do nothing while state stays the same
+    while (inc_a == digitalRead(INC_A)) { // Solange nicht gedreht wird, tue nichts!
         if (!digitalRead(INC_SW)) {
-            return 0; // exit without change on switch press
+            return 0; // bei Tastendruck verlassen ohne Änderungen.
         }
     }
-    if (!inc_a == digitalRead(INC_B)) { // A == B means backwards rotating, else forwards
+    if (!inc_a == digitalRead(INC_B)) { // A == B bedeutet rückwärts, andernfalls vorwärts
         return -1;
     } 
     else {
