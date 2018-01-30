@@ -2,10 +2,10 @@
  * @file  digitalIO.c
  * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
- * @brief Bit deklaration der verschiedenen Fälle, beispielsweise LED an/aus oder Taster gedrückt/nicht gedrückt.
+ * @brief Bit Deklaration der verschiedenen Fälle, beispielsweise LED an/aus oder Taster gedrückt/nicht gedrückt.<br>
  * Außerdem Erstellung von digitalRead und digitalWrite um die Bits auszulesen bzw zu schreiben.
  * 
- * @date Created on 16.01.2017
+ * @date 11.12.2017
  */
 
 #include <stdint.h>
@@ -14,6 +14,7 @@
 #include "lcd.h"
 
 #include "digitalIO.h"
+#include "time.h"
 
 // SW 0..3: PG12..15
 // LED 0...3: PB8..11
@@ -88,9 +89,10 @@ void initPin(uint16_t pin) {
             TRISGbits.TRISG15= 1; //Input
             CNPUGbits.CNPUG15=1;                
             break;
-        default:
+        default: // falls der Code nicht wie gewollt funktioniert
             LCD_ClearScreen();
             LCD_PutString("! initPin", 16);
+            delay_ms(1000);
             break;
     }
 }
@@ -123,10 +125,10 @@ uint8_t digitalRead(uint16_t pin) {
         case INC_SW:
             return PORTGbits.RG9;
             break;
-            
-        default:
+        default:  // falls der Code nicht wie gewollt funktioniert
             LCD_ClearScreen();
             LCD_PutString("! digitalRead", 16);
+            delay_ms(1000);
             break;
     }
     return 0;
@@ -153,6 +155,7 @@ void digitalWrite(uint16_t pin, uint8_t mode) {
         default:
             LCD_ClearScreen();
             LCD_PutString("! digitalWrite", 16);
+            delay_ms(1000);
             break;
     }
 }

@@ -2,7 +2,7 @@
  * @file  main.c
  * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
- * @brief Erstellung von Funktionen. Beispielsweise Menü und Einstellungen.
+ * @brief Erstellung von Funktionen und Hauptdatei von CHESSCLOCK. Beispielsweise Menü und Einstellungen.
  * 
  * @date 11.12.2017
  */
@@ -23,7 +23,7 @@
 #define MAX_EXTRA_TIME 60 // Sekunden
 #define TURNS 30 // Zugzahl
 #define TURNS_MAX 50 // Maximale Zuganzahl
-#define TURNS_MIN 2 //Minimale Zuganzahl
+#define TURNS_MIN 2 // Minimale Zuganzahl
 #define SCROLLING 0
 
 uint16_t initTime = INIT_TIME;
@@ -143,6 +143,9 @@ void bonusSetting()
     }
 }
 
+/** 
+ * @brief Öffnet die Credits: Studenten & Professor.
+ */
 void credits()
 {
     LCD_ClearScreen();
@@ -391,9 +394,10 @@ void handleEnding()
             case 1:
                 showTimePlayedStats("P Two", playertwo_sec);
                 break;
-            default:
+            default: // falls der Code nicht wie gewollt funktioniert
                 LCD_ClearScreen();
                 LCD_PutString("! handleEnding", 16);
+                delay_ms(1000);
                 break;
             }
             i++;
@@ -433,10 +437,6 @@ void showClock()
     LCD_setPosition(1, 0);
     LCD_PutString(string, 16);
 }
-
-/** 
- * @brief Öffnet die Credits: Studenten & Professor.
- */
 
 /** 
  * @brief Schleife des Programmes.

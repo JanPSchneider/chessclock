@@ -2,7 +2,7 @@
  * @file  time.c
  * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
  * 
- * @brief 
+ * @brief Funktion zur Intialisierung des Timers und Vereinfachung der Delay-Funktionen
  * 
  * @date 11.12.2017
  */
@@ -23,8 +23,8 @@ void delay_ms(uint16_t ms){
 }
 
 /** 
- * @brief Legt einen Sound(Feedback) fest und die möglichkeit den Sound zu deaktivieren bzw zu aktivieren.
- * @param ms, frequency
+ * @brief Legt einen Sound (-feedback) fest und die möglichkeit den Sound zu deaktivieren bzw zu aktivieren.
+ * @param ms, frequency, muted
  */
 void feedback(uint16_t ms, uint16_t frequency, uint8_t muted) {
     ms /= 10; // Only 10ms duration steps for higher frequency resolution
@@ -58,7 +58,7 @@ void feedback(uint16_t ms, uint16_t frequency, uint8_t muted) {
 }
 
 /** 
- * @brief Initialisiert den TImer. Legt Bits für den Timer fest.
+ * @brief Initialisiert den Timer. Legt Bits für den Timer fest.
  * @attention Timer braucht 16 bits.
  */
 void initTimer(){
