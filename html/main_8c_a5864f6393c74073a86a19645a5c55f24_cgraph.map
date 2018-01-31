@@ -1,9 +1,9 @@
 <map id="credits" name="credits">
-<area shape="rect" id="node2" href="$lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62" title="LCD_ClearScreen" alt="" coords="416,51,541,77"/>
-<area shape="rect" id="node3" href="$lcd_8c.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="425,127,533,153"/>
-<area shape="rect" id="node6" href="$lcd_8c.html#adad847c231be8127a1a4b4004a63a8eb" title="LCD_setPosition" alt="" coords="115,88,233,115"/>
-<area shape="rect" id="node7" href="$digital_i_o_8c.html#a5e4162b54ab2f8a428979678ec19b69d" title="ließt die einzelnen bits der Buttons T0&#45;T3 aus, sowie die Bits des Inkrementers. " alt="" coords="281,88,368,115"/>
-<area shape="rect" id="node8" href="$digital_i_o_8c.html#a7d44f5215696f8c31471cc5b3190875d" title="Ließt die Werte des Drehencoders aus. " alt="" coords="127,37,221,64"/>
-<area shape="rect" id="node4" href="$lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa" title="LCD_PutChar" alt="" coords="589,127,691,153"/>
-<area shape="rect" id="node5" href="$lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="739,127,879,153"/>
+<area shape="rect" id="node2" href="$lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62" title="LCD_ClearScreen" alt="" coords="115,5,240,32"/>
+<area shape="rect" id="node3" href="$lcd_8c.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="123,56,231,83"/>
+<area shape="rect" id="node6" href="$lcd_8c.html#adad847c231be8127a1a4b4004a63a8eb" title="LCD_setPosition" alt="" coords="118,107,237,133"/>
+<area shape="rect" id="node7" href="$digital_i_o_8c.html#a5e4162b54ab2f8a428979678ec19b69d" title="digital Read " alt="" coords="295,183,382,209"/>
+<area shape="rect" id="node8" href="$digital_i_o_8c.html#a7d44f5215696f8c31471cc5b3190875d" title="readEncoder " alt="" coords="130,208,225,235"/>
+<area shape="rect" id="node4" href="$lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa" title="LCD_PutChar" alt="" coords="288,56,389,83"/>
+<area shape="rect" id="node5" href="$lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="437,56,577,83"/>
 </map>

@@ -1,6 +1,0 @@
-<map id="initPin" name="initPin">
-<area shape="rect" id="node2" href="$lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62" title="LCD_ClearScreen" alt="" coords="112,5,237,32"/>
-<area shape="rect" id="node3" href="$lcd_8c.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="121,56,229,83"/>
-<area shape="rect" id="node4" href="$lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa" title="LCD_PutChar" alt="" coords="285,56,387,83"/>
-<area shape="rect" id="node5" href="$lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="435,56,575,83"/>
-</map>

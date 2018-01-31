@@ -4,8 +4,8 @@
 <area shape="rect" id="node6" href="$main_8c.html#ad6a8a325993331420e5776ed4975cee9" title="LEDs umschalten. " alt="" coords="159,107,248,133"/>
 <area shape="rect" id="node3" href="$lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa" title="LCD_PutChar" alt="" coords="319,5,421,32"/>
 <area shape="rect" id="node4" href="$lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="477,5,617,32"/>
-<area shape="rect" id="node7" href="$time_8c.html#aa147e4fc062ebcad160b842ff6046653" title="Legt einen Sound(Feedback) fest und die möglichkeit den Sound zu deaktivieren bzw zu aktivieren..." alt="" coords="333,56,407,83"/>
-<area shape="rect" id="node9" href="$digital_i_o_8c.html#abddcace85cc72e5a0763f345ede98746" title="Setzt die Bits der LEDs, Schaltet die LEDs somit an oder aus. " alt="" coords="311,107,429,133"/>
+<area shape="rect" id="node7" href="$time_8c.html#aa147e4fc062ebcad160b842ff6046653" title="beeping " alt="" coords="333,56,407,83"/>
+<area shape="rect" id="node9" href="$digital_i_o_8c.html#abddcace85cc72e5a0763f345ede98746" title="digitalWriteLEDs " alt="" coords="311,107,429,133"/>
 <area shape="rect" id="node10" href="$time_8c.html#aa0dce6d249d81fb85b082273270ba710" title="Provides ms delay. " alt="" coords="331,157,409,184"/>
 <area shape="rect" id="node8" href="$main_8c.html#a0b041cda2a7b0bc73178a9ec78abd5cb" title="Schaltet Feedback Töne ein oder aus. " alt="" coords="518,56,577,83"/>
 </map>

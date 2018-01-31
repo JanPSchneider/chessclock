@@ -1,9 +1,0 @@
-<map id="turnSetting" name="turnSetting">
-<area shape="rect" id="node2" href="$digital_i_o_8c.html#a5e4162b54ab2f8a428979678ec19b69d" title="ließt die einzelnen bits der Buttons T0&#45;T3 aus, sowie die Bits des Inkrementers. " alt="" coords="305,65,392,92"/>
-<area shape="rect" id="node3" href="$lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62" title="LCD_ClearScreen" alt="" coords="440,28,565,54"/>
-<area shape="rect" id="node4" href="$lcd_8c.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="449,104,557,130"/>
-<area shape="rect" id="node7" href="$lcd_8c.html#adad847c231be8127a1a4b4004a63a8eb" title="LCD_setPosition" alt="" coords="139,141,257,168"/>
-<area shape="rect" id="node8" href="$digital_i_o_8c.html#a7d44f5215696f8c31471cc5b3190875d" title="Ließt die Werte des Drehencoders aus. " alt="" coords="151,40,245,66"/>
-<area shape="rect" id="node5" href="$lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa" title="LCD_PutChar" alt="" coords="613,104,715,130"/>
-<area shape="rect" id="node6" href="$lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="763,104,903,130"/>
-</map>

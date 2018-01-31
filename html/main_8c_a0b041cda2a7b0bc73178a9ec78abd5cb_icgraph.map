@@ -1,7 +1,7 @@
 <map id="muted" name="muted">
 <area shape="rect" id="node2" href="$main_8c.html#ae0b1861d934f61491fad3142725daf56" title="Öffnet das Menü um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits an..." alt="" coords="243,5,326,32"/>
-<area shape="rect" id="node5" href="$time_8h.html#aa147e4fc062ebcad160b842ff6046653" title="Legt einen Sound(Feedback) fest und die möglichkeit den Sound zu deaktivieren bzw zu aktivieren..." alt="" coords="112,56,187,83"/>
-<area shape="rect" id="node3" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="Öffnet die Credits: Studenten &amp; Professor. " alt="" coords="405,56,451,83"/>
+<area shape="rect" id="node5" href="$time_8h.html#aa147e4fc062ebcad160b842ff6046653" title="beeping " alt="" coords="112,56,187,83"/>
+<area shape="rect" id="node3" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="Schleife des Programmes. " alt="" coords="405,56,451,83"/>
 <area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="521,81,572,108"/>
 <area shape="rect" id="node6" href="$main_8c.html#ad6a8a325993331420e5776ed4975cee9" title="LEDs umschalten. " alt="" coords="240,107,329,133"/>
 <area shape="rect" id="node8" href="$main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="235,56,335,83"/>

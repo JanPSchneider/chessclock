@@ -3,8 +3,8 @@ var indexSectionsWithContent =
   0: "bcdefhilmoprst",
   1: "dlmt",
   2: "bcdfhilmorst",
-  3: "eimpst",
-  4: "bcefhilmost"
+  3: "eimps",
+  4: "bcefhilmos"
 };
 
 var indexSectionNames =
@@ -18,10 +18,10 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "Alle",
-  1: "Dateien",
-  2: "Funktionen",
-  3: "Variablen",
-  4: "Makrodefinitionen"
+  0: "All",
+  1: "Files",
+  2: "Functions",
+  3: "Variables",
+  4: "Macros"
 };
 

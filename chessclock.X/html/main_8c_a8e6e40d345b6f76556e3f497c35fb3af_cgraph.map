@@ -1,8 +1,0 @@
-<map id="bonusSetting" name="bonusSetting">
-<area shape="rect" id="node2" href="$digital_i_o_8c.html#a5e4162b54ab2f8a428979678ec19b69d" title="digital Read " alt="" coords="333,24,419,51"/>
-<area shape="rect" id="node3" href="$lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62" title="LCD_ClearScreen" alt="" coords="152,24,277,51"/>
-<area shape="rect" id="node4" href="$lcd_8c.html#a34b4c6478ad043d6bd9a64df8f4db763" title="LCD_PutString" alt="" coords="161,126,269,152"/>
-<area shape="rect" id="node7" href="$digital_i_o_8c.html#a7d44f5215696f8c31471cc5b3190875d" title="readEncoder " alt="" coords="167,75,262,102"/>
-<area shape="rect" id="node5" href="$lcd_8c.html#a9bbd8a3addf7efb3ed628b000298bbfa" title="LCD_PutChar" alt="" coords="325,126,427,152"/>
-<area shape="rect" id="node6" href="$lcd_8c.html#a712d0a47147dfd0d883719518e78b988" title="LCD_CarriageReturn" alt="" coords="475,126,615,152"/>
-</map>

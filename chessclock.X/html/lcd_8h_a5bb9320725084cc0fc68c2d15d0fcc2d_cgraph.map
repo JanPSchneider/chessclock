@@ -1,4 +1,0 @@
-<map id="LCD_Initialize" name="LCD_Initialize">
-<area shape="rect" id="node2" href="$lcd_8c.html#a6a31be2073f118b2811e28f19ded450a" title="LCD_Wait" alt="" coords="177,5,258,32"/>
-<area shape="rect" id="node3" href="$lcd_8c.html#a25e1f60dd77e50ae7ded44a431214c62" title="LCD_ClearScreen" alt="" coords="155,56,280,83"/>
-</map>
