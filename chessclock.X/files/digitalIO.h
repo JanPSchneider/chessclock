@@ -1,6 +1,6 @@
 /* 
  * @file  digitalIO.h
- * @author Tobias Haag, Felix Sья, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Suess, Jan Schneider, Marcus Schoch
  * 
  * @brief Definierung der LED's und Switches bzw. Buttons sowie dem Inkrementer
  * 

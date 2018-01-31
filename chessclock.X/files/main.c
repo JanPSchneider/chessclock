@@ -1,8 +1,8 @@
 /**
  * @file  main.c
- * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Suess, Jan Schneider, Marcus Schoch
  * 
- * @brief Erstellung von Funktionen und Hauptdatei von CHESSCLOCK. Beispielsweise Menü und Einstellungen.
+ * @brief Erstellung von Funktionen und Hauptdatei von CHESSCLOCK. Beispielsweise Menue und Einstellungen.
  * 
  * @date 11.12.2017
  */
@@ -60,7 +60,7 @@ void changeLED(bool change)
 
 /** 
  * @brief Anzeige des Start Screens und LED-Startsequenz
- * @attention Wenn die Wortlänge geändert wird, muss die Länge des Stings geändert werden.
+ * @attention Wenn die Wortlaenge geaendert wird, muss die Laenge des Stings geaendert werden.
  */
 void initialization()
 {
@@ -73,15 +73,15 @@ void initialization()
 }
 
 /** 
- * @brief Öffnet die Einstellungen um die Länge des Spiels zu ändern.
- * @attention Maximale Spielzeit beträgt 90 Minuten.
+ * @brief oeffnet die Einstellungen um die Laenge des Spiels zu aendern.
+ * @attention Maximale Spielzeit betraegt 90 Minuten.
  */
 void timeSetting()
 {
     while (digitalRead(INC_SW)) {
         LCD_ClearScreen();
         char buffer[16];
-        sprintf(buffer, "Set Time: %02d min", initTime / 60); //02: minimale Länge von 2 Chars, d: signed decimal integer
+        sprintf(buffer, "Set Time: %02d min", initTime / 60); //02: minimale Laenge von 2 Chars, d: signed decimal integer
         LCD_PutString(buffer, 16);
 
         initTime += readEncoder()*60;
@@ -100,7 +100,7 @@ void turnSetting()
     while (digitalRead(INC_SW)){
         LCD_ClearScreen();
         char buffer[16];
-        sprintf(buffer, "Set Turns: %02d ", turns); //02: minimale Länge von 2 Chars, d: signed decimal integer
+        sprintf(buffer, "Set Turns: %02d ", turns); //02: minimale Laenge von 2 Chars, d: signed decimal integer
         LCD_PutString(buffer, 16);
         char string[16];
         sprintf(string, "min: %02d max: %02d", TURNS_MIN, TURNS_MAX);
@@ -121,8 +121,8 @@ void turnSetting()
 }
 
 /** 
- * @brief Öffnet die Einstellung Zusatzzeit je Zug einzustellen.
- * @attention Maximale Bonus Zeit beträgt 60 Sekunden
+ * @brief oeffnet die Einstellung Zusatzzeit je Zug einzustellen.
+ * @attention Maximale Bonus Zeit betraegt 60 Sekunden
  */
 void bonusSetting()
 {
@@ -144,7 +144,7 @@ void bonusSetting()
 }
 
 /** 
- * @brief Öffnet die Credits: Studenten & Professor.
+ * @brief oeffnet die Credits: Studenten & Professor.
  */
 void credits()
 {
@@ -212,7 +212,7 @@ void credits()
 }
 
 /** 
- * @brief Schaltet Feedback Töne ein oder aus.
+ * @brief Schaltet Feedback Toene ein oder aus.
  * @attention Es wird eventuell schwieriger die Schachuhr zu bedienen.
  */
 void muted()
@@ -226,7 +226,7 @@ void muted()
 }
 
 /** 
- * @brief  Öffnet das Menü um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits anzusehen.
+ * @brief  oeffnet das Menue um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits anzusehen.
  */
 void openMenu()
 {
@@ -352,7 +352,7 @@ void showTimePlayedStats(char* playerName, uint16_t playerTime)
 }
 
 /** 
- * @brief "Game Over" Screen. Kann durch Tastendruck bei einem Sieg hervorgerufen werden oder öffnet sich wenn die Zeit eines Spielers abgelaufen ist.
+ * @brief "Game Over" Screen. Kann durch Tastendruck bei einem Sieg hervorgerufen werden oder oeffnet sich wenn die Zeit eines Spielers abgelaufen ist.
  */
 void showGameOver()
 {
@@ -411,7 +411,7 @@ void handleEnding()
 }
 
 /** 
- * @brief Setzt das Spiel auf die Standard Werte zurück.
+ * @brief Setzt das Spiel auf die Standard Werte zurueck.
  */
 void resetGame()
 {
@@ -463,7 +463,7 @@ void loop()
                 changeLED(true);
             }
         }
-        // Überprüft ob die Zeit abgelaufen ist
+        // ueberprueft ob die Zeit abgelaufen ist
         if (IFS0bits.T1IF == 1) {
             // reset Timer
             IFS0bits.T1IF = 0;
@@ -472,7 +472,7 @@ void loop()
 
             ClrWdt(); // Reset Watchdog
 
-            if (!digitalRead(INC_SW)) { // öffnet Einstellungen
+            if (!digitalRead(INC_SW)) { // oeffnet Einstellungen
                 openMenu();
                 resetGame();
             }
@@ -486,7 +486,7 @@ void loop()
                 digitalWriteLEDs(0b0110);
             }
 
-            // Stopt das Spiel wenn keine Zeit, keine Züge mehr übrig sind oder kann manuell geöffnet werden
+            // Stopt das Spiel wenn keine Zeit, keine Zuege mehr uebrig sind oder kann manuell geoeffnet werden
             if ((playerone_turns >= turns && playertwo_turns >= turns) || playerone_sec == 0 || playertwo_sec == 0 || !digitalRead(BUTTON_T1)) {
                 handleEnding();
                 resetGame();

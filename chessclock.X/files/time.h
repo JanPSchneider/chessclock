@@ -1,6 +1,6 @@
 /* 
  * @file  time.h
- * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Suess, Jan Schneider, Marcus Schoch
  * 
  * @brief Erstellung einer Zeiteinheit mithilfe der CPU Frequenz
  * 
@@ -9,7 +9,7 @@
 #include <stdint.h>
 #include <p33EP512MU810.h>
 
-#define FCY  4000000UL // CPU Frequenz für Verzögerungen
+#define FCY  4000000UL // CPU Frequenz fuer Verzoegerungen
 #include <libpic30.h>
 
 void delay_ms(uint16_t ms);

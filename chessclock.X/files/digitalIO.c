@@ -1,9 +1,9 @@
 /** 
  * @file  digitalIO.c
- * @author Tobias Haag, Felix Süß, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Suess, Jan Schneider, Marcus Schoch
  * 
- * @brief Bit Deklaration der verschiedenen Fälle, beispielsweise LED an/aus oder Taster gedrückt/nicht gedrückt.<br>
- * Außerdem Erstellung von digitalRead und digitalWrite um die Bits auszulesen bzw zu schreiben.
+ * @brief Bit Deklaration der verschiedenen Faelle, beispielsweise LED an/aus oder Taster gedrueckt/nicht gedrueckt.<br>
+ * Ausserdem Erstellung von digitalRead und digitalWrite um die Bits auszulesen bzw zu schreiben.
  * 
  * @date 11.12.2017
  */
@@ -98,7 +98,7 @@ void initPin(uint16_t pin) {
 }
 
 /** 
- * @brief ließt die einzelnen bits der Buttons T0-T3 aus, sowie die Bits des Inkrementers.
+ * @brief liesst die einzelnen bits der Buttons T0-T3 aus, sowie die Bits des Inkrementers.
  * @param pin
  */
 uint8_t digitalRead(uint16_t pin) {
@@ -171,7 +171,7 @@ void digitalWriteLEDs(uint16_t overwrite) {
 
 /** 
  * @brief Initialisiert den Encoder. Setzt die Pins des Encoders als digitale Inputs
- * @attention ANSEL G0,1 existiert nicht, alles digitale Eingänge
+ * @attention ANSEL G0,1 existiert nicht, alles digitale Eingaenge
  */
 void initEncoder() {
    
@@ -187,16 +187,16 @@ void initEncoder() {
 }
 
 /** 
- * @brief Ließt die Werte des Drehencoders aus.
+ * @brief Liesst die Werte des Drehencoders aus.
  */
 int8_t readEncoder() {
     bool inc_a = digitalRead(INC_A);
     while (inc_a == digitalRead(INC_A)) { // Solange nicht gedreht wird, tue nichts!
         if (!digitalRead(INC_SW)) {
-            return 0; // bei Tastendruck verlassen ohne Änderungen.
+            return 0; // bei Tastendruck verlassen ohne aenderungen.
         }
     }
-    if (!inc_a == digitalRead(INC_B)) { // A == B bedeutet rückwärts, andernfalls vorwärts
+    if (!inc_a == digitalRead(INC_B)) { // A == B bedeutet rueckwaerts, andernfalls vorwaerts
         return -1;
     } 
     else {

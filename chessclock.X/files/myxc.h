@@ -1,6 +1,6 @@
 /* 
  * @file  myxc.h
- * @author Tobias Haag, Felix Sья, Jan Schneider, Marcus Schoch
+ * @author Tobias Haag, Felix Suess, Jan Schneider, Marcus Schoch
  * 
  * @brief DSPIC33EP512MU810 Configuration Bit Settings <br>
  *        'C' source line config statements <br>
