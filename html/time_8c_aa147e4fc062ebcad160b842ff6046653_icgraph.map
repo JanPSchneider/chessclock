@@ -1,8 +1,8 @@
 <map id="feedback" name="feedback">
-<area shape="rect" id="node2" href="$main_8c.html#ad6a8a325993331420e5776ed4975cee9" title="LEDs umschalten. " alt="" coords="133,107,223,133"/>
-<area shape="rect" id="node6" href="$main_8c.html#ae0b1861d934f61491fad3142725daf56" title="Öffnet das Menü um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits an..." alt="" coords="137,5,219,32"/>
-<area shape="rect" id="node7" href="$main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="128,56,228,83"/>
-<area shape="rect" id="node3" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="Schleife des Programmes. " alt="" coords="298,56,345,83"/>
-<area shape="rect" id="node5" href="$main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="Anzeige des Start Screens und LED&#45;Startsequenz. " alt="" coords="276,107,367,133"/>
-<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="415,81,465,108"/>
+<area shape="rect" id="node2" href="$main_8c.html#ad6a8a325993331420e5776ed4975cee9" title="LEDs umschalten. " alt="" coords="133,5,223,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#ae0b1861d934f61491fad3142725daf56" title="Oeffnet das Menue um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credit..." alt="" coords="137,56,219,83"/>
+<area shape="rect" id="node7" href="$main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="128,107,228,133"/>
+<area shape="rect" id="node3" href="$main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="Anzeige des Start Screens und LED&#45;Startsequenz. " alt="" coords="276,5,367,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="Schleife des Programmes. " alt="" coords="298,56,345,83"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="415,31,465,57"/>
 </map>

@@ -1,3 +1,5 @@
-<map id="files/digitalIO.c" name="files/digitalIO.c">
-<area shape="rect" id="node5" href="$digital_i_o_8h.html" title="digitalIO.h" alt="" coords="281,80,361,107"/>
+<map id="chessclock.X/files/digitalIO.c" name="chessclock.X/files/digitalIO.c">
+<area shape="rect" id="node5" href="$lcd_8h.html" title="lcd.h" alt="" coords="69,95,120,121"/>
+<area shape="rect" id="node6" href="$digital_i_o_8h.html" title="digitalIO.h" alt="" coords="195,95,275,121"/>
+<area shape="rect" id="node8" href="$time_8h.html" title="time.h" alt="" coords="299,95,357,121"/>
 </map>

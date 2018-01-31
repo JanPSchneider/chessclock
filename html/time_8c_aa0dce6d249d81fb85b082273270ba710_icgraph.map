@@ -1,6 +1,16 @@
 <map id="delay_ms" name="delay_ms">
-<area shape="rect" id="node2" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="408,31,459,57"/>
-<area shape="rect" id="node3" href="$main_8c.html#ad6a8a325993331420e5776ed4975cee9" title="LEDs umschalten. " alt="" coords="132,31,221,57"/>
-<area shape="rect" id="node4" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="Schleife des Programmes. " alt="" coords="291,31,338,57"/>
-<area shape="rect" id="node5" href="$main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="Anzeige des Start Screens und LED&#45;Startsequenz. " alt="" coords="269,81,360,108"/>
+<area shape="rect" id="node2" href="$digital_i_o_8h.html#af45835ae132b28795d8ed348c090790c" title="Initialisiert die Pins. Setzt die Bits der einzelnen Pins. " alt="" coords="287,43,346,69"/>
+<area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="837,220,888,247"/>
+<area shape="rect" id="node4" href="$digital_i_o_8h.html#a5e4162b54ab2f8a428979678ec19b69d" title="liesst die einzelnen bits der Buttons T0&#45;T3 aus, sowie die Bits des Inkrementers. ..." alt="" coords="132,296,219,323"/>
+<area shape="rect" id="node12" href="$main_8c.html#a1d70a2cc6bd8f48bb4dafb48fb6154d0" title="Definiert was nach einem &quot;Game Over&quot; passiert. Es kann hier nun durch Tastendruck T2 die Statistiken ..." alt="" coords="267,448,367,475"/>
+<area shape="rect" id="node13" href="$digital_i_o_8h.html#a9a9747f5c74c6f562923c41ae973b1f1" title="Steuert die LEDs an. " alt="" coords="132,549,219,576"/>
+<area shape="rect" id="node14" href="$main_8c.html#ad6a8a325993331420e5776ed4975cee9" title="LEDs umschalten. " alt="" coords="561,499,651,525"/>
+<area shape="rect" id="node5" href="$digital_i_o_8h.html#a7d44f5215696f8c31471cc5b3190875d" title="Liesst die Werte des Drehencoders aus. " alt="" coords="269,195,364,221"/>
+<area shape="rect" id="node6" href="$main_8c.html#aa7305d48b840eb4cffb865d4f4d685e4" title="oeffnet die Einstellungen um die Laenge des Spiels zu aendern. " alt="" coords="420,144,508,171"/>
+<area shape="rect" id="node7" href="$main_8c.html#ae0b1861d934f61491fad3142725daf56" title="Oeffnet das Menue um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credit..." alt="" coords="565,245,647,272"/>
+<area shape="rect" id="node8" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="Schleife des Programmes. " alt="" coords="721,397,767,424"/>
+<area shape="rect" id="node9" href="$main_8c.html#a9e3b22ae2e0234b51f4f2df58e6a6128" title="turnSetting" alt="" coords="421,245,507,272"/>
+<area shape="rect" id="node10" href="$main_8c.html#a8e6e40d345b6f76556e3f497c35fb3af" title="Oeffnet die Einstellung Zusatzzeit je Zug einzustellen. " alt="" coords="415,296,513,323"/>
+<area shape="rect" id="node11" href="$main_8c.html#a5864f6393c74073a86a19645a5c55f24" title="Oeffnet die Credits: Studenten &amp; Professor. " alt="" coords="433,93,495,120"/>
+<area shape="rect" id="node15" href="$main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="Anzeige des Start Screens und LED&#45;Startsequenz. " alt="" coords="699,473,789,500"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="changeLED" name="changeLED">
-<area shape="rect" id="node2" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="Schleife des Programmes. " alt="" coords="165,5,211,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="Anzeige des Start Screens und LED&#45;Startsequenz. " alt="" coords="143,56,233,83"/>
+<area shape="rect" id="node2" href="$main_8c.html#a64bdd9967c83240dde0fc2fef8696dbb" title="Anzeige des Start Screens und LED&#45;Startsequenz. " alt="" coords="143,5,233,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#afe461d27b9c48d5921c00d521181f12f" title="Schleife des Programmes. " alt="" coords="165,56,211,83"/>
 <area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Hauptklasse sowie Deklaration bzw. Initialisierung der Variablen. " alt="" coords="281,31,332,57"/>
 </map>

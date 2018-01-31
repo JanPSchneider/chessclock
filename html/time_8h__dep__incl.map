@@ -1,4 +1,5 @@
-<map id="files/time.h" name="files/time.h">
-<area shape="rect" id="node2" href="$main_8c.html" title="Erstellung von Funktionen. Beispielsweise Menü und Einstellungen. " alt="" coords="5,80,93,107"/>
-<area shape="rect" id="node3" href="$time_8c.html" title="files/time.c" alt="" coords="117,80,203,107"/>
+<map id="chessclock.X/files/time.h" name="chessclock.X/files/time.h">
+<area shape="rect" id="node2" href="$digital_i_o_8c.html" title="Bit Deklaration der verschiedenen Faelle, beispielsweise LED an/aus oder Taster gedrueckt/nicht gedru..." alt="" coords="5,95,132,136"/>
+<area shape="rect" id="node3" href="$main_8c.html" title="Erstellung von Funktionen und Hauptdatei von CHESSCLOCK. Beispielsweise Menue und Einstellungen..." alt="" coords="156,95,283,136"/>
+<area shape="rect" id="node4" href="$time_8c.html" title="Funktion zur Intialisierung des Timers und Vereinfachung der Delay&#45;Funktionen. " alt="" coords="307,95,433,136"/>
 </map>
