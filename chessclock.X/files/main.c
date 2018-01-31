@@ -83,6 +83,11 @@ void timeSetting()
         char buffer[16];
         sprintf(buffer, "Set Time: %02d min", initTime / 60); //02: minimale Laenge von 2 Chars, d: signed decimal integer
         LCD_PutString(buffer, 16);
+        
+        char string[16];
+        sprintf(string, "min: %02d max: %02d", MIN_TIME, MAX_TIME);
+        LCD_setPosition(1, 0);
+        LCD_PutString(string, 16);
 
         initTime += readEncoder()*60;
 
@@ -102,6 +107,7 @@ void turnSetting()
         char buffer[16];
         sprintf(buffer, "Set Turns: %02d ", turns); //02: minimale Laenge von 2 Chars, d: signed decimal integer
         LCD_PutString(buffer, 16);
+        
         char string[16];
         sprintf(string, "min: %02d max: %02d", TURNS_MIN, TURNS_MAX);
         LCD_setPosition(1, 0);
@@ -121,7 +127,7 @@ void turnSetting()
 }
 
 /** 
- * @brief oeffnet die Einstellung Zusatzzeit je Zug einzustellen.
+ * @brief Oeffnet die Einstellung Zusatzzeit je Zug einzustellen.
  * @attention Maximale Bonus Zeit betraegt 60 Sekunden
  */
 void bonusSetting()
@@ -131,6 +137,11 @@ void bonusSetting()
         char buffer[16];
         sprintf(buffer, "Set Bonus: %2d s", extraTime);
         LCD_PutString(buffer, 16);
+        
+        char string[16];
+        sprintf(string, "min: 00 max: %02d", MAX_EXTRA_TIME);
+        LCD_setPosition(1, 0);
+        LCD_PutString(string, 16);
 
         extraTime += readEncoder();
 
@@ -144,7 +155,7 @@ void bonusSetting()
 }
 
 /** 
- * @brief oeffnet die Credits: Studenten & Professor.
+ * @brief Oeffnet die Credits: Studenten & Professor.
  */
 void credits()
 {
@@ -213,7 +224,7 @@ void credits()
 
 /** 
  * @brief Schaltet Feedback Toene ein oder aus.
- * @attention Es wird eventuell schwieriger die Schachuhr zu bedienen.
+ * @attention Gemuted wird es eventuell schwieriger die Schachuhr zu bedienen.
  */
 void muted()
 {
@@ -226,7 +237,7 @@ void muted()
 }
 
 /** 
- * @brief  oeffnet das Menue um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits anzusehen.
+ * @brief  Oeffnet das Menue um Einstellungen vorzunehmen, sowie die Sounds an und aus zuschalten und die Credits anzusehen.
  */
 void openMenu()
 {
@@ -347,7 +358,7 @@ void showTimePlayedStats(char* playerName, uint16_t playerTime)
     uint16_t used_sec = initTime - playerTime;
     char string[16];
     LCD_setPosition(1, 0);
-    sprintf(string, "%02d:%02d min (%d%%)", used_sec / 60, used_sec % 60, used_sec * 100 / initTime);
+    sprintf(string, "%02d:%02d min / %d%%", used_sec / 60, used_sec % 60, used_sec * 100 / initTime);
     LCD_PutString(string, 16);
 }
 
@@ -360,10 +371,10 @@ void showGameOver()
     LCD_PutString("   Game Over ", 15);
     LCD_setPosition(1, 0);
     if (playerone_sec == 0) {
-        LCD_PutString("One Timeout!", 16);
+        LCD_PutString("P One Timeout!", 16);
     }
     else if (playertwo_sec == 0) {
-        LCD_PutString("Two Timeout!", 16);
+        LCD_PutString("P Two Timeout!", 16);
     }
     else if (playerone_turns >=  turns && playertwo_turns >= turns) {
         LCD_PutString(" No Turns Left", 16);

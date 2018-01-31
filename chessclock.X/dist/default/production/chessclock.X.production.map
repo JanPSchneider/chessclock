@@ -109,12 +109,12 @@ Program Memory  [Origin = 0x200, Length = 0x55600]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0xbd6          0x11c1  (4545)
-.const                       0xdd6               0x2c2           0x423  (1059)
-.text                       0x1098               0xd00          0x1380  (4992)
-.dinit                      0x1d98                0x50            0x78  (120)
-.init.delay32               0x1de8                0x1c            0x2a  (42)
+.const                       0xdd6               0x2d4           0x43e  (1086)
+.text                       0x10aa               0xd38          0x13d4  (5076)
+.dinit                      0x1de2                0x50            0x78  (120)
+.init.delay32               0x1e32                0x1c            0x2a  (42)
 
-                 Total program memory used (bytes):         0x2a06  (10758) 2%
+                 Total program memory used (bytes):         0x2a75  (10869) 2%
 
 
 Auxflash Memory  [Origin = 0x7fc000, Length = 0x3ffa]
@@ -201,60 +201,60 @@ External Symbols in Program Memory (by address):
                   0x000b38                  __Litob
                   0x000db2                  ___divsi3
                   0x000dd0                  ___umodsi3
-                  0x001098                  _changeLED
-                  0x0010e6                  _initialization
-                  0x001106                  _timeSetting
-                  0x00115c                  _turnSetting
-                  0x0011c2                  _bonusSetting
-                  0x001208                  _credits
-                  0x001330                  _muted
-                  0x001344                  _openMenu
-                  0x00154c                  _showTimePlayedStats
-                  0x0015b0                  _showGameOver
-                  0x0015fe                  _handleEnding
-                  0x001670                  _resetGame
-                  0x001686                  _showClock
-                  0x0016f6                  _loop
-                  0x0017c2                  _main
-                  0x0017fe                  _LCD_Initialize
-                  0x00183e                  _LCD_PutString
-                  0x001870                  _LCD_PutChar
-                  0x00190a                  _LCD_ClearScreen
-                  0x00192c                  _LCD_CarriageReturn
-                  0x001954                  _LCD_ShiftCursorLeft
-                  0x0019aa                  _LCD_ShiftCursorRight
-                  0x0019f0                  _LCD_ShiftCursorUp
-                  0x001a06                  _LCD_ShiftCursorDown
-                  0x001a1c                  _LCD_Wait
-                  0x001a3a                  _LCD_CursorEnable
-                  0x001a62                  _LCD_setPosition
-                  0x001aaa                  _initPin
-                  0x001b4e                  _digitalRead
-                  0x001bc2                  _digitalWrite
-                  0x001c46                  _digitalWriteLEDs
-                  0x001c5c                  _initEncoder
-                  0x001c70                  _readEncoder
-                  0x001cb6                  _initPiezo
-                  0x001cc2                  _delay_ms
-                  0x001ce4                  _feedback
-                  0x001d78                  _initTimer
-                  0x001de8                  ___delay32
+                  0x0010aa                  _changeLED
+                  0x0010f8                  _initialization
+                  0x001118                  _timeSetting
+                  0x00118c                  _turnSetting
+                  0x0011f2                  _bonusSetting
+                  0x001252                  _credits
+                  0x00137a                  _muted
+                  0x00138e                  _openMenu
+                  0x001596                  _showTimePlayedStats
+                  0x0015fa                  _showGameOver
+                  0x001648                  _handleEnding
+                  0x0016ba                  _resetGame
+                  0x0016d0                  _showClock
+                  0x001740                  _loop
+                  0x00180c                  _main
+                  0x001848                  _LCD_Initialize
+                  0x001888                  _LCD_PutString
+                  0x0018ba                  _LCD_PutChar
+                  0x001954                  _LCD_ClearScreen
+                  0x001976                  _LCD_CarriageReturn
+                  0x00199e                  _LCD_ShiftCursorLeft
+                  0x0019f4                  _LCD_ShiftCursorRight
+                  0x001a3a                  _LCD_ShiftCursorUp
+                  0x001a50                  _LCD_ShiftCursorDown
+                  0x001a66                  _LCD_Wait
+                  0x001a84                  _LCD_CursorEnable
+                  0x001aac                  _LCD_setPosition
+                  0x001af4                  _initPin
+                  0x001b98                  _digitalRead
+                  0x001c0c                  _digitalWrite
+                  0x001c90                  _digitalWriteLEDs
+                  0x001ca6                  _initEncoder
+                  0x001cba                  _readEncoder
+                  0x001d00                  _initPiezo
+                  0x001d0c                  _delay_ms
+                  0x001d2e                  _feedback
+                  0x001dc2                  _initTimer
+                  0x001e32                  ___delay32
                   0xf80004                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x00192c                  _LCD_CarriageReturn
-                  0x00190a                  _LCD_ClearScreen
-                  0x001a3a                  _LCD_CursorEnable
-                  0x0017fe                  _LCD_Initialize
-                  0x001870                  _LCD_PutChar
-                  0x00183e                  _LCD_PutString
-                  0x001a06                  _LCD_ShiftCursorDown
-                  0x001954                  _LCD_ShiftCursorLeft
-                  0x0019aa                  _LCD_ShiftCursorRight
-                  0x0019f0                  _LCD_ShiftCursorUp
-                  0x001a1c                  _LCD_Wait
-                  0x001a62                  _LCD_setPosition
+                  0x001976                  _LCD_CarriageReturn
+                  0x001954                  _LCD_ClearScreen
+                  0x001a84                  _LCD_CursorEnable
+                  0x001848                  _LCD_Initialize
+                  0x0018ba                  _LCD_PutChar
+                  0x001888                  _LCD_PutString
+                  0x001a50                  _LCD_ShiftCursorDown
+                  0x00199e                  _LCD_ShiftCursorLeft
+                  0x0019f4                  _LCD_ShiftCursorRight
+                  0x001a3a                  _LCD_ShiftCursorUp
+                  0x001a66                  _LCD_Wait
+                  0x001aac                  _LCD_setPosition
                   0x0002fe                  __DefaultInterrupt
                   0xf80004                  __FGS.sec
                   0x000b38                  __Litob
@@ -262,7 +262,7 @@ External Symbols in Program Memory (by name):
                   0x0008f0                  __Vacopy
                   0x0005ee                  ___Printf_cdnopuxX
                   0x0008f4                  ___Putfld_cdnopuxX
-                  0x001de8                  ___delay32
+                  0x001e32                  ___delay32
                   0x000470                  ___divdi3
                   0x000db2                  ___divsi3
                   0x0004d0                  ___moddi3
@@ -278,33 +278,33 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
                   0x0005d0                  __sprintf_cdnopuxX
-                  0x0011c2                  _bonusSetting
-                  0x001098                  _changeLED
-                  0x001208                  _credits
-                  0x001cc2                  _delay_ms
-                  0x001b4e                  _digitalRead
-                  0x001bc2                  _digitalWrite
-                  0x001c46                  _digitalWriteLEDs
-                  0x001ce4                  _feedback
-                  0x0015fe                  _handleEnding
-                  0x001c5c                  _initEncoder
-                  0x001cb6                  _initPiezo
-                  0x001aaa                  _initPin
-                  0x001d78                  _initTimer
-                  0x0010e6                  _initialization
-                  0x0016f6                  _loop
-                  0x0017c2                  _main
+                  0x0011f2                  _bonusSetting
+                  0x0010aa                  _changeLED
+                  0x001252                  _credits
+                  0x001d0c                  _delay_ms
+                  0x001b98                  _digitalRead
+                  0x001c0c                  _digitalWrite
+                  0x001c90                  _digitalWriteLEDs
+                  0x001d2e                  _feedback
+                  0x001648                  _handleEnding
+                  0x001ca6                  _initEncoder
+                  0x001d00                  _initPiezo
+                  0x001af4                  _initPin
+                  0x001dc2                  _initTimer
+                  0x0010f8                  _initialization
+                  0x001740                  _loop
+                  0x00180c                  _main
                   0x000752                  _memcpy
-                  0x001330                  _muted
-                  0x001344                  _openMenu
-                  0x001c70                  _readEncoder
-                  0x001670                  _resetGame
-                  0x001686                  _showClock
-                  0x0015b0                  _showGameOver
-                  0x00154c                  _showTimePlayedStats
+                  0x00137a                  _muted
+                  0x00138e                  _openMenu
+                  0x001cba                  _readEncoder
+                  0x0016ba                  _resetGame
+                  0x0016d0                  _showClock
+                  0x0015fa                  _showGameOver
+                  0x001596                  _showTimePlayedStats
                   0x000760                  _strchr
-                  0x001106                  _timeSetting
-                  0x00115c                  _turnSetting
+                  0x001118                  _timeSetting
+                  0x00118c                  _turnSetting
                   0x0005c2                  sprintf_cdnopuxX.EPeo:_prout
 
 Memory Configuration
@@ -465,12 +465,12 @@ __FUID0
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x26af
+.debug_info       0x000000       0x26cb
  *(.debug_info)
  .debug_info      0x000000       0x131f build/default/production/files/digitalIO.o
  .debug_info      0x00131f        0x4fe build/default/production/files/lcd.o
- .debug_info      0x00181d        0x83b build/default/production/files/main.o
- .debug_info      0x002058        0x657 build/default/production/files/time.o
+ .debug_info      0x00181d        0x857 build/default/production/files/main.o
+ .debug_info      0x002074        0x657 build/default/production/files/time.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x4e1
@@ -480,19 +480,19 @@ __FUID0
  .debug_abbrev    0x0001f6        0x1df build/default/production/files/main.o
  .debug_abbrev    0x0003d5        0x10c build/default/production/files/time.o
 
-.debug_line       0x000000        0x64f
+.debug_line       0x000000        0x656
  *(.debug_line)
  .debug_line      0x000000        0x168 build/default/production/files/digitalIO.o
  .debug_line      0x000168        0x181 build/default/production/files/lcd.o
- .debug_line      0x0002e9        0x24c build/default/production/files/main.o
- .debug_line      0x000535        0x11a build/default/production/files/time.o
+ .debug_line      0x0002e9        0x253 build/default/production/files/main.o
+ .debug_line      0x00053c        0x11a build/default/production/files/time.o
 
-.debug_frame      0x000000        0x4c4
+.debug_frame      0x000000        0x4e0
  *(.debug_frame)
  .debug_frame     0x000000         0xde build/default/production/files/digitalIO.o
  .debug_frame     0x0000de        0x164 build/default/production/files/lcd.o
- .debug_frame     0x000242        0x21a build/default/production/files/main.o
- .debug_frame     0x00045c         0x68 build/default/production/files/time.o
+ .debug_frame     0x000242        0x236 build/default/production/files/main.o
+ .debug_frame     0x000478         0x68 build/default/production/files/time.o
 
 .debug_str        0x000000        0x12e
  *(.debug_str)
@@ -3334,56 +3334,56 @@ __c30_signature
 .config_IESO      0xf80006          0x2
  .config_IESO     0xf80006          0x2 build/default/production/files/main.o
 
-.const              0x8dd6        0x2c2 load address 0x000dd6  
- .const             0x8dd6        0x29a build/default/production/files/main.o
- .const             0x9070         0x28 build/default/production/files/digitalIO.o
+.const              0x8dd6        0x2d4 load address 0x000dd6  
+ .const             0x8dd6        0x2ac build/default/production/files/main.o
+ .const             0x9082         0x28 build/default/production/files/digitalIO.o
 
-.text             0x001098        0xd00
- .text            0x001098        0x766 build/default/production/files/main.o
-                  0x001098                  _changeLED
-                  0x0010e6                  _initialization
-                  0x001106                  _timeSetting
-                  0x00115c                  _turnSetting
-                  0x0011c2                  _bonusSetting
-                  0x001208                  _credits
-                  0x001330                  _muted
-                  0x001344                  _openMenu
-                  0x00154c                  _showTimePlayedStats
-                  0x0015b0                  _showGameOver
-                  0x0015fe                  _handleEnding
-                  0x001670                  _resetGame
-                  0x001686                  _showClock
-                  0x0016f6                  _loop
-                  0x0017c2                  _main
- .text            0x0017fe        0x2ac build/default/production/files/lcd.o
-                  0x0017fe                  _LCD_Initialize
-                  0x00183e                  _LCD_PutString
-                  0x001870                  _LCD_PutChar
-                  0x00190a                  _LCD_ClearScreen
-                  0x00192c                  _LCD_CarriageReturn
-                  0x001954                  _LCD_ShiftCursorLeft
-                  0x0019aa                  _LCD_ShiftCursorRight
-                  0x0019f0                  _LCD_ShiftCursorUp
-                  0x001a06                  _LCD_ShiftCursorDown
-                  0x001a1c                  _LCD_Wait
-                  0x001a3a                  _LCD_CursorEnable
-                  0x001a62                  _LCD_setPosition
- .text            0x001aaa        0x218 build/default/production/files/digitalIO.o
-                  0x001aaa                  _initPin
-                  0x001b4e                  _digitalRead
-                  0x001bc2                  _digitalWrite
-                  0x001c46                  _digitalWriteLEDs
-                  0x001c5c                  _initEncoder
-                  0x001c70                  _readEncoder
-                  0x001cb6                  _initPiezo
- .text            0x001cc2         0xd6 build/default/production/files/time.o
-                  0x001cc2                  _delay_ms
-                  0x001ce4                  _feedback
-                  0x001d78                  _initTimer
+.text             0x0010aa        0xd38
+ .text            0x0010aa        0x79e build/default/production/files/main.o
+                  0x0010aa                  _changeLED
+                  0x0010f8                  _initialization
+                  0x001118                  _timeSetting
+                  0x00118c                  _turnSetting
+                  0x0011f2                  _bonusSetting
+                  0x001252                  _credits
+                  0x00137a                  _muted
+                  0x00138e                  _openMenu
+                  0x001596                  _showTimePlayedStats
+                  0x0015fa                  _showGameOver
+                  0x001648                  _handleEnding
+                  0x0016ba                  _resetGame
+                  0x0016d0                  _showClock
+                  0x001740                  _loop
+                  0x00180c                  _main
+ .text            0x001848        0x2ac build/default/production/files/lcd.o
+                  0x001848                  _LCD_Initialize
+                  0x001888                  _LCD_PutString
+                  0x0018ba                  _LCD_PutChar
+                  0x001954                  _LCD_ClearScreen
+                  0x001976                  _LCD_CarriageReturn
+                  0x00199e                  _LCD_ShiftCursorLeft
+                  0x0019f4                  _LCD_ShiftCursorRight
+                  0x001a3a                  _LCD_ShiftCursorUp
+                  0x001a50                  _LCD_ShiftCursorDown
+                  0x001a66                  _LCD_Wait
+                  0x001a84                  _LCD_CursorEnable
+                  0x001aac                  _LCD_setPosition
+ .text            0x001af4        0x218 build/default/production/files/digitalIO.o
+                  0x001af4                  _initPin
+                  0x001b98                  _digitalRead
+                  0x001c0c                  _digitalWrite
+                  0x001c90                  _digitalWriteLEDs
+                  0x001ca6                  _initEncoder
+                  0x001cba                  _readEncoder
+                  0x001d00                  _initPiezo
+ .text            0x001d0c         0xd6 build/default/production/files/time.o
+                  0x001d0c                  _delay_ms
+                  0x001d2e                  _feedback
+                  0x001dc2                  _initTimer
 
-.dinit            0x001d98         0x50
- .dinit           0x001d98         0x50 data_init
+.dinit            0x001de2         0x50
+ .dinit           0x001de2         0x50 data_init
 
-.init.delay32     0x001de8         0x1c
- .init.delay32    0x001de8         0x1c c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
-                  0x001de8                  ___delay32
+.init.delay32     0x001e32         0x1c
+ .init.delay32    0x001e32         0x1c c:/program files (x86)/microchip/xc16/v1.33/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
+                  0x001e32                  ___delay32
