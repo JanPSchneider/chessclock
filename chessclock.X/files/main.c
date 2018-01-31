@@ -85,7 +85,7 @@ void timeSetting()
         LCD_PutString(buffer, 16);
         
         char string[16];
-        sprintf(string, "min: %02d max: %02d", MIN_TIME, MAX_TIME);
+        sprintf(string, "min: %02d max: %02d", MIN_TIME/60, MAX_TIME/60);
         LCD_setPosition(1, 0);
         LCD_PutString(string, 16);
 
